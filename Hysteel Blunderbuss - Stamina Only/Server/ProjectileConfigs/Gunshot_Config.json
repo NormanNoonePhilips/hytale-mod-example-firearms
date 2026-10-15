@@ -1,0 +1,114 @@
+{
+  "Model": "Fireball_Gun",
+  "SpawnRotationOffset": {
+    "Pitch": 0,
+    "Yaw": 0.25,
+    "Roll": 0
+  },
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 3,
+    "TerminalVelocityAir": 100,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "LaunchForce": 50,
+  "SpawnOffset": {
+    "X": 0.15,
+    "Y": -0.25,
+    "Z": -0.5
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Flame_Staff_Burn"
+        },
+        {
+          "Type": "DamageEntity",
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 10
+            }
+          ],
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Fire": 20
+            },
+            "Class": "Charged"
+          }
+        },
+        {
+          "Type": "RemoveEntity"
+        },
+        {
+          "Type": "Explode",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Explosion_Big"
+              }
+            ],
+            "WorldSoundEventId": "SFX_Fireball_Death"
+          },
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": true,
+            "BlockDamageRadius": 5,
+            "BlockDropChance": 100,
+            "EntityDamageRadius": 5,
+            "EntityDamage": 40,
+            "EntityDamageFalloff": 1
+          }
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Fireball_Impact_0",
+          "DefaultOk": true,
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Stick_Fire_Impact_Base"
+            ]
+          }
+        },
+        {
+          "Type": "Explode",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Explosion_Big"
+              }
+            ],
+            "WorldSoundEventId": "SFX_Fireball_Death"
+          },
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": true,
+            "BlockDamageRadius": 5,
+            "BlockDropChance": 100,
+            "EntityDamage": 60,
+            "EntityDamageFalloff": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 1,
+              "Duration": 0.05,
+              "VelocityType": "Add",
+              "VelocityY": 5
+            },
+            "EntityDamageRadius": 7
+          }
+        },
+        "Weapon_Stick_Fire_Projectile_Despawn"
+      ]
+    }
+  }
+}

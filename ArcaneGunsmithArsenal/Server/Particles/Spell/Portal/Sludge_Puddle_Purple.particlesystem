@@ -1,0 +1,42 @@
+{
+  "CullDistance": 192,
+  "Spawners": [
+    {
+      "SpawnerId": "Sludge_Purple_Effect",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 3,
+        "Z": -0.1
+      }
+    },
+    {
+      "PositionOffset": {
+        "X": 0,
+        "Y": 3,
+        "Z": 0.03
+      },
+      "SpawnerId": "Portal_Purple_Center"
+    },
+    {
+      "SpawnerId": "Portal_Trails",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 3,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "VoidSplash",
+      "PositionOffset": {
+        "Y": 3
+      },
+      "SpawnRate": {
+        "Min": 2.4,
+        "Max": 2.4
+      },
+      "TotalSpawners": 5,
+      "StartDelay": 0.75
+    }
+  ],
+  "LifeSpan": 3.75
+}

@@ -1,0 +1,15 @@
+{
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Cooldown": 0.05
+  },
+  "Interactions": [
+    "SMT_Primary"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  },
+  "ClickQueuingTimeout": 0.15
+}

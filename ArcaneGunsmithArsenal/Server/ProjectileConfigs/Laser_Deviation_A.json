@@ -1,0 +1,7 @@
+{
+  "Parent": "Projectile_Config_Laser_PsycoSkull",
+  "SpawnRotationOffset": {
+    "Pitch": -1.25,
+    "Yaw": 2
+  }
+}

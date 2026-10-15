@@ -1,0 +1,262 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Refroster.name",
+    "Description": "AGA_Server.items.ArcaneGun_Refroster.description"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/Refroster.blockymodel",
+  "Texture": "Items/Weapons/RefrosterTexture.png",
+  "Icon": "Icons/ItemsGenerated/ABT_Refroster.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Uncommon",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      333,
+      69,
+      51
+    ],
+    "Translation": [
+      -6,
+      -6
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_ABT_Primary_Ice",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges"
+    ],
+    "StatModifiers": {
+      "SignatureEnergy": [
+        {
+          "Amount": 10,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 150,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "AMT_Primary_Projectile": {
+      "Interactions": [
+        "ABT_Refroster_Projectile"
+      ]
+    },
+    "AMT_Signature_Projectile": {
+      "Interactions": [
+        "ABT_Sig_Refroster_Projectile"
+      ]
+    },
+    "AMT_Damage_FX": {
+      "Interactions": [
+        "ABT_Refroster_Damage"
+      ]
+    },
+    "AMT_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "AMT_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Impact_Ice",
+                "Scale": 0.25,
+                "TargetEntityPart": "Entity"
+              }
+            ]
+          },
+          "RunTime": 0.1
+        }
+      ]
+    },
+    "AMT_Sig_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Parent": "Explode_Generic_Entities",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 2,
+            "EntityDamage": 18,
+            "EntityDamageFalloff": 0.25,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 15
+            }
+          },
+          "Next": {
+            "Type": "ApplyEffect",
+            "Entity": "Target",
+            "EffectId": "Freeze_Status_Mild"
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Break_Ice",
+                "TargetEntityPart": "Entity",
+                "Scale": 3
+              }
+            ]
+          },
+          "RunTime": 0.05
+        }
+      ]
+    },
+    "AMT_Sig_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "AMT_Sig_Miss_FX": {
+      "Interactions": [
+        "Common_Projectile_Miss"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.175,
+        "Z": -0.25
+      },
+      "Color": "#1ba1f8",
+      "Scale": 0.15
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.175,
+        "Z": 0.65
+      },
+      "Color": "#1ba1f8",
+      "Scale": 0.3
+    }
+  ],
+  "DurabilityLossOnDeath": true,
+  "ItemLevel": 25,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 10,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Ice_Essence",
+        "Quantity": 10
+      },
+      {
+        "ResourceTypeId": "Wood_Deadwood",
+        "Quantity": 6
+      },
+      {
+        "Quantity": 7,
+        "ItemId": "Ingredient_Bar_Cobalt"
+      },
+      {
+        "ItemId": "Rock_Ice",
+        "Quantity": 8
+      }
+    ]
+  }
+}

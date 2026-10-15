@@ -1,0 +1,20 @@
+{
+  "RequireNewClick": true,
+  "Interactions": [
+    "Weapon_Candela_Primary_Ember"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  },
+  "Cooldown": {
+    "Cooldown": 0.15,
+    "Charges": [
+      2.5,
+      2.5
+    ],
+    "SkipCooldownReset": false,
+    "InterruptRecharge": true
+  }
+}

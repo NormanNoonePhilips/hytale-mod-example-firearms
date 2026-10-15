@@ -1,0 +1,48 @@
+{
+  "Parent": "Projectile_Config_Ember_Base",
+  "Physics": {
+    "Type": "Standard",
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "Gravity": 5
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Damage",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.25
+  }
+}

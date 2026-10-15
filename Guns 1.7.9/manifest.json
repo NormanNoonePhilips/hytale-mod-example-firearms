@@ -1,0 +1,20 @@
+{
+  "Group": "Antho",
+  "Name": "Guns",
+  "Version": "1.7.9",
+  "Description": "Add firearms to the game.",
+  "Authors": [
+    {
+      "Name": "Antho",
+      "Email": "",
+      "Url": ""
+    }
+  ],
+  "Website": "",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "SubPlugins": []
+}

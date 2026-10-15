@@ -1,0 +1,209 @@
+{
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "SignatureCharges": -100
+      }
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_A"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Projectile_Config_Beam_PsycoSkull"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.12
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_B"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Projectile_Config_Beam_PsycoSkull"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_E"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.12
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_C"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Projectile_Config_Beam_PsycoSkull"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.12
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_D"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Projectile_Config_Beam_PsycoSkull"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.12
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_E"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Projectile_Config_Beam_PsycoSkull"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.12
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_F"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Projectile_Config_Beam_PsycoSkull"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "Config": "Beam_Deviation_C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.12
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "Type": "Simple",
+  "Next": {
+    "Type": "Repeat",
+    "ForkInteractions": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_IonCannon_Primary_Shoot_Laser"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.08
+        }
+      ]
+    },
+    "Repeat": 3
+  }
+}

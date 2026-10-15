@@ -1,0 +1,67 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Rifle_Fire_Splash2",
+      "PositionOffset": {
+        "X": 0.05,
+        "Y": 0.8,
+        "Z": -0.08
+      },
+      "RotationOffset": {
+        "Yaw": 0,
+        "Pitch": -90,
+        "Roll": 90
+      }
+    },
+    {
+      "SpawnerId": "Rifle_Smoke",
+      "PositionOffset": {
+        "X": 0.0,
+        "Y": 0.47,
+        "Z": -0.08
+      },
+      "RotationOffset": {
+        "Yaw": 0,
+        "Pitch": 0,
+        "Roll": 0
+      }
+    },
+    {
+      "SpawnerId": "Bullet_Case_Small",
+      "PositionOffset": {
+        "Y": -0.4,
+        "Z": -0.04
+      },
+      "InitialVelocity": {
+        "Speed": {
+          "Min": 1.5,
+          "Max": 3
+        },
+        "Yaw": {
+          "Min": 5,
+          "Max": -5
+        },
+        "Pitch": {
+          "Min": 0,
+          "Max": -15
+        }
+      }
+    },
+    {
+      "SpawnerId": "Explosion_Fail_Flash_Glow",
+      "PositionOffset": {
+        "Y": 0.36,
+        "Z": -0.08
+      }
+    },
+    {
+      "SpawnerId": "Gun_Glow",
+      "PositionOffset": {
+        "Y": 0.0,
+        "Z": -0.08
+      }
+    }
+  ],
+  "IsImportant": true,
+  "LifeSpan": 1.0
+}

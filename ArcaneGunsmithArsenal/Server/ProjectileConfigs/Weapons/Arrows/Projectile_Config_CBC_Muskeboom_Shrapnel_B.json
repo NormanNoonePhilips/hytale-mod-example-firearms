@@ -1,0 +1,8 @@
+{
+  "LaunchForce": 45,
+  "Parent": "Projectile_Config_CBC_Muskeboom_A",
+  "SpawnRotationOffset": {
+    "Yaw": -6,
+    "Pitch": 1
+  }
+}

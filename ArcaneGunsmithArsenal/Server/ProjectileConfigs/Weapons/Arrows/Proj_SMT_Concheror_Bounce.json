@@ -1,0 +1,83 @@
+{
+  "Model": "Tang_Blue",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 5,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 50,
+    "RotationMode": "VelocityDamped",
+    "SticksVertically": true,
+    "Bounciness": 1,
+    "BounceLimit": 0.02,
+    "BounceCount": 15
+  },
+  "LaunchForce": 2,
+  "SpawnRotationOffset": {
+    "Pitch": 90
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          },
+          "Var": "SMT_Damage_Bounce"
+        },
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Effects_Standard_Projectile_Impact"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 3
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "SMT_Projectile_Attack"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Model": "Chainshot_Tether",
+  "SpawnOffset": {
+    "X": 0.3
+  },
+  "SpawnRotationOffset": {
+    "Yaw": -1.5
+  },
+  "Parent": "Projectile_Config_Chainshot_Tether_C"
+}

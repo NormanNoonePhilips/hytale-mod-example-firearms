@@ -1,0 +1,56 @@
+{
+  "Type": "Charging",
+  "DisplayProgress": false,
+  "Effects": {
+    "ItemAnimationId": "StabDashCharging",
+    "Particles": [
+      {
+        "PositionOffset": {
+          "Z": 0.7,
+          "Y": 0.1
+        },
+        "RotationOffset": {
+          "Pitch": -90,
+          "Roll": 0
+        },
+        "TargetNodeName": "Handle",
+        "SystemId": "Sword_Charging",
+        "Scale": 0.6
+      }
+    ]
+  },
+  "Next": {
+    "0.5": {
+      "Type": "Serial",
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "Stamina": -2
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.125,
+          "Next": {
+            "Type": "Serial",
+            "Interactions": [
+              "Weapon_Whaler_Primary_Thrust_Force",
+              {
+                "Type": "Replace",
+                "Var": "Thrust_Selector",
+                "DefaultOk": true,
+                "DefaultValue": {
+                  "Interactions": [
+                    "Weapon_Whaler_Secondary_Thrust_Selector"
+                  ]
+                }
+              }
+            ]
+          },
+          "CancelOnItemChange": false
+        }
+      ]
+    }
+  }
+}

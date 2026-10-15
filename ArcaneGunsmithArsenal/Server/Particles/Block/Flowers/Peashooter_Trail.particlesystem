@@ -1,0 +1,22 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Block_Break_Soft_Flower",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "SpawnRate": {
+        "Min": 10,
+        "Max": 10
+      },
+      "LifeSpan": {
+        "Min": 1,
+        "Max": 1
+      },
+      "MaxConcurrent": 50,
+      "TotalSpawners": 20
+    }
+  ]
+}

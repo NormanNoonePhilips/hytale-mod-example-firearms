@@ -1,0 +1,7 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "WorldSoundEventId": "Gun_Empty_Fire",
+    "LocalSoundEventId": "Gun_Empty_Fire"
+  }
+}

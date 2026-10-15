@@ -1,0 +1,44 @@
+{
+  "Model": "Arrow_Crossbow_Signature",
+  "LaunchForce": 30,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15,
+    "TerminalVelocityAir": 100,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "BP_Sig_Damage_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        "Block_Break_Adventure",
+        {
+          "Type": "Replace",
+          "Var": "BP_Sig_Impact_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  }
+}

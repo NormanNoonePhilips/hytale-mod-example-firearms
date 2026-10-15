@@ -1,0 +1,21 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Item/Ice/Ice_Swing_01.ogg",
+        "Sounds/Weapons/Item/Ice/Ice_Swing_02.ogg",
+        "Sounds/Weapons/Item/Ice/Ice_Swing_03.ogg",
+        "Sounds/Weapons/Item/Ice/Ice_Swing_04.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": -3.8631371386483475,
+        "MaxPitch": 3.1564128700055254,
+        "MinVolume": -0.9151498112135024
+      },
+      "Volume": -1.44
+    }
+  ],
+  "Volume": 2.08,
+  "Parent": "SFX_Attn_Moderate",
+  "Pitch": -2.592
+}

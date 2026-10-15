@@ -1,0 +1,109 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 0.5,
+  "Next": [
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 4
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -3
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 4
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -3
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 4
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -3
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 4
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -3
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 4
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -6
+        }
+      },
+      "EntityStatsOnHit": [
+        {
+          "EntityStatId": "SignatureEnergy",
+          "Amount": 1
+        }
+      ],
+      "Next": {
+        "Type": "Explode",
+        "Config": {
+          "DamageEntities": true,
+          "EntityDamageRadius": 3,
+          "EntityDamage": 8,
+          "EntityDamageFalloff": 0,
+          "Knockback": {
+            "Type": "Point",
+            "Force": 7
+          }
+        },
+        "Effects": {
+          "Particles": [
+            {
+              "SystemId": "Explosion_Medium",
+              "TargetEntityPart": "Entity",
+              "Scale": 3
+            },
+            {
+              "SystemId": "Lightning",
+              "TargetEntityPart": "Entity",
+              "Scale": 2
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

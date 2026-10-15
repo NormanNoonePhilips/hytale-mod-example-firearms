@@ -1,0 +1,9 @@
+{
+  "Parent": "Projectile_Config_Ember_Candela_Strength_X",
+  "SpawnRotationOffset": {
+    "Yaw": -3
+  },
+  "SpawnOffset": {
+    "X": 0.2
+  }
+}

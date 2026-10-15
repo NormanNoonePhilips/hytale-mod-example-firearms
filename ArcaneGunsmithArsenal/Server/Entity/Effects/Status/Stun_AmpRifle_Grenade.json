@@ -1,0 +1,23 @@
+{
+  "Duration": 4,
+  "ApplicationEffects": {
+    "EntityBottomTint": "#ffa93f",
+    "ScreenEffect": "ScreenEffects/Snow.png",
+    "Particles": [
+      {
+        "SystemId": "Stunned",
+        "TargetEntityPart": "Entity",
+        "TargetNodeName": "Head"
+      }
+    ],
+    "EntityTopTint": "#da72ff",
+    "HorizontalSpeedMultiplier": 0.75
+  },
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Environmental": 4
+    }
+  },
+  "DamageCalculatorCooldown": 2,
+  "Debuff": true
+}

@@ -1,0 +1,26 @@
+{
+  "Base": [
+    "UI/Reticles/Reticle_Gun.png"
+  ],
+  "ServerEvents": {
+    "OnHit": {
+      "Parts": [
+        "UI/Reticles/DamageHitMarker1.png"
+      ],
+      "Duration": 0.1
+    },
+    "OnKill": {
+      "HideBase": false,
+      "Parts": [
+        "UI/Reticles/ServerEvents/OnKill/Default.png"
+      ]
+    }
+  },
+  "ClientEvents": {
+    "OnHit": {
+      "Parts": [
+        "UI/Reticles/ServerEvents/OnHit/Default.png"
+      ]
+    }
+  }
+}

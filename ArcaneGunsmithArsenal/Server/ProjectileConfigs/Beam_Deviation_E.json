@@ -1,0 +1,7 @@
+{
+  "Parent": "Projectile_Config_Beam_PsycoSkull",
+  "SpawnRotationOffset": {
+    "Yaw": -2,
+    "Pitch": -2
+  }
+}

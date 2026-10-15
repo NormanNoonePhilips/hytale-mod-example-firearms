@@ -1,0 +1,7 @@
+{
+  "Parent": "Weapon_ShockBracer_Secondary_Shooting_TBall",
+  "Config": "Projectile_Config_TBall_ShockBracer",
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  }
+}

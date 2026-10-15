@@ -1,0 +1,29 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "SystemId": "Bow_Signature_Charge",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1.25,
+          "Y": 0.125
+        },
+        "RotationOffset": {
+          "Pitch": 90
+        },
+        "Scale": 0.5
+      }
+    ]
+  },
+  "HorizontalSpeedMultiplier": 0.5,
+  "Next": {
+    "1": "CMC_MuskeBoom_Sig_Strength"
+  }
+}

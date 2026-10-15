@@ -1,0 +1,65 @@
+{
+  "Type": "Charging",
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "PositionOffset": {
+          "X": 0.075,
+          "Y": -0.4,
+          "Z": 0.075
+        },
+        "RotationOffset": {
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 90
+        },
+        "Scale": 0.5,
+        "TargetNodeName": "Handle",
+        "SystemId": "Bow_Charging"
+      }
+    ]
+  },
+  "Next": {
+    "0": {
+      "Type": "Simple",
+      "Effects": {
+        "Particles": [
+          {
+            "SystemId": "Explosion_Fail",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.4
+            },
+            "Scale": 1.5
+          }
+        ],
+        "WorldSoundEventId": "SFX_Arrow_Fire_Miss",
+        "LocalSoundEventId": "SFX_Arrow_Fire_Miss"
+      }
+    },
+    "0.3": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 2
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      },
+      "Next": "Weapon_Candela_Primary_Ember_Strength_X"
+    }
+  },
+  "HorizontalSpeedMultiplier": 0.75,
+  "DisplayProgress": true
+}

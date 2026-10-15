@@ -1,0 +1,44 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": true,
+    "DamageBlocks": false,
+    "EntityDamage": 5,
+    "EntityDamageRadius": 3,
+    "Knockback": {
+      "Type": "Point",
+      "VelocityConfig": {
+        "AirResistance": 0.97,
+        "AirResistanceMax": 0.96,
+        "Direction": {
+          "X": 0.0,
+          "Y": 5.0,
+          "Z": 0.0
+        },
+        "GroundResistance": 0.94,
+        "GroundResistanceMax": 0.3,
+        "Threshold": 3.0
+      },
+      "Force": 17,
+      "VelocityType": "Add"
+    },
+    "EntityDamageFalloff": 0.25
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Sword_Signature_AoE2",
+        "TargetEntityPart": "Entity",
+        "Scale": 1
+      },
+      {
+        "SystemId": "Lightning",
+        "TargetEntityPart": "Entity"
+      }
+    ],
+    "WaitForAnimationToFinish": false,
+    "WorldSoundEventId": "SFX_Weapon_Charge_Swing",
+    "LocalSoundEventId": "SFX_Weapon_Charge_Swing"
+  },
+  "RunTime": 0.35
+}

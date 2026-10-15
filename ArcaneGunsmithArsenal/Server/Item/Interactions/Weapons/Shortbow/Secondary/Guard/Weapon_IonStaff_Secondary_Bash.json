@@ -1,0 +1,8 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 1,
+  "Next": [
+    "Weapon_IonStaff_Primary_Guard_Bash_Selector",
+    "Bash_Selector_V2"
+  ]
+}

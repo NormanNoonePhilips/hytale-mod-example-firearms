@@ -1,0 +1,306 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Fishzooka.name",
+    "Description": "AGA_Server.items.ArcaneGun_Fishzooka.description"
+  },
+  "PlayerAnimationsId": "Crossbow_Heavy",
+  "Model": "Items/Weapons/Fishzooka.blockymodel",
+  "Texture": "Items/Weapons/FishzookaTexture.png",
+  "Icon": "Icons/ItemsGenerated/CBC_Fishzooka.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Epic",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      331,
+      52,
+      341
+    ],
+    "Translation": [
+      16,
+      -11
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 6,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 8,
+          "CalculationType": "Additive",
+          "Target": "Max"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 220,
+  "DurabilityLossOnHit": 0.25,
+  "Interactions": {
+    "Primary": "Root_CBC_Primary_Water",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Shortbow_Signature_Volley"
+  },
+  "InteractionVars": {
+    "CMC_Charge": {
+      "Interactions": [
+        "CBC_Fishzooka_Charge"
+      ]
+    },
+    "CMC_Proj_A": {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Fishzooka"
+        }
+      ]
+    },
+    "CMC_Proj_B": {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Fishzooka_A"
+        }
+      ]
+    },
+    "CMC_Proj_C": {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Fishzooka_B"
+        }
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_H2_Bash"
+      ]
+    },
+    "CMC_Impact_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "CMC_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 4,
+            "EntityDamage": 12,
+            "EntityDamageFalloff": 0.5,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 10,
+              "VelocityType": "Add"
+            },
+            "DamageBlocks": true
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Water_Splash",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Water_Can_Splash",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Block_Break_Ice",
+                "TargetEntityPart": "Entity",
+                "Color": "#92b5d4",
+                "Scale": 2.5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "CMC_Signature_Shot": {
+      "Interactions": [
+        "CBC_Fishzooka_Sig_Launch"
+      ]
+    },
+    "CMC_Sig_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 5,
+            "EntityDamage": 20,
+            "EntityDamageFalloff": 0.5,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 12,
+              "VelocityType": "Add"
+            },
+            "BlockDamageRadius": 0,
+            "BlockDamageFalloff": 5
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Water_Splash",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Water_Can_Splash",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Block_Break_Ice",
+                "TargetEntityPart": "Entity",
+                "Color": "#92b5d4",
+                "Scale": 4
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Z": 0.4
+      },
+      "Color": "#2620ed",
+      "Scale": 0.25,
+      "RotationOffset": {
+        "Pitch": 90
+      }
+    }
+  ],
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 12,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "*Deco_Tankard_State_Filled_Water",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Deco_Coral_Shell",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Wood_Tropicalwood",
+        "Quantity": 10
+      },
+      {
+        "Quantity": 10,
+        "ItemId": "Ingredient_Bar_Adamantite"
+      }
+    ]
+  },
+  "ItemLevel": 45
+}

@@ -1,0 +1,12 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "LocalSoundEventId": "SFX_GunPvP_Handgun_Bullet_Death",
+    "WorldSoundEventId": "SFX_GunPvP_Handgun_Bullet_Death",
+    "Particles": [
+      {
+        "SystemId": "Gun_Impact"
+      }
+    ]
+  }
+}

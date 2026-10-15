@@ -1,0 +1,132 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "PositionOffset": {
+          "X": 0.075,
+          "Y": -0.4,
+          "Z": 0.075
+        },
+        "RotationOffset": {
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 90
+        },
+        "Scale": 0.5,
+        "TargetNodeName": "Handle",
+        "SystemId": "Bow_Charging"
+      }
+    ]
+  },
+  "HorizontalSpeedMultiplier": 0.67,
+  "Next": {
+    "0.4": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Void",
+        "Quantity": 1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_1",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_VoidSpitter_Primary_Shoot_Strength_A"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    },
+    "0.8": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Void",
+        "Quantity": 2
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_2",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_VoidSpitter_Primary_Shoot_Strength_B"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    },
+    "1.2": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Void",
+        "Quantity": 3
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_3",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_VoidSpitter_Primary_Shoot_Strength_C"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    },
+    "1.6": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Void",
+        "Quantity": 4
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_4",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_VoidSpitter_Primary_Shoot_Strength_D"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    }
+  }
+}

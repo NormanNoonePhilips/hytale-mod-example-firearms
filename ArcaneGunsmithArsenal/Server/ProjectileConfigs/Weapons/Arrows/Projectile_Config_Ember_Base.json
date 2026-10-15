@@ -1,0 +1,17 @@
+{
+  "Model": "Fireball",
+  "SpawnRotationOffset": {
+    "Yaw": 0,
+    "Roll": 0
+  },
+  "Physics": {
+    "Type": "Standard",
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "Gravity": 5
+  },
+  "LaunchForce": 30
+}

@@ -1,0 +1,411 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Weapon_HandmadeSMG.name",
+    "Description": "server.items.Weapon_HandmadeSMG.description"
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "PlayerAnimationsId": {
+    "Parent": "Rifle",
+    "Animations": {
+      "Gun_Fire": {
+        "FirstPerson": "Characters/Animations/Items/Dual_Handed/Guns/Shoot/HandmadeSMG_Shoot_FPS.blockyanim",
+        "Speed": 2,
+        "BlendingDuration": 0.01,
+        "ThirdPerson": "Characters/Animations/Items/Dual_Handed/Guns/Shoot/HandmadeSMG_Shoot.blockyanim",
+        "ThirdPersonMoving": "Characters/Animations/Items/Dual_Handed/Guns/Shoot/HandmadeSMG_Shoot_Moving.blockyanim"
+      },
+      "Reload": {
+        "ThirdPerson": "Characters/Animations/Items/Main_Handed/Crossbow/Reload/Reload.blockyanim",
+        "Speed": 1,
+        "BlendingDuration": 0.0,
+        "ThirdPersonFace": "Characters/Animations/Expressions/Frown.blockyanim",
+        "Looping": true,
+        "FirstPerson": "Characters/Animations/Default/Fall_FPS.blockyanim"
+      }
+    }
+  },
+  "Interactions": {
+    "Primary": {
+      "Cooldown": {
+        "Id": "Shoot",
+        "Cooldown": 0.125
+      },
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Rules": {},
+          "Costs": {
+            "Ammo": 1
+          },
+          "Failed": {
+            "Parent": "Gun_Empty_Noise"
+          },
+          "LessThan": false,
+          "Next": {
+            "Type": "ChangeStat",
+            "StatModifiers": {
+              "Ammo": -1
+            },
+            "Next": {
+              "Type": "Replace",
+              "Var": "Shot_Fired"
+            },
+            "HorizontalSpeedMultiplier": 0,
+            "RunTime": 0
+          },
+          "HorizontalSpeedMultiplier": 1,
+          "Effects": {
+            "ItemAnimationId": ""
+          }
+        }
+      ],
+      "Tags": {
+        "Attack": [
+          "Range"
+        ]
+      }
+    },
+    "Secondary": "Gun_Attack",
+    "Ability3": "Root_Common_AmmoLight_Reload_Entry",
+    "SwapFrom": {
+      "Cooldown": {
+        "Cooldown": 0.25
+      },
+      "Interactions": [
+        "Gun_Ammo_Light_SwapFrom_BatchRefund"
+      ]
+    },
+    "SwapTo": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Reload_Batch"
+        }
+      ]
+    }
+  },
+  "InteractionVars": {
+    "Gun_Swing_Left_Effect": {
+      "Interactions": [
+        {
+          "Parent": "Gun_Swing_Left_Effect",
+          "Effects": {
+            "Trails": [
+              {
+                "TrailId": "Small_Default",
+                "TargetNodeName": "Handle",
+                "TargetEntityPart": "PrimaryItem",
+                "PositionOffset": {
+                  "X": 0.4,
+                  "Y": -0.05,
+                  "Z": 0
+                },
+                "RotationOffset": {
+                  "Yaw": 0,
+                  "Pitch": 0,
+                  "Roll": -45
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Gun_Swing_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Gun_Swing_Left_Damage",
+          "DamageCalculator": {
+            "Type": "Dps",
+            "BaseDamage": {
+              "Physical": 5
+            },
+            "RandomPercentageModifier": 0.1
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Unarmed_Impact"
+          }
+        }
+      ]
+    },
+    "Shot_Fired": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Gun_Shot_Effects"
+        },
+        {
+          "Type": "Simple",
+          "Next": {
+            "Type": "LaunchProjectile",
+            "RunTime": 0,
+            "ProjectileId": "Gun_Bullet_Light02",
+            "HorizontalSpeedMultiplier": 1,
+            "Effects": {
+              "ClearAnimationOnFinish": false,
+              "ClearSoundEventOnFinish": false,
+              "ItemAnimationId": ""
+            }
+          },
+          "Effects": {
+            "ItemAnimationId": "Gun_Fire",
+            "ClearAnimationOnFinish": false,
+            "ClearSoundEventOnFinish": false
+          },
+          "RunTime": 0,
+          "HorizontalSpeedMultiplier": 0
+        },
+        {
+          "Type": "Replace",
+          "Var": "Camera_FX"
+        }
+      ]
+    },
+    "Gun_Shot_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Ammo_Small_Normal",
+                "PositionOffset": {
+                  "Z": 0.7,
+                  "Y": 0.25
+                },
+                "RotationOffset": {
+                  "Pitch": 90
+                },
+                "Scale": 0.8
+              }
+            ],
+            "LocalSoundEventId": "SFX_SMG_Fire",
+            "ClearSoundEventOnFinish": false,
+            "ClearAnimationOnFinish": false,
+            "WorldSoundEventId": "SFX_SMG_Fire"
+          },
+          "RunTime": 0
+        }
+      ]
+    },
+    "Reload_Entry": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "ClearAnimationOnFinish": true,
+            "ItemAnimationId": "Reload",
+            "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start_Local",
+            "WorldSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start",
+            "ClearSoundEventOnFinish": true
+          },
+          "RunTime": 1.1,
+          "HorizontalSpeedMultiplier": 0.8,
+          "Next": {
+            "Type": "Serial",
+            "Interactions": [
+              {
+                "Parent": "Gun_Ammo_Light_BatchRefund"
+              },
+              {
+                "Type": "Replace",
+                "Var": "Reload_Batch"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Reload_Batch": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "Repeat",
+              "ForkInteractions": {
+                "Interactions": [
+                  {
+                    "Type": "StatsCondition",
+                    "Costs": {
+                      "Ammo": 100
+                    },
+                    "LessThan": true,
+                    "ValueType": "Percent",
+                    "Next": {
+                      "Type": "ModifyInventory",
+                      "ItemToRemove": {
+                        "Id": "Gun_Ammo_Light",
+                        "Quantity": 15
+                      },
+                      "Next": {
+                        "Type": "ChangeStat",
+                        "Entity": "User",
+                        "StatModifiers": {
+                          "Ammo": 15
+                        }
+                      },
+                      "Failed": {
+                        "Type": "ModifyInventory",
+                        "ItemToRemove": {
+                          "Id": "Gun_Ammo_Light",
+                          "Quantity": 10
+                        },
+                        "Next": {
+                          "Type": "ChangeStat",
+                          "Entity": "User",
+                          "StatModifiers": {
+                            "Ammo": 10
+                          }
+                        },
+                        "Failed": {
+                          "Type": "ModifyInventory",
+                          "ItemToRemove": {
+                            "Id": "Gun_Ammo_Light",
+                            "Quantity": 5
+                          },
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "Entity": "User",
+                            "StatModifiers": {
+                              "Ammo": 5
+                            }
+                          },
+                          "Failed": {
+                            "Type": "ModifyInventory",
+                            "ItemToRemove": {
+                              "Id": "Gun_Ammo_Light",
+                              "Quantity": 1
+                            },
+                            "Next": {
+                              "Type": "ChangeStat",
+                              "Entity": "User",
+                              "StatModifiers": {
+                                "Ammo": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Repeat": -1
+            },
+            {
+              "Type": "Simple",
+              "Effects": {
+                "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start_Local"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "No_Ammo_Effects": {
+      "Interactions": [
+        {
+          "Parent": "Gun_Empty_Noise2"
+        }
+      ]
+    },
+    "Camera_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "CameraEffect": "Handgun_Shoot",
+            "ItemAnimationId": "Gun_Slide"
+          },
+          "RunTime": 0.01
+        }
+      ]
+    }
+  },
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      347,
+      53,
+      0
+    ],
+    "Translation": [
+      -3,
+      -14
+    ]
+  },
+  "Texture": "Items/Weapons/Gun/HandmadeSMG_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_SMG_Handmade.png",
+  "Quality": "Uncommon",
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ]
+  },
+  "Weapon": {
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 15,
+          "CalculationType": "Additive"
+        }
+      ]
+    },
+    "RenderDualWielded": false,
+    "EntityStatsToClear": [
+      "Ammo"
+    ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fabric_Scrap_Linen",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Leather_Medium",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 25
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 1
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Categories": [
+          "Weapons.Bow"
+        ],
+        "Id": "Armory"
+      }
+    ]
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "InteractionConfig": {
+    "DisplayOutlines": false
+  },
+  "Utility": {
+    "Compatible": false
+  },
+  "ItemLevel": 5,
+  "MaxDurability": 80,
+  "DurabilityLossOnHit": 0.28,
+  "UsePlayerAnimations": false,
+  "Model": "Items/Weapons/Gun/HandmadeSMG.blockymodel",
+  "Scale": 0.8,
+  "Reticle": "DefaultGun"
+}

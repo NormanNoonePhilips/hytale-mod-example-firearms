@@ -1,0 +1,11 @@
+{
+  "RequireNewClick": true,
+  "Interactions": [
+    "Weapon_ShockBracer_Signature_PBall_Activate"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 10,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.056,
+    "SticksVertically": false,
+    "BounceLimit": 0,
+    "BounceCount": 1
+  },
+  "LaunchLocalSoundEventId": "SFX_Crystal_Hit",
+  "LaunchWorldSoundEventId": "SFX_Crystal_Hit",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_IonStaff_Secondary_Shoot_Damage_Strength_A",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Mace_Signature_Ground_Hit",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.1
+              }
+            ],
+            "WaitForAnimationToFinish": false
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 2
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "IonStaff_Laser_A",
+  "LaunchForce": 70,
+  "SpawnOffset": {
+    "Y": -0.3,
+    "X": 0.2
+  }
+}

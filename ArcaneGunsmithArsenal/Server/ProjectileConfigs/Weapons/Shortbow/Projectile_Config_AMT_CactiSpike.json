@@ -1,0 +1,57 @@
+{
+  "Model": "Cactee_Spike",
+  "LaunchForce": 30,
+  "Physics": {
+    "Type": "Standard",
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "Gravity": 3
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Damage_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Shortbow_Primary_Shoot_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "AMT_Hit_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.5
+  },
+  "LaunchLocalSoundEventId": "SFX_Cactus_Break"
+}

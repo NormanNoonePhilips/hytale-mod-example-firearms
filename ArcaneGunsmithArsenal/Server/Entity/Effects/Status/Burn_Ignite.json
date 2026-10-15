@@ -1,0 +1,44 @@
+{
+  "ApplicationEffects": {
+    "EntityBottomTint": "#100600",
+    "EntityTopTint": "#cf2302",
+    "ScreenEffect": "ScreenEffects/Fire.png",
+    "WorldSoundEventId": "SFX_Effect_Burn_World",
+    "LocalSoundEventId": "SFX_Effect_Burn_Local",
+    "Particles": [
+      {
+        "SystemId": "Ignite_StatusFX",
+        "PositionOffset": {
+          "Y": 0.5
+        },
+        "Scale": 1.3
+      },
+      {
+        "SystemId": "Ignite_StatusFX",
+        "PositionOffset": {
+          "Y": 1.25
+        }
+      }
+    ],
+    "ModelVFXId": "Bow_Signature_Status"
+  },
+  "DamageCalculatorCooldown": 1,
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Fire": 2
+    }
+  },
+  "DamageEffects": {
+    "WorldSoundEventId": "SFX_Effect_Burn_World",
+    "PlayerSoundEventId": "SFX_Effect_Burn_Local"
+  },
+  "OverlapBehavior": "Overwrite",
+  "Infinite": false,
+  "Debuff": true,
+  "StatusEffectIcon": "UI/StatusEffects/Burn.png",
+  "Duration": 2,
+  "RemovalBehavior": "Duration",
+  "Tags": {
+    "Burn": []
+  }
+}

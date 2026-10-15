@@ -1,0 +1,31 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "SystemId": "IceBoulderTrail",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 0.7,
+          "Y": 0.2
+        },
+        "Scale": 0.3,
+        "RotationOffset": {
+          "Pitch": -90
+        }
+      }
+    ]
+  },
+  "HorizontalSpeedMultiplier": 0.667,
+  "Next": {
+    "0.75": "Weapon_HailCannon_Signature_SRocket_Strength_A",
+    "1.2": "Weapon_HailCannon_Signature_SMortar_Strength_B"
+  }
+}

@@ -1,0 +1,703 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Template_Weapon_Crossbow.name"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/Crossbow/Iron.blockymodel",
+  "Texture": "Items/Weapons/Crossbow/Iron_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Crossbow_Iron.png",
+  "Reticle": "DefaultMelee",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Utility": {
+    "Compatible": true
+  },
+  "IconProperties": {
+    "Scale": 0.5,
+    "Translation": [
+      -4.11,
+      -15.51
+    ],
+    "Rotation": [
+      330,
+      90,
+      45
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 10,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 15,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 135,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "SMT_Primary_Projectile": {
+      "Interactions": [
+        {
+          "Type": "Chaining",
+          "ChainingAllowance": 0.35,
+          "Next": [
+            {
+              "Type": "Projectile",
+              "RunTime": 0.1,
+              "Effects": {
+                "ItemAnimationId": "ShootCharged",
+                "ClearAnimationOnFinish": true
+              },
+              "Config": "Projectile_Config_BackupPistol_Flame",
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Ammo": -1
+                },
+                "Next": {
+                  "Type": "ChangeStat",
+                  "Behaviour": "Set",
+                  "StatModifiers": {
+                    "StaminaRegenDelay": 0
+                  },
+                  "RunTime": 0.175
+                }
+              }
+            },
+            {
+              "Type": "Parallel",
+              "Interactions": [
+                {
+                  "Interactions": [
+                    {
+                      "Type": "Projectile",
+                      "RunTime": 0.1,
+                      "Effects": {
+                        "ItemAnimationId": "ShootCharged",
+                        "ClearAnimationOnFinish": true
+                      },
+                      "Config": "Projectile_Config_BackupPistol_Flame",
+                      "Next": {
+                        "Type": "ChangeStat",
+                        "StatModifiers": {
+                          "Ammo": -1
+                        },
+                        "Next": {
+                          "Type": "ChangeStat",
+                          "Behaviour": "Set",
+                          "StatModifiers": {
+                            "StaminaRegenDelay": 0
+                          },
+                          "RunTime": 0.175
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Interactions": [
+                    {
+                      "Type": "ChainFlag",
+                      "ChainId": "AMT_Primary_Overheating",
+                      "Flag": "AMT_Primary_Overheat"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Flags": {
+            "AMT_Primary_Overheat": {
+              "Type": "Parallel",
+              "Interactions": [
+                {
+                  "Interactions": [
+                    {
+                      "Type": "Chaining",
+                      "ChainingAllowance": 0.35,
+                      "Next": [
+                        {
+                          "Type": "Projectile",
+                          "RunTime": 0.1,
+                          "Effects": {
+                            "ItemAnimationId": "ShootCharged",
+                            "ClearAnimationOnFinish": true
+                          },
+                          "Config": "Projectile_Config_BackupPistol_Flame_A",
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "StatModifiers": {
+                              "Ammo": -1
+                            },
+                            "Next": {
+                              "Type": "ChangeStat",
+                              "Behaviour": "Set",
+                              "StatModifiers": {
+                                "StaminaRegenDelay": 0
+                              },
+                              "RunTime": 0.175
+                            }
+                          }
+                        },
+                        {
+                          "Type": "Projectile",
+                          "RunTime": 0.1,
+                          "Effects": {
+                            "ItemAnimationId": "ShootCharged",
+                            "ClearAnimationOnFinish": true
+                          },
+                          "Config": "Projectile_Config_BackupPistol_Flame_B",
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "StatModifiers": {
+                              "Ammo": -1
+                            },
+                            "Next": {
+                              "Type": "ChangeStat",
+                              "Behaviour": "Set",
+                              "StatModifiers": {
+                                "StaminaRegenDelay": 0
+                              },
+                              "RunTime": 0.175
+                            }
+                          }
+                        },
+                        {
+                          "Type": "Projectile",
+                          "RunTime": 0.1,
+                          "Effects": {
+                            "ItemAnimationId": "ShootCharged",
+                            "ClearAnimationOnFinish": true
+                          },
+                          "Config": "Projectile_Config_BackupPistol_Flame_C",
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "StatModifiers": {
+                              "Ammo": -1
+                            },
+                            "Next": {
+                              "Type": "ChangeStat",
+                              "Behaviour": "Set",
+                              "StatModifiers": {
+                                "StaminaRegenDelay": 0
+                              },
+                              "RunTime": 0.175
+                            }
+                          }
+                        },
+                        {
+                          "Type": "Projectile",
+                          "RunTime": 0.1,
+                          "Effects": {
+                            "ItemAnimationId": "ShootCharged",
+                            "ClearAnimationOnFinish": true
+                          },
+                          "Config": "Projectile_Config_BackupPistol_Flame_D",
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "StatModifiers": {
+                              "Ammo": -1
+                            },
+                            "Next": {
+                              "Type": "ChangeStat",
+                              "Behaviour": "Set",
+                              "StatModifiers": {
+                                "StaminaRegenDelay": 0
+                              },
+                              "RunTime": 0.175
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Interactions": [
+                    {
+                      "Type": "ChainFlag",
+                      "ChainId": "AMT_Primary_Overheating",
+                      "Flag": "AMT_Primary_Overheat"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "ChainId": "AMT_Primary_Overheating"
+        }
+      ]
+    },
+    "SMT_Signature_Projectile": {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.2,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_BackupPistol_Flame_Signature",
+          "Next": {
+            "Type": "ChangeStat",
+            "StatModifiers": {
+              "SignatureCharges": -100
+            },
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            },
+            "ValueType": "Percent"
+          }
+        }
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.8,
+          "Effects": {
+            "ItemAnimationId": "ReloadReady",
+            "WorldSoundEventId": "SFX_Door_Crude_Open",
+            "LocalSoundEventId": "SFX_Door_Crude_Open",
+            "ClearAnimationOnFinish": true
+          },
+          "Next": {
+            "Type": "Repeat",
+            "Repeat": -1,
+            "Rules": {
+              "InterruptedBy": [
+                "Primary",
+                "Secondary"
+              ]
+            },
+            "ForkInteractions": {
+              "Interactions": [
+                {
+                  "Type": "StatsCondition",
+                  "LessThan": true,
+                  "Costs": {
+                    "Ammo": 6
+                  },
+                  "ValueType": "Absolute",
+                  "Next": {
+                    "Type": "ModifyInventory",
+                    "RequiredGameMode": "Adventure",
+                    "ItemToRemove": {
+                      "Id": "Weapon_MagicCell_Flame",
+                      "Quantity": 5
+                    },
+                    "Next": {
+                      "Type": "Simple",
+                      "RunTime": 0.75,
+                      "HorizontalSpeedMultiplier": 0.75,
+                      "Effects": {
+                        "ItemAnimationId": "ReloadCharged3",
+                        "WorldSoundEventId": "SFX_Hand_Crossbow_T2_Load",
+                        "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Load_Local",
+                        "ClearAnimationOnFinish": true
+                      },
+                      "Next": {
+                        "Type": "ApplyEffect",
+                        "HorizontalSpeedMultiplier": 0.75,
+                        "EffectId": {
+                          "StatModifiers": {
+                            "Ammo": 5
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Failed": {
+                    "Type": "StatsCondition",
+                    "LessThan": true,
+                    "Costs": {
+                      "Ammo": 100
+                    },
+                    "ValueType": "Percent",
+                    "Next": {
+                      "Type": "ModifyInventory",
+                      "RequiredGameMode": "Adventure",
+                      "ItemToRemove": {
+                        "Id": "Weapon_MagicCell_Flame",
+                        "Quantity": 1
+                      },
+                      "Next": {
+                        "Type": "Simple",
+                        "RunTime": 0.3,
+                        "HorizontalSpeedMultiplier": 0.75,
+                        "Effects": {
+                          "ItemAnimationId": "Reload",
+                          "WorldSoundEventId": "SFX_Hand_Crossbow_T2_Load",
+                          "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Load_Local",
+                          "ClearAnimationOnFinish": true,
+                          "ItemPlayerAnimationsId": "Crossbow"
+                        },
+                        "Next": {
+                          "Type": "ApplyEffect",
+                          "HorizontalSpeedMultiplier": 0.75,
+                          "EffectId": {
+                            "StatModifiers": {
+                              "Ammo": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "Failed": {
+              "Type": "Replace",
+              "Var": "No_Ammo_Effects",
+              "DefaultValue": {
+                "Interactions": [
+                  "Common_Bow_No_Ammo"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        {
+          "Type": "DurabilityCondition",
+          "Threshold": 0,
+          "Operator": "GreaterThan",
+          "Next": {
+            "Type": "ModifyInventory",
+            "RequiredGameMode": "Adventure",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Flame",
+              "Quantity": 3
+            },
+            "Next": {
+              "Type": "Projectile",
+              "RunTime": 0.2,
+              "Effects": {
+                "ItemAnimationId": "ShootCharged",
+                "ClearAnimationOnFinish": true
+              },
+              "Config": "Projectile_Config_BackupPistol_Flame_Special",
+              "Next": {
+                "Type": "ChangeStat",
+                "Behaviour": "Set",
+                "StatModifiers": {
+                  "StaminaRegenDelay": 0
+                },
+                "RunTime": 0.2,
+                "Next": {
+                  "Type": "TriggerCooldown",
+                  "Cooldown": {
+                    "Id": "BashCooldown",
+                    "Cooldown": 4
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "BP_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 8
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Exp"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 1.0,
+                "Z": -2.0
+              },
+              "Force": 4,
+              "VelocityType": "Add"
+            },
+            "ModelParticles": [
+              {
+                "SystemId": "RifleShooting_Impact",
+                "TargetEntityPart": "Entity",
+                "PositionOffset": {
+                  "Y": 1
+                }
+              }
+            ]
+          },
+          "TargetedDamage": {
+            "Head": {
+              "Type": "DamageEntity",
+              "DamageCalculator": {
+                "BaseDamage": {
+                  "Projectile": 12
+                }
+              },
+              "DamageEffects": {
+                "Knockback": {
+                  "Type": "Force",
+                  "VelocityConfig": {
+                    "AirResistance": 0.97,
+                    "AirResistanceMax": 0.96,
+                    "GroundResistance": 0.94,
+                    "GroundResistanceMax": 0.3,
+                    "Threshold": 3.0,
+                    "Style": "Exp"
+                  },
+                  "Direction": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": -2.0
+                  },
+                  "Force": 5,
+                  "VelocityType": "Add"
+                },
+                "ModelParticles": [
+                  {
+                    "SystemId": "Impact_Critical",
+                    "TargetEntityPart": "Self",
+                    "PositionOffset": {
+                      "Y": 2
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "BP_Impact_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 1,
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "RifleShooting_Impact",
+                "TargetEntityPart": "Self",
+                "Scale": 0.6
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "BP_Sig_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 20
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Exp"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 1.0,
+                "Z": -2.0
+              },
+              "Force": 4,
+              "VelocityType": "Add"
+            },
+            "ModelParticles": [
+              {
+                "SystemId": "RifleShooting_Impact",
+                "TargetEntityPart": "Entity",
+                "PositionOffset": {
+                  "Y": 1
+                }
+              }
+            ]
+          },
+          "TargetedDamage": {
+            "Head": {
+              "Type": "DamageEntity",
+              "DamageCalculator": {
+                "BaseDamage": {
+                  "Projectile": 40
+                }
+              },
+              "DamageEffects": {
+                "Knockback": {
+                  "Type": "Force",
+                  "VelocityConfig": {
+                    "AirResistance": 0.97,
+                    "AirResistanceMax": 0.96,
+                    "GroundResistance": 0.94,
+                    "GroundResistanceMax": 0.3,
+                    "Threshold": 3.0,
+                    "Style": "Exp"
+                  },
+                  "Direction": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": -2.0
+                  },
+                  "Force": 5,
+                  "VelocityType": "Add"
+                },
+                "ModelParticles": [
+                  {
+                    "SystemId": "Impact_Critical",
+                    "TargetEntityPart": "Self",
+                    "PositionOffset": {
+                      "Y": 2
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "BP_Sig_Impact_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 1,
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "RifleShooting_Impact",
+                "TargetEntityPart": "Self",
+                "Scale": 0.6
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "DurabilityLossOnDeath": true,
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Parent": "Template_BackupPistol"
+}

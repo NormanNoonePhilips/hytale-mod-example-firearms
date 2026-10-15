@@ -1,0 +1,82 @@
+items.ArcaneGun_FlashBall.name = FlashBall
+items.ArcaneGun_FlashBall.description = <i>While some civilizations don't have the proper resources to weaponise boom powder, the more magical kin have engineered alternatives.</i> \n\nPrimary Fire: Projectiles ignites non-burning targets, causes an explosion against burning targets for bonus damage. \nSignature: Ignites targets at close range, then fires both barrels.
+
+items.ArcaneGun_Candela.name = Combat Candela
+items.ArcaneGun_Candela.description = Primary Fire: Shoots a stream of ember projectiles that slow down during sustained fire, eventually overheating. \nSecondary Fire: Shoot a horizontal spread of fire, with 2 charges. \nSignature: Fires 5 shot horizontal spread instead of 3. Use secondary fire to shoot once charged.
+
+items.ArcaneGun_IonStaff.name = Ionic Staff
+items.ArcaneGun_IonStaff.description = <i>The definition of ArcaneGonne has evolved substantially since scholars first invented the word. Anything that uses Magic Cells seems to be fair game</i> \n\nPrimary Charge: Shoot bursts of electric projectiles, the longer fire is held, the more projectiles are shot.
+
+items.ArcaneGun_ShockBracer.name = Enforcer's ShockBracer
+items.ArcaneGun_ShockBracer.description = Primary Fire: Shoot 4 projectiles in a fixed spread. Spread increases and damage decreases over sustained fire. \nSecondary Fire: Shoot slug-like pulse projectile, with two charges \nSignature: Fire large pulse that radiates damage while it travels.
+
+items.ArcaneGun_HailCannon.name = Hailcannon
+items.ArcaneGun_HailCannon.description = <i>Archives seem to imply old arctic civilizations stockpiled these in preparation against a maritime invasion. The scarcity of these implies the war didn't go well.</i> \n\nPrimary Charge: Charging changes the frost missile into a powerful, upwards firing mortar. \nSignature: Charging changes the super frost missile into a splitting, upwards firing mortar.
+
+items.ArcaneGun_Whaler.name = Whaler's Vengance
+items.ArcaneGun_Whaler.description = Primary Charge: Shoots harpoons that headshot and pull targets closer to the wielder. Charged shots also apply a frost debuff that increases damage taken from melee attacks. \nSecondary Charge: Lunge attack does even more damage to frost debuffed targets. \nSignature: Explosive harpoon pulls targets in before exploding and applying frost debuff.
+
+items.ArcaneGun_Peashooter.name = Pacifist's Peashooter
+items.ArcaneGun_Peashooter.description = <i>First rule in Gonnesmithing: Ease of use needs counterbalancing. The Kweebec didn't make this as a weapon, but demonstrates this principle well.</i> \n\nPrimary Charge: Uncharged shots have "recoil" and poor damage, even on headshot. Charged shots mitigates the first problem. \nSecondary Fire: Fires healing projectiles, with 3 charges. \nSignature: Projectile does respectable damage with primary fire, great healing on secondary fire.
+
+items.ArcaneGun_Bomberry.name = Bomberry Launcher
+items.ArcaneGun_Bomberry.description = <i>Development of this weapon was suspended after a forest fire caused by irresponsible use of the prototype.</i> \n\nFairly standard grenade launcher type weapon, although misses don't explode on impact, instead exploding a second after bouncing
+
+items.ArcaneGun_VoidSpitter.name = Voidspitter
+items.ArcaneGun_VoidSpitter.description = <i>Some people will try to domesticate anything...</i> \n\nPrimary Charge: Charging gives spit projectile more splash damage. At max charge, causes a DoT puddle, but only one puddle can exist at a time, save for the signature shot. \nSignature: Primary fire gains 4 charges of max charge shots, with near no charge time.
+
+items.ArcaneGun_PsycoSkull.name = Psycopomp's Skull
+items.ArcaneGun_PsycoSkull.description = Functions like a burst-fire submachine gun. 5 shot bursts with mild spread and limited range.
+
+items.ArcaneGun_Refroster.name = Refroster Wand
+items.ArcaneGun_Refroster.description = Primary Fire: Rapidly shoots ice pellets, but "overheats" over time. Repeated hits cause an explosion, slowing the target. \nSignature Fire: Shoots 5 small freezing bombs in rapid succession.
+
+items.ArcaneGun_SlashSaw.name = Sacrificial Slashsaw
+items.ArcaneGun_SlashSaw.description = Primary Fire: Shoots short range sparks that looses accuracy and range over time. Explodes upon overheating, damaging the user and launching knives all ovet the place. \nSignature Fire: Shoots 5 volleys of 3 knives, similar to the overheat produced knives.
+
+items.ArcaneGun_CactiSpike.name = Potted Cactispike
+items.ArcaneGun_CactiSpike.description = Primary Fire: Rapidly shoots thorns, but overheats over time. Repeated hits cause an explosion. \nSignature Fire: Shoots a spike turret that pulls targets in.
+
+items.ArcaneGun_Hwacha.name = Hwacha Launcha
+items.ArcaneGun_Hwacha.description = Primary Fire: Shoots explosive arrows. Missed arrows linger around and explode after a time or touched by a valid target. Explosions does minor damage to blocks. \nSignature Fire: Shoots a 3 arrow barrage that does heavy damage to most block types.
+
+items.ArcaneGun_Polyp.name = Polyp Popgun
+items.ArcaneGun_Polyp.description = Primary Fire: Shoots heavy projectiles, repeated hits poison targets target. \nSignature Fire: Shoots a slow, flying projectile that damages and poisons nearby enemies.
+
+items.ArcaneGun_Fishzooka.name = Fishzooka
+items.ArcaneGun_Fishzooka.description = Primary Fire: Charge to shoot fish projectiles. Longer charges cause puddles after impact that slow down targets. \nSignature Fire: Shot causes a puddle after impact that slows and damages nearby enemies.
+
+items.ArcaneGun_Hayley.name = Astral Ice
+items.ArcaneGun_Hayley.description = Primary Fire: Charge to shoot ice projectiles. Projectiles do bonus damage at a distance, charge time increases damage and distance needed. Max charge shots causes explosions after traveling a long distance. \nSignature Fire: Shot generates multiple, increasingly powerful explosions as it travels.
+
+items.ArcaneGun_Chainshot.name = Abysal Chain
+items.ArcaneGun_Chainshot.description = Primary Fire: Charge to shoot void projectiles. Longer charge times increase the amount of projectiles fired, spreading out in a horizontal line. \nSignature Fire: Shot fires a larger, stronger spread than the max charge primary fire.
+
+items.ArcaneGun_Muskeboom.name = Muskeboom
+items.ArcaneGun_Muskeboom.description = Primary Fire: Charge to shoot both a fire projectile and melee-range muzzle blast. Longer charge times increases damage, projectile speed, and melee range. \nSignature Fire: Fire shot becomes a shotgun, alongside a wide muzzle blast.
+
+items.ArcaneGun_Plasmacoil.name = Pocket Plasmacoil
+items.ArcaneGun_Plasmacoil.description = Primary Fire: Charge to shoot a 4 shot barrage. The range of each shot decreases during the barrage. \nSignature Fire: Fires a stronger barrage as well as a short range muzzle blast.
+
+items.ArcaneGun_Amprifle.name = Amprifle
+items.ArcaneGun_Amprifle.description = Primary Fire: Shoots a 5 shot barrage with light projectile spread. Causes an explosion on target if all shots land. \nSignature Fire: Fires a heavy grenade that stuns targets close enough to the center.
+
+items.ArcaneGun_Amprifle.name = Amprifle
+items.ArcaneGun_Amprifle.description = Primary Fire: Shoots a 5 shot barrage with light projectile spread. Causes an explosion on target if all shots land. \nSignature Fire: Fires a heavy grenade that stuns targets close enough to the center.
+
+items.ArcaneGun_Chromatic.name = Chroma-Blaster
+items.ArcaneGun_Chromatic.description = Primary Fire: Shoots a 3 shot projectile spread. Pellets do more damage as hits are landed. \nSignature Fire: Fires a quick beam of pellets. Pellets do more damage as hits are landed. 
+
+items.ArcaneGun_Concheror.name = Concheror
+items.ArcaneGun_Concheror.description = Primary Fire: Shoots a random fish, causing an explosion and leaving behind a flopping projectile that damages nearby targets. \nSignature Fire: Fires a shark projectile with far more damage, attack range, projectile speed, and flopping duration.
+
+items.ArcaneGun_Thornblaster.name = Thornbow
+items.ArcaneGun_Thornblaster.description = Primary Fire: Shoots a high velocity spike. Does bonus damage on headshot. \nSignature Fire: Fires a high velocity spike that headshota and penetrates valid targets.
+
+items.MagicCell_Flame.name = Flame Magic Cell
+items.MagicCell_Plasma.name = Plasma Magic Cell
+items.MagicCell_Frost.name = Frost Magic Cell
+items.MagicCell_Eco.name = Eco Magic Cell
+items.MagicCell_Void.name = Void Magic Cell
+items.MagicCell_Water.name = Water Magic Cell
+items.MagicCell.description = <i>A bottle of liquified essence, contained by a magic-charged crystal</i> \n\n Note: Not all Arcane Guns consume 1 munitions per shot.

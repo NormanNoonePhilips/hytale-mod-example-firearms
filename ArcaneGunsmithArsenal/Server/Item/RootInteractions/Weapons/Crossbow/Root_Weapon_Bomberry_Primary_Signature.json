@@ -1,0 +1,14 @@
+{
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Cooldown": 0.75
+  },
+  "Interactions": [
+    "Weapon_Crossbow_Primary_Signature"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

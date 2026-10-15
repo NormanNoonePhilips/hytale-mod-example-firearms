@@ -1,0 +1,7 @@
+{
+  "Parent": "Projectile_Config_Lightning_Shrapnel",
+  "SpawnRotationOffset": {
+    "Pitch": 3
+  },
+  "Model": "Lightning_Spark"
+}

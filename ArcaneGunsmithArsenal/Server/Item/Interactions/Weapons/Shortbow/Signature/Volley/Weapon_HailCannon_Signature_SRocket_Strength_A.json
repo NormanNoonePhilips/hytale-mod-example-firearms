@@ -1,0 +1,24 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_HailCannon_Signature_SRocket_Projectile",
+          "Config": "Projectile_Config_HailCannon_Signature_SRocket"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    }
+  ]
+}

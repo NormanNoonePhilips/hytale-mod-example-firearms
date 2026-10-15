@@ -1,0 +1,64 @@
+{
+  "Type": "Selector",
+  "$Comment": "Length of Combat",
+  "RunTime": 0.3,
+  "Effects": {
+    "ItemAnimationId": "SwingLeft",
+    "Particles": [
+      {
+        "RotationOffset": {
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": -90
+        },
+        "SystemId": "Sword_Charged_Trail_Blade",
+        "PositionOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1
+        },
+        "TargetEntityPart": "PrimaryItem"
+      }
+    ],
+    "WorldSoundEventId": "SFX_Light_Melee_T2_Lunge",
+    "LocalSoundEventId": "SFX_Sword_T2_Lunge_Local",
+    "CameraEffect": "Sword_Stab",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": false,
+    "StartDelay": 0.1
+  },
+  "Selector": {
+    "Id": "Stab",
+    "TestLineOfSight": true,
+    "ExtendTop": 0.5,
+    "ExtendLeft": 0.5,
+    "ExtendRight": 0.5,
+    "ExtendBottom": 0.5,
+    "StartDistance": 0.1,
+    "EndDistance": 2.25
+  },
+  "HitBlock": {
+    "Interactions": [
+      "Block_Break_Adventure"
+    ]
+  },
+  "Next": {
+    "Type": "Simple",
+    "$Comment": "Pad the interaction length",
+    "RunTime": 0.251
+  },
+  "HitEntity": {
+    "Interactions": [
+      {
+        "Type": "EffectCondition",
+        "Entity": "Target",
+        "EntityEffectIds": [
+          "Frost_Whaler"
+        ],
+        "Next": "Weapon_Whaler_Secondary_Thrust_Damage_B",
+        "Failed": "Weapon_Whaler_Secondary_Thrust_Damage_A",
+        "Match": "All"
+      }
+    ]
+  }
+}

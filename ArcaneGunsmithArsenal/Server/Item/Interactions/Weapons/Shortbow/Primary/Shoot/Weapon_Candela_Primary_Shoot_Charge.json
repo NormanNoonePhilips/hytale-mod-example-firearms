@@ -1,0 +1,90 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": false,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+  },
+  "HorizontalSpeedMultiplier": 0.67,
+  "Next": {
+    "0.02": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_0",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_0"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    },
+    "1.2": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_Arrow_Crude",
+        "Quantity": 1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_4",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_4"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    },
+    "0.9": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_Arrow_Crude",
+        "Quantity": 1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_3",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_3"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    }
+  }
+}

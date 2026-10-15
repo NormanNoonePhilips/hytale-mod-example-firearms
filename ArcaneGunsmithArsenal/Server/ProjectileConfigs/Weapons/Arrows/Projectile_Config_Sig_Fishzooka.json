@@ -1,0 +1,209 @@
+{
+  "Model": "Pike_Sig_Fishzooka",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 9,
+    "TerminalVelocityAir": 60,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "SticksVertically": true
+  },
+  "LaunchForce": 90,
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "Class": "Charged",
+            "BaseDamage": {
+              "Projectile": 50
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Exp"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 25,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Sig_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Sig_Fishzooka_Ricochet"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.15
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "CMC_Sig_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.3,
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Mace_Charging",
+                "TargetEntityPart": "Entity",
+                "PositionOffset": {
+                  "Y": 4
+                }
+              }
+            ]
+          },
+          "Next": {
+            "Type": "Repeat",
+            "ForkInteractions": {
+              "Interactions": [
+                {
+                  "Type": "Explode",
+                  "Config": {
+                    "DamageEntities": true,
+                    "EntityDamageRadius": 5,
+                    "EntityDamage": 6,
+                    "EntityDamageFalloff": 0.5,
+                    "BlockDamageRadius": 0,
+                    "BlockDamageFalloff": 10,
+                    "Knockback": {
+                      "Type": "Point",
+                      "Force": -5
+                    },
+                    "DamageBlocks": true
+                  },
+                  "RunTime": 0.15,
+                  "Effects": {
+                    "Particles": [
+                      {
+                        "SystemId": "Sword_Signature_AoE2",
+                        "TargetEntityPart": "Entity",
+                        "Scale": 2,
+                        "PositionOffset": {
+                          "Y": 0.5
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Type": "Selector",
+                  "RunTime": 0.15,
+                  "Selector": {
+                    "Id": "AOECircle",
+                    "Range": 5
+                  },
+                  "HitEntity": {
+                    "Interactions": [
+                      {
+                        "Type": "ApplyEffect",
+                        "Entity": "Target",
+                        "EffectId": "Fishzooka_Soak"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Type": "Chaining",
+                  "Next": [
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_A"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_B"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_C"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_D"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_E"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_F"
+                    },
+                    {
+                      "Type": "Projectile",
+                      "Config": "Projectile_Config_Sig_Fishzooka_Shrapnel_G"
+                    }
+                  ]
+                }
+              ]
+            },
+            "Repeat": 24
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.15
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Sig_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": 0.5
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "Serial",
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_R",
+          "RunTime": 0.05
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_B1",
+          "RunTime": 0.05
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_G1",
+          "RunTime": 0.05
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_R1",
+          "RunTime": 0.05
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_B2",
+          "RunTime": 0.05
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_G2",
+          "RunTime": 0.05
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chromatic_Sig_R2",
+          "RunTime": 0.05
+        }
+      ]
+    },
+    {
+      "Type": "ChangeStat",
+      "Behaviour": "Set",
+      "StatModifiers": {
+        "SignatureCharges": 0
+      },
+      "RunTime": 0.5
+    }
+  ]
+}

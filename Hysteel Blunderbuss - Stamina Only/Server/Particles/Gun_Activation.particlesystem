@@ -1,0 +1,33 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Gun_Gather",
+      "FixedRotation": false,
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "LifeSpan": {
+        "Min": 1,
+        "Max": 1
+      }
+    },
+    {
+      "SpawnerId": "Dagger_Charging_Circles_FP",
+      "LifeSpan": {
+        "Max": 1,
+        "Min": 1
+      }
+    },
+    {
+      "SpawnerId": "Fire_Charge_Flash",
+      "StartDelay": 0.8,
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
+    }
+  ]
+}

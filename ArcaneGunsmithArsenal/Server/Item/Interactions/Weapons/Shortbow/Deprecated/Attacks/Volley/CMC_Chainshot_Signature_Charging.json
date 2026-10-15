@@ -1,0 +1,15 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+  },
+  "HorizontalSpeedMultiplier": 0.4,
+  "Next": {
+    "1": "CMC_Chainshot_Shoot_Signature"
+  }
+}

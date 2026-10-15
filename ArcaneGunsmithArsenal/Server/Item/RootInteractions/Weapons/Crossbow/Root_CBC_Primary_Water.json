@@ -1,0 +1,14 @@
+{
+  "Cooldown": {
+    "Cooldown": 0.05,
+    "Id": "CMCPrimaryCooldown"
+  },
+  "Interactions": [
+    "CBC_Primary_Action_Water"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

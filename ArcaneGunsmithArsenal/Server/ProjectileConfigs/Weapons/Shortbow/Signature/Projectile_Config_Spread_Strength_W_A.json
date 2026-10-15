@@ -1,0 +1,12 @@
+{
+  "Parent": "Projectile_Config_Firecracker_Candela_Strength_W",
+  "Physics": {
+    "Gravity": 15
+  },
+  "SpawnRotationOffset": {
+    "Yaw": -1
+  },
+  "SpawnOffset": {
+    "X": 0.1
+  }
+}

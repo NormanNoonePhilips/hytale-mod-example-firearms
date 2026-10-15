@@ -1,0 +1,60 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 2,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "Velocity",
+    "Bounciness": 0.0,
+    "SticksVertically": false
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_ShockBracer_Primary_LBall_Damage",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.5
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Lightning_Orb",
+  "LaunchForce": 40,
+  "SpawnOffset": {
+    "Y": -0.2,
+    "X": 0.1,
+    "Z": -0.5
+  }
+}

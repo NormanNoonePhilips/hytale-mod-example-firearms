@@ -1,0 +1,27 @@
+{
+  "Type": "ModifyInventory",
+  "ItemToRemove": {
+    "Id": "Weapon_MagicCell_Flame",
+    "Quantity": 1
+  },
+  "Next": {
+    "Type": "Serial",
+    "Interactions": [
+      "Weapon_Candela_Primary_Ember_Strength_Z",
+      {
+        "Type": "Simple",
+        "RunTime": 0.175
+      },
+      "Weapon_Candela_Primary_Ember_Strength_Z"
+    ]
+  },
+  "Failed": {
+    "Type": "Replace",
+    "Var": "No_Ammo_Effects",
+    "DefaultValue": {
+      "Interactions": [
+        "Common_Bow_No_Ammo"
+      ]
+    }
+  }
+}

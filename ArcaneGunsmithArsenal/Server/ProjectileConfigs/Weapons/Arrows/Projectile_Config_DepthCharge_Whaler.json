@@ -1,0 +1,135 @@
+{
+  "LaunchForce": 75,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15,
+    "TerminalVelocityAir": 75,
+    "TerminalVelocityWater": 50,
+    "RotationMode": "VelocityDamped",
+    "SticksVertically": true,
+    "DensityWater": 1,
+    "HitWaterImpulseLoss": 0
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Model": "Harpoon_Whaler",
+  "Interactions": {
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "DepthCharge_Slow_AoE",
+                "Scale": 0.5,
+                "RotationOffset": {
+                  "Pitch": 90
+                }
+              }
+            ]
+          }
+        },
+        "Explode_DepthCharge",
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 3
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "ApplyEffect",
+                "Entity": "Target",
+                "EffectId": "Frost_Whaler"
+              }
+            ]
+          }
+        },
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 3
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "ApplyEffect",
+                "Entity": "Target",
+                "EffectId": "Frost_Whaler"
+              }
+            ]
+          }
+        },
+        "Explode_DepthCharge_Final",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "DepthCharge_Slow_AoE",
+                "Scale": 0.5,
+                "RotationOffset": {
+                  "Pitch": 90
+                }
+              }
+            ]
+          },
+          "RunTime": 0.4
+        },
+        "Explode_DepthCharge",
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 3
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "ApplyEffect",
+                "Entity": "Target",
+                "EffectId": "Frost_Whaler"
+              }
+            ]
+          }
+        },
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        "Explode_DepthCharge",
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 3
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "ApplyEffect",
+                "Entity": "Target",
+                "EffectId": "Frost_Whaler"
+              }
+            ]
+          }
+        },
+        "Explode_DepthCharge_Final",
+        "Common_Projectile_Despawn"
+      ]
+    }
+  }
+}

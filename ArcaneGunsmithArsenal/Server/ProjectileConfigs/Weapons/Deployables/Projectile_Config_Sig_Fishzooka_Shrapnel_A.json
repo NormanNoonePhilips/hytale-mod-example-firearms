@@ -1,0 +1,7 @@
+{
+  "SpawnRotationOffset": {
+    "Pitch": 87
+  },
+  "Parent": "Projectile_Config_Sig_Fishzooka_Shrapnel",
+  "LaunchForce": 9
+}

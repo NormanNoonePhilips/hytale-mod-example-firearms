@@ -1,0 +1,10 @@
+{
+  "LaunchForce": 2,
+  "SpawnOffset": {
+    "Z": -1
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 105
+  },
+  "Parent": "Projectile_Config_Fishzooka_Puddle"
+}

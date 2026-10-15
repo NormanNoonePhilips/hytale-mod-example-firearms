@@ -1,0 +1,100 @@
+{
+  "Model": "Polyp_Sig_Projectile",
+  "LaunchForce": 35,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 10,
+    "TerminalVelocityAir": 25,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "DensityAir": 0.2
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Sig_Damage_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Shortbow_Primary_Shoot_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "AMT_Sig_Hit_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Sig_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.3
+        },
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 2.5,
+            "Offset": {
+              "Z": -2
+            }
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "DamageEntity",
+                "Parent": "DamageEntityParent",
+                "DamageCalculator": {
+                  "BaseDamage": {
+                    "Projectile": 18
+                  }
+                },
+                "Effects": {
+                  "Particles": [
+                    {
+                      "SystemId": "Impact_Poison",
+                      "TargetEntityPart": "Entity"
+                    }
+                  ]
+                },
+                "Next": {
+                  "Type": "ApplyEffect",
+                  "Entity": "Target",
+                  "EffectId": "Polyp_Poison"
+                }
+              }
+            ]
+          },
+          "RunTime": 8
+        }
+      ]
+    }
+  }
+}

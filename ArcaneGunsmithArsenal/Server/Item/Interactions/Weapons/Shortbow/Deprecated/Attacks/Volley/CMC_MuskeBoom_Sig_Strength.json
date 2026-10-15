@@ -1,0 +1,149 @@
+{
+  "Type": "Parallel",
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 4,
+        "RotationOffset": {
+          "Pitch": 180,
+          "Yaw": -25
+        }
+      },
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 7,
+        "RotationOffset": {
+          "Pitch": 180
+        }
+      },
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 4,
+        "RotationOffset": {
+          "Pitch": 180,
+          "Yaw": 25
+        }
+      }
+    ],
+    "WorldSoundEventId": "SFX_Fireball_Death",
+    "ItemAnimationId": "ShootCharged",
+    "ItemPlayerAnimationsId": "Crossbow_Heavy"
+  },
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "Horizontal",
+            "Direction": "ToRight",
+            "Length": 20,
+            "EndDistance": 12,
+            "ExtendTop": 0.85,
+            "ExtendBottom": 1,
+            "TestLineOfSight": true,
+            "YawStartOffset": -12
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "DamageEntity",
+                "DamageCalculator": {
+                  "BaseDamage": {
+                    "Physical": 30
+                  }
+                },
+                "DamageEffects": {
+                  "Knockback": {
+                    "Force": -21
+                  },
+                  "ModelParticles": [
+                    {
+                      "SystemId": "Impact_Fire",
+                      "TargetEntityPart": "Entity",
+                      "Scale": 2,
+                      "PositionOffset": {
+                        "Y": 3
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "RunTime": 0.15
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_CBC_Sig_Muskeboom_A"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_CBC_Muskeboom_Shrapnel_A"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_CBC_Muskeboom_Shrapnel_B"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_CBC_Muskeboom_Shrapnel_C"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_CBC_Muskeboom_Shrapnel_D"
+        }
+      ]
+    }
+  ]
+}

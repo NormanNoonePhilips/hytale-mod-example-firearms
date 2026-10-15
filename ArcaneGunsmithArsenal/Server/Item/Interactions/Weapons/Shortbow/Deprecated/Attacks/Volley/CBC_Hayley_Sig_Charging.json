@@ -1,0 +1,30 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+  },
+  "HorizontalSpeedMultiplier": 0.5,
+  "Next": {
+    "0.75": {
+      "Type": "Serial",
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_CBC_Sig_Hayley"
+        },
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    }
+  }
+}

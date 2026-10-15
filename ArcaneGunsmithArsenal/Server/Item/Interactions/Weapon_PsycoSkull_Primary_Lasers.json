@@ -1,0 +1,51 @@
+{
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "Ammo": -1
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Laser_Deviation_E",
+      "RunTime": 0.05,
+      "Effects": {
+        "WaitForAnimationToFinish": true
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Laser_Deviation_D",
+      "RunTime": 0.05,
+      "Effects": {
+        "WaitForAnimationToFinish": true
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Laser_Deviation_C",
+      "RunTime": 0.05,
+      "Effects": {
+        "WaitForAnimationToFinish": true
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Laser_Deviation_B",
+      "RunTime": 0.05,
+      "Effects": {
+        "WaitForAnimationToFinish": true
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Laser_Deviation_A",
+      "RunTime": 0.05,
+      "Effects": {
+        "WaitForAnimationToFinish": true
+      }
+    }
+  ]
+}

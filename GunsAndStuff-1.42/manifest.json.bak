@@ -1,0 +1,21 @@
+{
+  "Group": "Trist_n",
+  "Name": "Guns And Stuff",
+  "Version": "1.4.1",
+  "Description": "",
+  "Authors": [
+    {
+      "Name": "Trist_n",
+      "Email": "",
+      "Url": "ttv/Thuum"
+    }
+  ],
+  "Website": "",
+  "ServerVersion": "2026.02.19-1a311a592",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "SubPlugins": []
+}

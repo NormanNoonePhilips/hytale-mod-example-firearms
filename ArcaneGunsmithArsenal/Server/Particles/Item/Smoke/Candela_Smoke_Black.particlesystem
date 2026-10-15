@@ -1,0 +1,12 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Smoke_Black",
+      "SpawnRate": {
+        "Min": 50,
+        "Max": 50
+      }
+    }
+  ],
+  "LifeSpan": 5
+}

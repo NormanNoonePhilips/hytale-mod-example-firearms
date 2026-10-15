@@ -1,0 +1,11 @@
+{
+  "SpawnOffset": {
+    "X": -0.2,
+    "Z": -0.5
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 1,
+    "Yaw": 2
+  },
+  "Parent": "Projectile_Config_AMT_Sig_Hwacha_Rocket"
+}

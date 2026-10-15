@@ -1,0 +1,103 @@
+{
+  "Type": "Selector",
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 4,
+        "RotationOffset": {
+          "Pitch": 180,
+          "Yaw": -25
+        }
+      },
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 5.5,
+        "RotationOffset": {
+          "Pitch": 180
+        }
+      },
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 4,
+        "RotationOffset": {
+          "Pitch": 180,
+          "Yaw": 25
+        }
+      }
+    ],
+    "WorldSoundEventId": "SFX_Fireball_Death",
+    "ItemAnimationId": "ShootCharged",
+    "ItemPlayerAnimationsId": "Crossbow_Heavy"
+  },
+  "RunTime": 0.1,
+  "Selector": {
+    "Id": "Horizontal",
+    "Direction": "ToRight",
+    "Length": 45,
+    "EndDistance": 7,
+    "ExtendTop": 0.85,
+    "ExtendBottom": 1,
+    "TestLineOfSight": true,
+    "YawStartOffset": -28
+  },
+  "HitEntity": {
+    "Interactions": [
+      {
+        "Type": "DamageEntity",
+        "DamageCalculator": {
+          "BaseDamage": {
+            "Physical": 25
+          }
+        },
+        "DamageEffects": {
+          "Knockback": {
+            "Force": -21
+          },
+          "ModelParticles": [
+            {
+              "SystemId": "Impact_Fire",
+              "TargetEntityPart": "Entity",
+              "Scale": 2,
+              "PositionOffset": {
+                "Y": 3
+              }
+            }
+          ]
+        },
+        "EntityStatsOnHit": [
+          {
+            "EntityStatId": "SignatureEnergy",
+            "Amount": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Next": {
+    "Type": "Projectile",
+    "Config": "Projectile_Config_CBC_Muskeboom_E",
+    "Next": {
+      "Type": "Simple",
+      "RunTime": 0.65
+    }
+  }
+}

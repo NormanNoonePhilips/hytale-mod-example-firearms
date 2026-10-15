@@ -1,0 +1,14 @@
+{
+  "RequireNewClick": true,
+  "Interactions": [
+    {
+      "Type": "Replace",
+      "Var": "Mag_Reload_Loop",
+      "DefaultValue": {
+        "Interactions": [
+          "Common_StatAmmoReload_Entry"
+        ]
+      }
+    }
+  ]
+}

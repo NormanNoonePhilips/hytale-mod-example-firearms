@@ -1,0 +1,52 @@
+{
+  "Camera": {
+    "Pitch": {
+      "AngleRange": {
+        "Max": 60,
+        "Min": -45
+      },
+      "TargetNodes": [
+        "Head",
+        "RShoulder"
+      ]
+    },
+    "Yaw": {
+      "AngleRange": {
+        "Max": 45,
+        "Min": -45
+      },
+      "TargetNodes": [
+        "Belly"
+      ]
+    }
+  },
+  "WiggleWeights": {
+    "Pitch": 1,
+    "PitchDeceleration": 0.2,
+    "Roll": 0.1,
+    "RollDeceleration": 0.2,
+    "X": 1,
+    "XDeceleration": 0.2,
+    "Y": 0.1,
+    "YDeceleration": 0.2,
+    "Z": 0.1,
+    "ZDeceleration": 0.2
+  },
+  "Animations": {
+    "ReloadReadyHwacha": {
+      "ThirdPerson": "Characters/Animations/Items/Main_Handed/Crossbow/Reload_Ready/Reload_Ready.blockyanim",
+      "FirstPerson": "Characters/Animations/Items/Main_Handed/Crossbow/Reload_Ready/Reload_Ready_FPS.blockyanim",
+      "Speed": 0.75,
+      "Looping": false,
+      "ThirdPersonMoving": "Characters/Animations/Items/Main_Handed/Crossbow/Reload_Ready/Reload_Ready.blockyanim"
+    },
+    "ShootChargingHwacha": {
+      "ThirdPerson": "Characters/Animations/Items/Dual_Handed/Crossbow_Heavy/Attacks/Shoot_Charged/Shoot_Charging.blockyanim",
+      "Speed": 1,
+      "FirstPerson": "Characters/Animations/Items/Dual_Handed/Crossbow_Heavy/Attacks/Shoot_Charged/Shoot_Charging_FPS.blockyanim",
+      "Looping": false,
+      "ThirdPersonMoving": "Characters/Animations/Items/Dual_Handed/Crossbow_Heavy/Attacks/Shoot_Charged/Shoot_Charging_Moving.blockyanim",
+      "ThirdPersonFace": "Characters/Animations/Expressions/Frown.blockyanim"
+    }
+  }
+}

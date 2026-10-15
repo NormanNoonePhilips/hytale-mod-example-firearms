@@ -1,0 +1,63 @@
+{
+  "Model": "Bomb_Popberry",
+  "SpawnRotationOffset": {
+    "Pitch": 5,
+    "Roll": 5
+  },
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 35,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "Bounciness": 1,
+    "BounceCount": 5,
+    "AllowRolling": true,
+    "RollingFrictionFactor": 1,
+    "SticksVertically": true,
+    "ComputeYaw": true,
+    "ComputePitch": true,
+    "BounceLimit": 3
+  },
+  "LaunchForce": 45,
+  "SpawnOffset": {
+    "X": 0,
+    "Y": 0,
+    "Z": 0.0
+  },
+  "Interactions": {
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 2
+        },
+        "Bomberry_Explode",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileHit": {
+      "Interactions": [
+        "Bomberry_Cluster",
+        {
+          "Type": "DamageEntity",
+          "Parent": "Weapon_Bomberry_Damage_Signature_Cluster"
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "ProjectileBounce": {
+    "Interactions": [
+      {
+        "Type": "Simple",
+        "RunTime": 2
+      },
+      "Bomberry_Explode",
+      "Bomberry_Explode_Roller",
+      "Common_Projectile_Despawn"
+    ]
+  },
+  "LaunchLocalSoundEventId": "SFX_GunPVP_Grenade_Frag_Miss",
+  "LaunchWorldSoundEventId": "SFX_GunPVP_Grenade_Frag_Miss"
+}

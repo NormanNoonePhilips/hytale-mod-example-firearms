@@ -1,0 +1,32 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageBlocks": true,
+    "Knockback": {
+      "Type": "Point",
+      "Force": -9,
+      "VelocityConfig": {
+        "Style": "Exp"
+      }
+    },
+    "EntityDamageRadius": 7,
+    "EntityDamage": 10,
+    "DamageEntities": true,
+    "BlockDropChance": 1,
+    "BlockDamageFalloff": 10,
+    "BlockDamageRadius": 0
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Impact_Ice",
+        "Scale": 2,
+        "TargetEntityPart": "Entity"
+      }
+    ],
+    "WorldSoundEventId": "SFX_Ice_Bolt_Death",
+    "LocalSoundEventId": "SFX_Ice_Bolt_Death",
+    "ClearSoundEventOnFinish": true
+  },
+  "RunTime": 0.4
+}

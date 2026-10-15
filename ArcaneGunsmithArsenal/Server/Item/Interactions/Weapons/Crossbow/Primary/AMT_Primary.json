@@ -1,0 +1,45 @@
+{
+  "Type": "DurabilityCondition",
+  "Threshold": 0,
+  "Operator": "GreaterThan",
+  "Next": {
+    "Type": "StatsCondition",
+    "Costs": {
+      "SignatureCharges": 1
+    },
+    "ValueType": "Percent",
+    "Next": {
+      "Type": "Replace",
+      "Var": "AMT_Signature_Projectile",
+      "DefaultValue": {
+        "Interactions": [
+          "Weapon_Crossbow_Signature_BigArrow_Shot"
+        ]
+      }
+    },
+    "Failed": {
+      "Type": "StatsCondition",
+      "Costs": {
+        "Ammo": 1
+      },
+      "Next": {
+        "Type": "Replace",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Crossbow_Shot_Standard_Projectile"
+          ]
+        },
+        "Var": "AMT_Primary_Projectile"
+      },
+      "Failed": {
+        "Type": "Replace",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Crossbow_Primary_Overcharge"
+          ]
+        },
+        "Var": "Mag_Reload_Loop"
+      }
+    }
+  }
+}

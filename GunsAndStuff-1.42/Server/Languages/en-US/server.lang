@@ -1,0 +1,21 @@
+items.Weapon_AK47.name=Refined Rifle
+items.Weapon_AK47.description = Requires Medium Ammo \n\n<i>A reliable rifle out on the battlefield.</i>
+
+items.Weapon_HandmadeRifle.name=Handmade Rifle
+items.Weapon_HandmadeRifle.description = Requires Medium Ammo \n\n<i>Though rudimentary, this type of rifle still packs a punch.</i>
+
+items.Weapon_HandmadeHandgun.name=Handmade Pistol
+items.Weapon_HandmadeHandgun.description = Requires Light Ammo \n\n<i>Though rudimentary, this type of handgun still serves a purpose.</i>
+
+items.Weapon_HandmadeSMG.name=Handmade SMG
+items.Weapon_HandmadeSMG.description = Requires Light Ammo \n\n<i>Though rudimentary, this type of SMG still serves a purpose.</i>
+
+items.Weapon_HandmadeBoltRifle.name=Handmade Bolt Rifle
+items.Weapon_HandmadeBoltRifle.description = Requires Heavy Ammo \n\n<i>This single load Bolt-action may be slow, but it sure packs a punch.</i>
+
+items.Weapon_HandmadeRevolver.name=Handmade Revolver
+items.Weapon_HandmadeRevolver.description = Requires Heavy Ammo \n\n<i>Built with a heavy trigger, make sure to give it a good squeeze.</i>
+
+items.Ammo_Heavy.name=Heavy Ammo
+items.Ammo_Medium.name=Medium Ammo
+items.Ammo_Light.name=Light Ammo

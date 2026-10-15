@@ -1,0 +1,12 @@
+{
+  "Model": "Chromatic_G",
+  "SpawnOffset": {
+    "Z": 0.5,
+    "X": 0.1
+  },
+  "Parent": "Projectile_Config_Chromatic_Sig_R",
+  "SpawnRotationOffset": {
+    "Pitch": -0.75,
+    "Yaw": -0.75
+  }
+}

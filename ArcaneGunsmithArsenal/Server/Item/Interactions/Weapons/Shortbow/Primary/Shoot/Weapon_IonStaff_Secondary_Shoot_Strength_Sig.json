@@ -1,0 +1,36 @@
+{
+  "Type": "Simple",
+  "Next": {
+    "Type": "Serial",
+    "Interactions": [
+      {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "SignatureCharges": -100
+        },
+        "ValueType": "Percent"
+      },
+      {
+        "Type": "Repeat",
+        "Repeat": 15,
+        "ForkInteractions": {
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "RunTime": 0.05
+            },
+            {
+              "Parent": "Weapon_IonCannon_Primary_Shoot_Laser",
+              "Config": "Projectile_Config_ShoulderLaser_IonStaff"
+            }
+          ]
+        },
+        "RunTime": 4
+      }
+    ]
+  },
+  "Effects": {
+    "ItemAnimationId": "CastLeft"
+  },
+  "RunTime": 0.3
+}

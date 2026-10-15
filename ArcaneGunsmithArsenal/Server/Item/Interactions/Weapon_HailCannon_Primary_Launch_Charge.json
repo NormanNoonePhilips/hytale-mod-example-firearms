@@ -1,0 +1,77 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "SystemId": "Bat_Ice",
+        "TargetEntityPart": "PrimaryItem",
+        "Scale": 0.3,
+        "PositionOffset": {
+          "Y": 0.3
+        },
+        "RotationOffset": {
+          "Yaw": 45
+        }
+      }
+    ]
+  },
+  "Next": {
+    "0.75": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Frost",
+        "Quantity": 2
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_2",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_HailCannon_Primary_Launch_Rocket"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    },
+    "1.2": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Frost",
+        "Quantity": 3
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_4",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_HailCannon_Primary_Launch_Mortar"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    }
+  }
+}

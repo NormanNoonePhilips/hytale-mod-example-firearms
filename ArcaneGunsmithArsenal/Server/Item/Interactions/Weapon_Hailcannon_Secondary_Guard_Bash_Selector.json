@@ -1,0 +1,69 @@
+{
+  "Type": "Selector",
+  "$Comment": "Length of Combat",
+  "RunTime": 0.2,
+  "Effects": {
+    "CameraEffect": "Shortbow_Bash",
+    "Particles": [
+      {
+        "SystemId": "Shortbow_Bash",
+        "TargetEntityPart": "PrimaryItem",
+        "TargetNodeName": "Handle",
+        "PositionOffset": {
+          "X": -0.2,
+          "Y": 0.2
+        }
+      }
+    ]
+  },
+  "Selector": {
+    "Id": "Stab",
+    "TestLineOfSight": true,
+    "ExtendTop": 0.5,
+    "ExtendLeft": 0.5,
+    "ExtendRight": 0.5,
+    "ExtendBottom": 0.5,
+    "StartDistance": 0,
+    "EndDistance": 2.5
+  },
+  "HitBlock": {
+    "Interactions": [
+      "Block_Break_Adventure"
+    ]
+  },
+  "HitEntity": {
+    "Interactions": [
+      {
+        "Type": "Replace",
+        "Var": "Guard_Bash_Damage",
+        "DefaultOk": true,
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Secondary_Guard_Bash_Damage"
+          ]
+        }
+      },
+      {
+        "Type": "ApplyEffect",
+        "EffectId": "Minor_Bash_Slow",
+        "Entity": "Target",
+        "RunTime": 1,
+        "Effects": {
+          "Particles": [
+            {
+              "SystemId": "Block_Hit_Ice",
+              "Scale": 0.5,
+              "PositionOffset": {
+                "Y": -0.4
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Next": {
+    "Type": "Simple",
+    "RunTime": 1
+  }
+}

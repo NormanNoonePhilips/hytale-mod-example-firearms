@@ -1,0 +1,259 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Chainshot.name",
+    "Description": "AGA_Server.items.ArcaneGun_Chainshot.description"
+  },
+  "PlayerAnimationsId": "Crossbow_Heavy",
+  "Model": "Items/Weapons/Chainshot.blockymodel",
+  "Texture": "Items/Weapons/ChainShotTexture.png",
+  "Icon": "Icons/ItemsGenerated/CMC_Chainshot.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Rare",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.4,
+    "Rotation": [
+      330,
+      90,
+      45
+    ],
+    "Translation": [
+      -4.11,
+      -10
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 5,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 12,
+          "CalculationType": "Additive",
+          "Target": "Max"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 180,
+  "DurabilityLossOnHit": 0.25,
+  "Interactions": {
+    "Primary": "Root_CMC_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Shortbow_Signature_Volley",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "InteractionVars": {
+    "CMC_Charge": {
+      "Interactions": [
+        "CMC_Chainshot_Charge"
+      ]
+    },
+    "CMC_Proj_B": {
+      "Interactions": [
+        "CMC_Chainshot_Shoot_Strength_B"
+      ]
+    },
+    "CMC_Proj_C": {
+      "Interactions": [
+        "CMC_Chainshot_Shoot_Strength_C"
+      ]
+    },
+    "CMC_Proj_D": {
+      "Interactions": [
+        "CMC_Chainshot_Shoot_Strength_D"
+      ]
+    },
+    "CMC_Proj_E": {
+      "Interactions": [
+        "CMC_Chainshot_Shoot_Strength_E"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "CMC_Chainshot_Reload_Loop"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_HeavyCrossbow_Bash"
+      ]
+    },
+    "CMC_Impact_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "VoidImpact",
+                "TargetEntityPart": "Entity"
+              }
+            ],
+            "WorldSoundEventId": "SFX_Gravel_Break"
+          },
+          "RunTime": 0.1
+        }
+      ]
+    },
+    "CMC_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "VoidImpact",
+                "TargetEntityPart": "Entity"
+              }
+            ],
+            "WorldSoundEventId": "SFX_Dirt_Hit"
+          },
+          "RunTime": 0.1
+        }
+      ]
+    },
+    "CMC_Signature_Shot": {
+      "Interactions": [
+        "CMC_Chainshot_Signature_Charging"
+      ]
+    },
+    "CMC_Reload_Loop": {
+      "Interactions": [
+        "CMC_Chainshot_Reload_Loop"
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.175,
+        "Z": 0.25
+      },
+      "Color": "#75158e",
+      "Scale": 0.25
+    }
+  ],
+  "ItemLevel": 45,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 15,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Void_Essence",
+        "Quantity": 12
+      },
+      {
+        "ItemId": "Ingredient_Bar_Adamantite",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 6
+      },
+      {
+        "Quantity": 8,
+        "ResourceTypeId": "Wood_Deadwood"
+      },
+      {
+        "ItemId": "Ingredient_Bone_Fragment",
+        "Quantity": 20
+      }
+    ],
+    "TimeSeconds": 3
+  }
+}

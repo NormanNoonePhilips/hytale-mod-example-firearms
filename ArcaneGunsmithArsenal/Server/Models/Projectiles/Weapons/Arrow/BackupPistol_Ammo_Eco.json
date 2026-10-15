@@ -1,0 +1,43 @@
+{
+  "HitBox": {
+    "Max": {
+      "X": 0.075,
+      "Y": 0.075,
+      "Z": 0.075
+    },
+    "Min": {
+      "X": -0.075,
+      "Y": -0.075,
+      "Z": -0.075
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "Trails": [
+    {
+      "TrailId": "Arrow"
+    },
+    {
+      "TrailId": "Arrow"
+    }
+  ],
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "AnimationSets": {
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "Items/Animations/Fly/Fly_Horizontal.blockyanim",
+          "Speed": 3,
+          "Looping": true
+        }
+      ]
+    }
+  },
+  "DefaultAttachments": [
+    {
+      "Model": "Resources/Ingredients/Apple.blockymodel",
+      "Texture": "Resources/Ingredients/Apple_Red.png"
+    }
+  ]
+}

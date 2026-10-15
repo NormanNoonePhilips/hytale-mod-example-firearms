@@ -1,0 +1,71 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 2,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "Velocity",
+    "Bounciness": 0.048,
+    "SticksVertically": true,
+    "BounceCount": 1,
+    "BounceLimit": 0
+  },
+  "LaunchLocalSoundEventId": "SFX_Snow_Break",
+  "LaunchWorldSoundEventId": "SFX_Snow_Break",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_HailCannon_Primary_Launch_Damage_Strength_A",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Explode_HailCannon_Rocket",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        "Explode_HailCannon_Rocket",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 1.5,
+          "Effects": {
+            "WaitForAnimationToFinish": true
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Ice_Rocket",
+  "LaunchForce": 30,
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": 0.25
+  }
+}

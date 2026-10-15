@@ -1,0 +1,9 @@
+{
+  "Parent": "Projectile_Config_Chainshot_Tether_Signature",
+  "SpawnOffset": {
+    "X": -0.4
+  },
+  "SpawnRotationOffset": {
+    "Yaw": 6
+  }
+}

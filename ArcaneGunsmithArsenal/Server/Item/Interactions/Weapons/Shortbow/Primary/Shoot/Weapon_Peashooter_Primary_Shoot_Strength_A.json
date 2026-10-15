@@ -1,0 +1,69 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 0.5,
+  "Next": [
+    {
+      "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+      "Config": "Projectile_Config_Peashooter_Pea_A"
+    },
+    {
+      "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+      "Config": "Deviation_A"
+    },
+    {
+      "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+      "Config": "Deviation_B"
+    },
+    {
+      "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+      "Config": "Deviation_C"
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "Chain_Peashooter",
+              "Flag": "MaxRecoil"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+              "Config": "Deviation_D"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ChainId": "Chain_Peashooter",
+  "Flags": {
+    "MaxRecoil": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "Chain_Peashooter",
+              "Flag": "MaxRecoil"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+              "Config": "Deviation_E"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

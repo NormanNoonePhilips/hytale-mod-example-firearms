@@ -1,0 +1,22 @@
+{
+  "Type": "Projectile",
+  "RunTime": 0,
+  "Effects": {
+    "ClearAnimationOnFinish": false
+  },
+  "Config": "Projectile_Config_Bullet_Light",
+  "Next": {
+    "Type": "ChangeStat",
+    "StatModifiers": {
+      "Ammo": -1
+    },
+    "Next": {
+      "Type": "ChangeStat",
+      "Behaviour": "Set",
+      "StatModifiers": {
+        "StaminaRegenDelay": 0
+      }
+    },
+    "RunTime": 0
+  }
+}

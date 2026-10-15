@@ -1,0 +1,9 @@
+{
+  "SpawnOffset": {
+    "Z": -2
+  },
+  "Parent": "Proj_SMT_Concheror_Signature_Bounce",
+  "SpawnRotationOffset": {
+    "Pitch": -120
+  }
+}

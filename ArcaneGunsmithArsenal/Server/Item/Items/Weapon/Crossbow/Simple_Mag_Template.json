@@ -1,0 +1,130 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Template_Weapon_Crossbow.name"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/Crossbow/Iron.blockymodel",
+  "Texture": "Items/Weapons/Crossbow/Iron_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Crossbow_Iron.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Template",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Utility": {
+    "Compatible": true
+  },
+  "IconProperties": {
+    "Scale": 0.5,
+    "Translation": [
+      -4.11,
+      -15.51
+    ],
+    "Rotation": [
+      330,
+      90,
+      45
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_SMT_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 6,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 5,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 80,
+  "DurabilityLossOnHit": 0.28,
+  "InteractionVars": {
+    "SMT_Primary_Projectile": {
+      "Interactions": [
+        "SMT_Standard_Projectile"
+      ]
+    },
+    "SMT_Signature_Projectile": {
+      "Interactions": [
+        "SMT_Signature_Projectile"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "Mag_Reload_Loop"
+      ]
+    },
+    "SMT_Damage_FX": {
+      "Interactions": [
+        "Weapon_Crossbow_Damage_Combo_Projectile"
+      ]
+    },
+    "SMT_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "SMT_Miss_FX": {
+      "Interactions": [
+        "Common_Projectile_Miss"
+      ]
+    },
+    "SMT_Sig_Damage_FX": {
+      "Interactions": [
+        "Weapon_Crossbow_Damage_Signature_Projectile"
+      ]
+    },
+    "SMT_Sig_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "SMT_Sig_Miss_FX": {
+      "Interactions": [
+        "Common_Projectile_Miss"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    }
+  }
+}

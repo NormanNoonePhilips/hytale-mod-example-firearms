@@ -1,0 +1,11 @@
+{
+  "Parent": "Projectile_Config_ABT_Refroster",
+  "SpawnRotationOffset": {
+    "Pitch": -1.5,
+    "Yaw": 2.5
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.5
+  }
+}

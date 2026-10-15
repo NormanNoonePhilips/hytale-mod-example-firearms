@@ -1,0 +1,14 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "LocalSoundEventId": "SFX_Arrow_FullCharge_Hit",
+    "WorldSoundEventId": "SFX_Arrow_FullCharge_Hit",
+    "Particles": [
+      {
+        "SystemId": "Explosion_Big",
+        "TargetEntityPart": "Self"
+      }
+    ],
+    "WaitForAnimationToFinish": true
+  }
+}

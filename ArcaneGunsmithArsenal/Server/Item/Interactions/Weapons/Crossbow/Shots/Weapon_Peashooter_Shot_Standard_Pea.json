@@ -1,0 +1,48 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "HorizontalSpeedMultiplier": 0.9,
+  "Next": {
+    "0": {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "Ammo": -1
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      },
+      "Next": "Weapon_Peashooter_Primary_Shoot_Strength_A"
+    },
+    "0.4": {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "Ammo": -1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "Primary_Shoot_Strength_1",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Peashooter_Primary_Shoot_Strength_B"
+          ]
+        }
+      },
+      "Failed": {
+        "Type": "Replace",
+        "Var": "No_Ammo_Effects",
+        "DefaultValue": {
+          "Interactions": [
+            "Common_Bow_No_Ammo"
+          ]
+        }
+      }
+    }
+  }
+}

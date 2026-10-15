@@ -1,0 +1,46 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 20,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": false
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Damage",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Eye_Void_Blast",
+  "LaunchForce": 30,
+  "LaunchLocalSoundEventId": "SFX_Mud_Break",
+  "LaunchWorldSoundEventId": "SFX_Mud_Break"
+}

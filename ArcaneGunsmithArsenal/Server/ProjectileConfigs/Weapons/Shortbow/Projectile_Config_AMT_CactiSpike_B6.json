@@ -1,0 +1,7 @@
+{
+  "Parent": "Projectile_Config_AMT_CactiSpike",
+  "SpawnRotationOffset": {
+    "Pitch": 2,
+    "Yaw": 2
+  }
+}

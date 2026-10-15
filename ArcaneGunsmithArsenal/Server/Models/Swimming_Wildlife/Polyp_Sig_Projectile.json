@@ -1,0 +1,24 @@
+{
+  "Model": "NPC/Swimming_Wildlife/Jellyfish/Models/Model.blockymodel",
+  "Texture": "NPC/Swimming_Wildlife/Jellyfish/Models/Model_Textures/Blue.png",
+  "HitBox": {
+    "Min": {
+      "X": -0.2,
+      "Z": -0.2
+    },
+    "Max": {
+      "X": 0.2,
+      "Y": 0.2,
+      "Z": 0.2
+    }
+  },
+  "AnimationSets": {
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "Items/Animations/Spin_Roll/Spin_Roll_Right.blockyanim"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "Parent": "Projectile_Config_Peashooter_Automatic",
+  "SpawnRotationOffset": {
+    "Pitch": 1
+  }
+}

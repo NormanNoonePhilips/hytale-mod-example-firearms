@@ -1,0 +1,47 @@
+{
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "DefaultAttachments": [
+    {
+      "Model": "Resources/Crystals/Crystal_Fragment.blockymodel",
+      "Texture": "Resources/Crystals/Crystal_Fragment_Textures/Green.png"
+    }
+  ],
+  "HitBox": {
+    "Max": {
+      "X": 0.05,
+      "Y": 0.05,
+      "Z": 0.05
+    },
+    "Min": {
+      "X": -0.05,
+      "Y": -0.05,
+      "Z": -0.05
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "AnimationSets": {
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "Items/Animations/Spin_Roll/Spin_Roll_Right.blockyanim",
+          "Speed": 2,
+          "SoundEventId": "SFX_Blunderbuss_Bullet_WhizBy"
+        }
+      ]
+    }
+  },
+  "Particles": [
+    {
+      "SystemId": "Block_Run_Crystal",
+      "Color": "#22ff00",
+      "Scale": 0.3
+    }
+  ],
+  "Trails": [
+    {
+      "TrailId": "Small_Projectile"
+    }
+  ]
+}

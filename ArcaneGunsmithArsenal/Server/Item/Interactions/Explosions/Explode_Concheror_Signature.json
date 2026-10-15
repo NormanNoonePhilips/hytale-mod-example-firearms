@@ -1,0 +1,38 @@
+{
+  "Type": "Explode",
+  "Parent": "Explode_Generic",
+  "Config": {
+    "DamageBlocks": false,
+    "DamageEntities": true,
+    "EntityDamageRadius": 4,
+    "EntityDamage": 21,
+    "EntityDamageFalloff": 0.5
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Water_Splash",
+        "TargetEntityPart": "Entity",
+        "Scale": 2.5
+      },
+      {
+        "SystemId": "Water_Splash_Soft_Ver2",
+        "TargetEntityPart": "Entity",
+        "Scale": 4
+      },
+      {
+        "SystemId": "Sword_Signature_AoE",
+        "TargetEntityPart": "Entity",
+        "PositionOffset": {
+          "Y": 0.5
+        },
+        "Scale": 2
+      },
+      {
+        "SystemId": "Mace_Signature_Ground_Hit",
+        "Scale": 2
+      }
+    ],
+    "WorldSoundEventId": "SFX_Water_MoveIn"
+  }
+}

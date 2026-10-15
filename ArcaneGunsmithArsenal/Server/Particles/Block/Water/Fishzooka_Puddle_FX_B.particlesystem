@@ -1,0 +1,70 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Fishzooka_Sprint_Splash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.5,
+        "Z": 0.3
+      },
+      "TotalSpawners": 6,
+      "MaxConcurrent": 3
+    },
+    {
+      "SpawnerId": "Water_Sprint_Splash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.5,
+        "Z": 2.3
+      },
+      "TotalSpawners": 6,
+      "MaxConcurrent": 3
+    },
+    {
+      "SpawnerId": "Water_Sprint_Splash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.5,
+        "Z": -1.7
+      },
+      "TotalSpawners": 6,
+      "MaxConcurrent": 3
+    },
+    {
+      "SpawnerId": "Water_Sprint_Splash",
+      "PositionOffset": {
+        "X": 2,
+        "Y": 0.5,
+        "Z": 0.3
+      },
+      "TotalSpawners": 6,
+      "MaxConcurrent": 3
+    },
+    {
+      "SpawnerId": "Water_Sprint_Splash",
+      "PositionOffset": {
+        "X": -2,
+        "Y": 0.5,
+        "Z": 0.3
+      },
+      "TotalSpawners": 6,
+      "MaxConcurrent": 3
+    },
+    {
+      "SpawnerId": "FishZooka_Circle_Sprint",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.25,
+        "Z": 0.3
+      }
+    },
+    {
+      "SpawnerId": "FishZooka_Circle_Sprint",
+      "PositionOffset": {
+        "Y": 0.75,
+        "Z": 0.3
+      }
+    }
+  ],
+  "LifeSpan": 6
+}

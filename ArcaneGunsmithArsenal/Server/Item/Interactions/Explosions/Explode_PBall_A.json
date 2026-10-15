@@ -1,0 +1,38 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": true,
+    "DamageBlocks": false,
+    "EntityDamage": 10,
+    "EntityDamageRadius": 6,
+    "Knockback": {
+      "Type": "Point",
+      "VelocityConfig": {
+        "AirResistance": 0.97,
+        "AirResistanceMax": 0.96,
+        "Direction": {
+          "X": 0.0,
+          "Y": 5.0,
+          "Z": 0.0
+        },
+        "GroundResistance": 0.94,
+        "GroundResistanceMax": 0.3,
+        "Threshold": 3.0
+      },
+      "Force": 2,
+      "VelocityType": "Add"
+    },
+    "EntityDamageFalloff": 0.5
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Example_Firework_ColorBase",
+        "TargetEntityPart": "Entity",
+        "Scale": 0.75
+      }
+    ],
+    "WaitForAnimationToFinish": true
+  },
+  "RunTime": 0.1
+}

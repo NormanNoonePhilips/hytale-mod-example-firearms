@@ -1,0 +1,21 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Guns/BoltAction/sniper-rifle.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": -2,
+        "MaxPitch": 1,
+        "MinVolume": -2,
+        "MaxVolume": 2
+      },
+      "Volume": -4
+    }
+  ],
+  "MaxInstance": 30,
+  "Volume": 1.0,
+  "PreventSoundInterruption": true,
+  "Parent": "SFX_Attn_Loud",
+  "MaxDistance": 100
+}

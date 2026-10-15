@@ -1,0 +1,56 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Firecracker_Candela_Strength_W"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_W_A"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_W_B"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_W_C"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_W_D"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    }
+  ]
+}

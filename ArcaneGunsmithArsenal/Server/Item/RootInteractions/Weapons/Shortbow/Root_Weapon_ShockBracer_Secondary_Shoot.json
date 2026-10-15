@@ -1,0 +1,18 @@
+{
+  "RequireNewClick": true,
+  "Interactions": [
+    "Weapon_ShockBracer_Secondary_Shoot_TBall"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  },
+  "Cooldown": {
+    "Cooldown": 1.5,
+    "Charges": [
+      5,
+      5
+    ]
+  }
+}

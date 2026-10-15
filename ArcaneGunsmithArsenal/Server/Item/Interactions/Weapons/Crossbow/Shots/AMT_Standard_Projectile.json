@@ -1,0 +1,229 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 0.5,
+  "Next": [
+    {
+      "Type": "Projectile",
+      "RunTime": 0.05,
+      "Effects": {
+        "ItemAnimationId": "ShootCharged",
+        "ClearAnimationOnFinish": true
+      },
+      "Config": "Projectile_Config_AMT_Base",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "Next": {
+          "Type": "ChangeStat",
+          "Behaviour": "Set",
+          "StatModifiers": {
+            "StaminaRegenDelay": 0
+          },
+          "RunTime": 0.1
+        }
+      }
+    },
+    {
+      "Type": "Projectile",
+      "RunTime": 0.05,
+      "Effects": {
+        "ItemAnimationId": "ShootCharged",
+        "ClearAnimationOnFinish": true
+      },
+      "Config": "Projectile_Config_AMT_Base_A",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "Next": {
+          "Type": "ChangeStat",
+          "Behaviour": "Set",
+          "StatModifiers": {
+            "StaminaRegenDelay": 0
+          },
+          "RunTime": 0.1
+        }
+      }
+    },
+    {
+      "Type": "Projectile",
+      "RunTime": 0.05,
+      "Effects": {
+        "ItemAnimationId": "ShootCharged",
+        "ClearAnimationOnFinish": true
+      },
+      "Config": "Projectile_Config_AMT_Base_B",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "Next": {
+          "Type": "ChangeStat",
+          "Behaviour": "Set",
+          "StatModifiers": {
+            "StaminaRegenDelay": 0
+          },
+          "RunTime": 0.1
+        }
+      }
+    },
+    {
+      "Type": "Projectile",
+      "RunTime": 0.05,
+      "Effects": {
+        "ItemAnimationId": "ShootCharged",
+        "ClearAnimationOnFinish": true
+      },
+      "Config": "Projectile_Config_AMT_Base_C",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "Next": {
+          "Type": "ChangeStat",
+          "Behaviour": "Set",
+          "StatModifiers": {
+            "StaminaRegenDelay": 0
+          },
+          "RunTime": 0.1
+        }
+      }
+    },
+    {
+      "Type": "Projectile",
+      "RunTime": 0.05,
+      "Effects": {
+        "ItemAnimationId": "ShootCharged",
+        "ClearAnimationOnFinish": true
+      },
+      "Config": "Projectile_Config_AMT_Base_D",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "Next": {
+          "Type": "ChangeStat",
+          "Behaviour": "Set",
+          "StatModifiers": {
+            "StaminaRegenDelay": 0
+          },
+          "RunTime": 0.1
+        }
+      }
+    },
+    {
+      "Type": "Projectile",
+      "RunTime": 0.05,
+      "Effects": {
+        "ItemAnimationId": "ShootCharged",
+        "ClearAnimationOnFinish": true
+      },
+      "Config": "Projectile_Config_AMT_Base_E",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "Next": {
+          "Type": "ChangeStat",
+          "Behaviour": "Set",
+          "StatModifiers": {
+            "StaminaRegenDelay": 0
+          },
+          "RunTime": 0.1
+        }
+      }
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "RunTime": 0.05,
+              "Effects": {
+                "ItemAnimationId": "ShootCharged",
+                "ClearAnimationOnFinish": true
+              },
+              "Config": "Projectile_Config_AMT_Base_F",
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Ammo": -1
+                },
+                "Next": {
+                  "Type": "ChangeStat",
+                  "Behaviour": "Set",
+                  "StatModifiers": {
+                    "StaminaRegenDelay": 0
+                  },
+                  "RunTime": 0.1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "AMT_Primary_Overheating",
+              "Flag": "AMT_Primary_Overheat"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Flags": {
+    "AMT_Primary_Overheat": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "RunTime": 0.05,
+              "Effects": {
+                "ItemAnimationId": "ShootCharged",
+                "ClearAnimationOnFinish": true
+              },
+              "Config": "Projectile_Config_AMT_Base_F",
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Ammo": -1
+                },
+                "Next": {
+                  "Type": "ChangeStat",
+                  "Behaviour": "Set",
+                  "StatModifiers": {
+                    "StaminaRegenDelay": 0
+                  },
+                  "RunTime": 0.1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "AMT_Primary_Overheating",
+              "Flag": "AMT_Primary_Overheat"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ChainId": "AMT_Primary_Overheating"
+}

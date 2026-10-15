@@ -1,0 +1,15 @@
+{
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Cooldown": 0.125
+  },
+  "Interactions": [
+    "Weapon_Peashooter_Primary_Signature"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  },
+  "ClickQueuingTimeout": 0.3
+}

@@ -1,0 +1,14 @@
+{
+  "Interactions": [
+    "Weapon_ShockBracer_Primary_Shoot"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  },
+  "Cooldown": {
+    "Cooldown": 0.4,
+    "Id": "PrimaryFire"
+  }
+}

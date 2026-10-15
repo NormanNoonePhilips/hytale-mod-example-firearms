@@ -1,0 +1,147 @@
+{
+  "TranslationProperties": {
+    "Name": "CMC"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/Crossbow/Iron.blockymodel",
+  "Texture": "Items/Weapons/Crossbow/Iron_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Crossbow_Iron_Rusty.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Template",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Utility": {
+    "Compatible": true
+  },
+  "IconProperties": {
+    "Scale": 0.5,
+    "Translation": [
+      -4.11,
+      -15.51
+    ],
+    "Rotation": [
+      330,
+      90,
+      45
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 6,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive",
+          "Target": "Max"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 80,
+  "DurabilityLossOnHit": 0.28,
+  "Interactions": {
+    "Primary": "Root_CBC_Projectile",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Shortbow_Signature_Volley",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "InteractionVars": {
+    "CMC_Charge": {
+      "Interactions": [
+        "CMC_Charge"
+      ]
+    },
+    "CMC_Proj_A": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Strength_0"
+      ]
+    },
+    "CMC_Proj_B": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Strength_1"
+      ]
+    },
+    "CMC_Proj_C": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Strength_2"
+      ]
+    },
+    "CMC_Proj_D": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Strength_3"
+      ]
+    },
+    "CMC_Proj_E": {
+      "Interactions": [
+        "Weapon_Shortbow_Primary_Shoot_Strength_4"
+      ]
+    },
+    "Common_Reload_Loop": {
+      "Interactions": [
+        "Mag_Reload_Loop"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "CMC_Impact_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "CMC_Miss_Effects": {
+      "Interactions": [
+        "Common_Projectile_Miss"
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "CMC_Signature_Shot": {
+      "Interactions": [
+        "Shortbow_Volley_Charging"
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "RequireNewClick": true,
+  "Rules": {
+    "Interrupting": [
+      "Primary"
+    ]
+  },
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  },
+  "Interactions": [
+    "Weapon_Crossbow_Secondary_Guard_Bash"
+  ]
+}

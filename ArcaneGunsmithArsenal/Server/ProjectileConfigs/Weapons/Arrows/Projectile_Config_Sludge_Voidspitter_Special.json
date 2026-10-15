@@ -1,0 +1,48 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 20,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "SticksVertically": false,
+    "BounceCount": 1,
+    "BounceLimit": 0,
+    "Bounciness": 0.024
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Voidspitter_Primary_Shoot_Puddle_Special"
+        },
+        "Weapon_Voidspitter_Primary_Shoot_Damage_B",
+        "Explode_Sludge_D",
+        "Void_Projectile_Impact_Effects_D",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Voidspitter_Primary_Shoot_Puddle_Special"
+        },
+        "Explode_Sludge_D",
+        "Void_Projectile_Impact_Effects_D",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 3
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "LaunchForce": 45,
+  "Model": "Voidspitter_Sludge_D",
+  "Parent": "Projectile_Config_Sludge_Voidspitter"
+}

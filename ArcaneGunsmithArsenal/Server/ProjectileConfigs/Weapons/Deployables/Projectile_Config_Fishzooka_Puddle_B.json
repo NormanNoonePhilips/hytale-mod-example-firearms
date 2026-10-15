@@ -1,0 +1,112 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15.0,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "SticksVertically": false,
+    "BounceCount": 0,
+    "BounceLimit": 0.4
+  },
+  "LaunchForce": 4,
+  "SpawnOffset": {
+    "Z": -2
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "Class": "Charged",
+            "BaseDamage": {
+              "Projectile": 15
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Exp"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 1,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          }
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "SpawnDeployableAtHitLocation",
+          "Config": {
+            "Type": "Aoe",
+            "Id": "Fishzooka_Puddle_B",
+            "LiveDuration": 5,
+            "Model": "Pike",
+            "ModelScale": 1,
+            "Height": 2,
+            "RadiusChangeTime": 2,
+            "DeploySoundEventId": "SFX_Deployable_Totem_Slowing_Spawn",
+            "DespawnSoundEventId": "SFX_Deployable_Totem_Slowing_Despawn",
+            "ApplyEffects": [
+              "Fishzooka_Soak"
+            ],
+            "SpawnParticles": [
+              {
+                "SystemId": "Splash",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Fishzooka_Puddle_FX_B",
+                "TargetEntityPart": "Entity"
+              }
+            ],
+            "EndRadius": 5,
+            "DamageInterval": 0.5,
+            "StartRadius": 4,
+            "DamageAmount": 0,
+            "Stats": {
+              "Health": {
+                "Max": 25,
+                "Initial": 25
+              }
+            },
+            "HitboxCollisionConfig": "HardCollision"
+          }
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    }
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 90
+  },
+  "Model": "Pike"
+}

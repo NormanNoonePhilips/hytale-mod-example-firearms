@@ -1,0 +1,72 @@
+{
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_Peashooter_Automatic",
+      "Effects": {
+        "ItemPlayerAnimationsId": "Crossbow",
+        "ItemAnimationId": "ShootCharged"
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.125
+    },
+    {
+      "Type": "Projectile",
+      "Config": "AutoDev_A",
+      "Effects": {
+        "ItemPlayerAnimationsId": "Crossbow",
+        "ItemAnimationId": "ShootCharged"
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.125
+    },
+    {
+      "Type": "Projectile",
+      "Config": "AutoDev_B",
+      "Effects": {
+        "ItemPlayerAnimationsId": "Crossbow",
+        "ItemAnimationId": "ShootCharged"
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.125
+    },
+    {
+      "Type": "Projectile",
+      "Config": "AutoDev_C",
+      "Effects": {
+        "ItemPlayerAnimationsId": "Crossbow",
+        "ItemAnimationId": "ShootCharged"
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.125
+    },
+    {
+      "Type": "Projectile",
+      "Config": "AutoDev_D",
+      "Effects": {
+        "ItemPlayerAnimationsId": "Crossbow",
+        "ItemAnimationId": "ShootCharged"
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.125
+    },
+    {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "SignatureCharges": -100
+      },
+      "ValueType": "Percent"
+    }
+  ]
+}

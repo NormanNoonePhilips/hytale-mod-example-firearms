@@ -1,0 +1,54 @@
+{
+  "Type": "Explode",
+  "Parent": "Explode_Generic",
+  "Config": {
+    "DamageBlocks": false,
+    "DamageEntities": true,
+    "EntityDamageRadius": 2.5,
+    "EntityDamage": 6,
+    "EntityDamageFalloff": 0.5,
+    "Knockback": {
+      "Type": "Point",
+      "Force": 6
+    }
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Water_Splash",
+        "TargetEntityPart": "Entity",
+        "Scale": 1.5
+      },
+      {
+        "SystemId": "Water_Splash_Soft_Ver2",
+        "TargetEntityPart": "Entity",
+        "Scale": 2.5
+      },
+      {
+        "SystemId": "Sword_Signature_AoE",
+        "TargetEntityPart": "Entity",
+        "PositionOffset": {
+          "Y": 0.5
+        }
+      }
+    ],
+    "WorldSoundEventId": "SFX_Water_MoveIn"
+  },
+  "Next": {
+    "Type": "Selector",
+    "Selector": {
+      "Id": "AOECircle",
+      "Range": 2
+    },
+    "HitEntity": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Concheror_Soak",
+          "Entity": "Target"
+        }
+      ]
+    },
+    "RunTime": 0.1
+  }
+}

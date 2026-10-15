@@ -1,0 +1,9 @@
+This mod unlocks and makes usable the firearms hidden in Hytale’s game files, fully integrating them into the gameplay. It introduces a new craftable Ammo item, required to use all firearms. The Hand Gun and Assault Rifle are both fully craftable and use this Ammo system. Weapons and ammunition: can be crafted using the standard Workbench, in exchange for Powder.
+
+Hand Gun
+Assault Rifle
+Ammo
+Crafts
+
+Warning: This mod may contain bugs. Feel free to report any issues or give feedback to help improve it.
+By Antho.

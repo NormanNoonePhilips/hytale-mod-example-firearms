@@ -1,0 +1,19 @@
+{
+  "Type": "StatsCondition",
+  "Costs": {
+    "SignatureCharges": 100
+  },
+  "ValueType": "Percent",
+  "Failed": "Weapon_Peashooter_Shot_Standard_Heal",
+  "Next": {
+    "Type": "Projectile",
+    "Config": "Projectile_Config_SuperHeal_Peashooter",
+    "Next": {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "SignatureCharges": -100
+      },
+      "ValueType": "Percent"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Potion_Health_Implosion",
+        "TargetEntityPart": "Entity",
+        "Scale": 1.5
+      },
+      {
+        "TargetEntityPart": "Entity",
+        "SystemId": "Totem_Heal_Extra",
+        "Scale": 1
+      }
+    ]
+  }
+}

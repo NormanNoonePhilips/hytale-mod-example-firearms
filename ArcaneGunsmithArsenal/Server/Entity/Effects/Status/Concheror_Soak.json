@@ -1,0 +1,19 @@
+{
+  "Duration": 2,
+  "ApplicationEffects": {
+    "EntityBottomTint": "#5a60cf",
+    "ScreenEffect": "ScreenEffects/Water.png",
+    "EntityTopTint": "#7279ff",
+    "HorizontalSpeedMultiplier": 0.75,
+    "Particles": [
+      {
+        "SystemId": "Water_Concheror",
+        "TargetEntityPart": "Entity",
+        "Scale": 0.7
+      }
+    ]
+  },
+  "OverlapBehavior": "Overwrite",
+  "Debuff": true,
+  "RemovalBehavior": "Duration"
+}

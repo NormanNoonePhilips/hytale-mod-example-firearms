@@ -1,0 +1,7 @@
+{
+  "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+  "Config": "Projectile_Config_Ember_Candela_Strength_Y",
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  }
+}

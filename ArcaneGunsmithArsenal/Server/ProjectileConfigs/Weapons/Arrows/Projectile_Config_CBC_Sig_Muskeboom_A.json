@@ -1,0 +1,57 @@
+{
+  "Model": "MuskeBoom_Sig_Shot",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 18,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "LaunchForce": 85,
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 15
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": -5
+            }
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Impact_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "CMC_Impact_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  }
+}

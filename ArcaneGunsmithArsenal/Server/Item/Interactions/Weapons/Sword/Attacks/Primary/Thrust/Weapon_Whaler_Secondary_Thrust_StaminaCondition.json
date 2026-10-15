@@ -1,0 +1,23 @@
+{
+  "Type": "StatsCondition",
+  "Costs": {
+    "Stamina": 2
+  },
+  "Next": {
+    "Type": "ChangeStat",
+    "Behaviour": "Set",
+    "StatModifiers": {
+      "StaminaRegenDelay": -2
+    },
+    "Next": {
+      "Type": "Replace",
+      "Var": "Thrust",
+      "DefaultOk": true,
+      "DefaultValue": {
+        "Interactions": [
+          "Weapon_Whaler_Secondary_Thrust"
+        ]
+      }
+    }
+  }
+}

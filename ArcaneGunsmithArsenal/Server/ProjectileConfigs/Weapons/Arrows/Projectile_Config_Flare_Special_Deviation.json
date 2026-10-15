@@ -1,0 +1,7 @@
+{
+  "SpawnOffset": {
+    "X": -0.3,
+    "Z": -0.2
+  },
+  "Parent": "Projectile_Config_Flare_Special"
+}

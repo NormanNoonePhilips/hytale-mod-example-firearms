@@ -1,0 +1,46 @@
+{
+  "Type": "Selector",
+  "Selector": {
+    "Id": "AOECircle",
+    "Range": 9
+  },
+  "HitEntity": {
+    "Interactions": [
+      {
+        "Type": "ApplyEffect",
+        "EffectId": "Frost_Whaler",
+        "Entity": "Target"
+      },
+      {
+        "Parent": "DamageEntityParent",
+        "DamageCalculator": {
+          "BaseDamage": {
+            "Projectile": 40
+          }
+        },
+        "DamageEffects": {
+          "Knockback": {
+            "Type": "Point",
+            "VelocityConfig": {
+              "AirResistance": 0.97,
+              "AirResistanceMax": 0.96,
+              "GroundResistance": 0.94,
+              "GroundResistanceMax": 0.3,
+              "Threshold": 3.0,
+              "Style": "Exp"
+            },
+            "Force": 15,
+            "VelocityType": "Set"
+          },
+          "WorldParticles": [
+            {
+              "SystemId": "Impact_Mace_Charged",
+              "Scale": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "FailOn": "Neither"
+}

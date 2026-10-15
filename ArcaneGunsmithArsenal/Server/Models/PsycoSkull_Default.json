@@ -1,0 +1,36 @@
+{
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    },
+    "Min": {
+      "X": -0.1,
+      "Y": -0.1,
+      "Z": -0.1
+    }
+  },
+  "Model": "Items/Projectiles/Acid.blockymodel",
+  "Texture": "Items/Projectiles/Acid_Texture.png",
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "Items/Animations/Spin_Pitch/Spin_Pitch_Down.blockyanim"
+        }
+      ]
+    }
+  },
+  "Light": {
+    "Color": "#9f9",
+    "Radius": 1
+  },
+  "Particles": [
+    {
+      "SystemId": "GreenOrbTrail",
+      "TargetEntityPart": "Entity",
+      "Scale": 0.3
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.25
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 2
+  },
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          },
+          "Var": "BP_Damage_FX"
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "BP_Impact_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 12,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "TerminalVelocityAir": 20
+  },
+  "Model": "BackupPistol_Ammo_Void",
+  "LaunchForce": 40
+}

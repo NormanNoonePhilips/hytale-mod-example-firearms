@@ -1,0 +1,53 @@
+{
+  "Type": "Selector",
+  "$Comment": "Length of Combat",
+  "RunTime": 0.083,
+  "Effects": {
+    "CameraEffect": "Shortbow_Bash",
+    "Particles": [
+      {
+        "SystemId": "Block_Break_Crystal",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1.25
+        },
+        "Scale": 0.5,
+        "Color": "#4f04a3"
+      },
+      {
+        "SystemId": "Block_Break_Crystal",
+        "Color": "#4f04a3",
+        "PositionOffset": {
+          "Z": 2.5
+        },
+        "TargetEntityPart": "PrimaryItem"
+      }
+    ],
+    "WorldSoundEventId": "SFX_Cocoon_Break",
+    "LocalSoundEventId": "SFX_Cocoon_Break"
+  },
+  "Selector": {
+    "Id": "Stab",
+    "TestLineOfSight": true,
+    "ExtendTop": 0.5,
+    "ExtendLeft": 0.5,
+    "ExtendRight": 0.5,
+    "ExtendBottom": 0.5,
+    "StartDistance": 0,
+    "EndDistance": 5
+  },
+  "HitBlock": {
+    "Interactions": [
+      "Block_Break_Adventure"
+    ]
+  },
+  "Next": {
+    "Type": "Simple",
+    "RunTime": 0.5
+  },
+  "HitEntity": {
+    "Interactions": [
+      "Weapon_Voidspitter_Secondary_Guard_Whip_Damage"
+    ]
+  }
+}

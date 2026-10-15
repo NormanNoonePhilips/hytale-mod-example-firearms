@@ -1,0 +1,5 @@
+# === items ===
+
+items.Weapon_Gun_Blunderbuss_Hysteel.name = Hysteel Blunderbuss
+items.Ingredient_Bar_Hysteel.name = Hysteel Ingot
+items.Ingredient_Bar_Hysteel.description = <i>This alloy is born from the fusion of Iron and Copper in the belly of the furnace, it possesses an uncanny responsiveness to Magic. Weapons and tools forged from it hold mystical abilities, making it highly prized among artificers and battlemages alike.</i>

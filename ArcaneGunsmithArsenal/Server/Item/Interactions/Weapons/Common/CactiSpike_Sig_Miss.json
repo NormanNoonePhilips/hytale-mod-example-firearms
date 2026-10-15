@@ -1,0 +1,124 @@
+{
+  "Type": "Simple",
+  "RunTime": 1,
+  "Effects": {
+    "LocalSoundEventId": "SFX_Arrow_FullCharge_Miss",
+    "WorldSoundEventId": "SFX_Arrow_FullCharge_Miss"
+  },
+  "Next": {
+    "Type": "Repeat",
+    "Repeat": 9,
+    "ForkInteractions": {
+      "Interactions": [
+        {
+          "Type": "Selector",
+          "IgnoreOwner": true,
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 4,
+            "Offset": {
+              "Y": 0.5
+            }
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "DamageEntity",
+                "DamageCalculator": {
+                  "Class": "Signature",
+                  "BaseDamage": {
+                    "Physical": 10
+                  }
+                },
+                "DamageEffects": {
+                  "Knockback": {
+                    "Type": "Point",
+                    "Force": 9
+                  }
+                },
+                "Parent": "DamageEntityParent"
+              }
+            ]
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Sword_Signature_AoE",
+                "TargetEntityPart": "Entity",
+                "Scale": 1.65
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel",
+          "RunTime": 0.1
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_A2"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_A3"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_A4"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_B1",
+          "RunTime": 0.1
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_B2"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_B3"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_B4"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_C1",
+          "RunTime": 0.1
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_C2"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_C3"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_C4"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_D1",
+          "RunTime": 0.1
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_D2"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_D3"
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel_D4"
+        }
+      ]
+    }
+  }
+}

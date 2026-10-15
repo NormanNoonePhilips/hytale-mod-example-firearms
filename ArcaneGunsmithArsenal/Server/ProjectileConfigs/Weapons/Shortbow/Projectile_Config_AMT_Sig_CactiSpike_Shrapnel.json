@@ -1,0 +1,70 @@
+{
+  "Model": "CactiSpike_Sig_Shrapnel",
+  "LaunchForce": 9,
+  "Physics": {
+    "Type": "Standard",
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "Gravity": 6
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 3
+            },
+            "Class": "Signature"
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "AMT_Hit_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.8
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 10
+  },
+  "SpawnOffset": {
+    "Y": 0.5
+  }
+}

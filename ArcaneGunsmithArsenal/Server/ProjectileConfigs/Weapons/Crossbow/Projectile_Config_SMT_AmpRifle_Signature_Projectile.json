@@ -1,0 +1,68 @@
+{
+  "Model": "AmpRifle_Grenade",
+  "LaunchForce": 40,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 20,
+    "TerminalVelocityAir": 25,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "Bounciness": 0.6,
+    "BounceCount": 3,
+    "BounceLimit": 0.05,
+    "AllowRolling": true
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Signature_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Signature_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Sig_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Sig_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 2
+        },
+        {
+          "Type": "Replace",
+          "Var": "SMT_Sig_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 5
+  }
+}

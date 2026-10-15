@@ -1,0 +1,42 @@
+{
+  "HitBox": {
+    "Max": {
+      "X": 0.075,
+      "Y": 0.1,
+      "Z": 0.075
+    },
+    "Min": {
+      "X": -0.075,
+      "Y": -0.075,
+      "Z": -0.075
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "DefaultAttachments": [
+    {
+      "Model": "Items/Weapons/Arrow/Arrow.blockymodel",
+      "Texture": "Items/Weapons/Arrow/Arrow_Iron.png"
+    }
+  ],
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "Items/Animations/Fly/Fly_Vertical.blockyanim"
+        }
+      ]
+    }
+  },
+  "Particles": [
+    {
+      "SystemId": "Water_Bubble_Stream",
+      "Scale": 2
+    },
+    {
+      "SystemId": "Bat_Ice"
+    }
+  ]
+}

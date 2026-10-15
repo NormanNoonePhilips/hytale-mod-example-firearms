@@ -1,0 +1,880 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 0.6,
+  "Next": [
+    {
+      "Type": "Chaining",
+      "ChainingAllowance": 1,
+      "Next": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.06,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.07,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.08,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.09,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.1,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.11,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.12,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.13,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.14,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.15,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Type": "Chaining",
+      "ChainingAllowance": 1,
+      "Next": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.06,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_A",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.07,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_B",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.08,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_C",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.09,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_A",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.1,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_B",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.11,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_C",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.12,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_A",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.13,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_B",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.14,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_C",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Parallel",
+          "Interactions": [
+            {
+              "Interactions": [
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.15,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true,
+                    "Particles": [
+                      {
+                        "SystemId": "Impact_Ice",
+                        "TargetEntityPart": "PrimaryItem",
+                        "PositionOffset": {
+                          "Z": 0.7,
+                          "Y": 0.2,
+                          "X": 0.1
+                        },
+                        "Scale": 0.4
+                      },
+                      {
+                        "SystemId": "Candle_Fire",
+                        "Color": "#36b8e6",
+                        "PositionOffset": {
+                          "X": 0.1,
+                          "Y": 0.2,
+                          "Z": 0.7
+                        },
+                        "TargetEntityPart": "PrimaryItem",
+                        "Scale": 2
+                      }
+                    ]
+                  },
+                  "Config": "Projectile_Config_ABT_Refroster",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.1
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "Interactions": [
+                {
+                  "Type": "ChainFlag",
+                  "ChainId": "AMT_Primary_Overheating",
+                  "Flag": "AMT_Primary_Overheat"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Chaining",
+      "ChainingAllowance": 1,
+      "Next": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.06,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_D",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.07,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_E",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.08,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_F",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.09,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_D",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.1,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_E",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.11,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_F",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.12,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_D",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.13,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_E",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.14,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_Refroster_F",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Ice",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "Flags": {
+    "AMT_Primary_Overheat": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "RunTime": 0.275,
+              "Effects": {
+                "ItemAnimationId": "ShootCharged",
+                "ClearAnimationOnFinish": true
+              },
+              "Config": "Projectile_Config_ABT_Refroster_Over",
+              "Next": {
+                "Type": "ModifyInventory",
+                "ItemToRemove": {
+                  "Id": "Weapon_MagicCell_Ice",
+                  "Quantity": 1
+                },
+                "RequiredGameMode": "Adventure",
+                "Next": {
+                  "Type": "ChangeStat",
+                  "Behaviour": "Set",
+                  "StatModifiers": {
+                    "StaminaRegenDelay": 0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "AMT_Primary_Overheating",
+              "Flag": "AMT_Primary_Overheat"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ChainId": "AMT_Primary_Overheating",
+  "Effects": {
+    "WorldSoundEventId": "SFX_Ice_Build"
+  }
+}

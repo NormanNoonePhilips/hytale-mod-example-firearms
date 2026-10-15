@@ -1,0 +1,48 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_HailCannon_Signature_SMortar_Projectile",
+          "Config": "Projectile_Config_Hailcannon_Signature_SMortar"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_HailCannon_Signature_SMortar_Projectile",
+          "Config": "SMortar_Deviation_A"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_HailCannon_Signature_SMortar_Projectile",
+          "Config": "SMortar_Deviation_B"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_HailCannon_Signature_SMortar_Projectile",
+          "Config": "SMortar_Deviation_C"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    }
+  ]
+}

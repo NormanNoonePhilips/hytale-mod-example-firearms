@@ -1,0 +1,40 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": true,
+    "DamageBlocks": false,
+    "EntityDamage": 25,
+    "EntityDamageRadius": 6,
+    "Knockback": {
+      "Type": "Point",
+      "VelocityConfig": {
+        "AirResistance": 0.97,
+        "AirResistanceMax": 0.96,
+        "Direction": {
+          "X": 0.0,
+          "Y": 5.0,
+          "Z": 0.0
+        },
+        "GroundResistance": 0.94,
+        "GroundResistanceMax": 0.3,
+        "Threshold": 3.0
+      },
+      "Force": 8,
+      "VelocityType": "Add"
+    },
+    "EntityDamageFalloff": 0.5
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Lightning",
+        "TargetEntityPart": "Entity",
+        "Scale": 2
+      }
+    ],
+    "WaitForAnimationToFinish": false,
+    "WorldSoundEventId": "SFX_Goblin_Lobber_Bomb_Death",
+    "LocalSoundEventId": "SFX_Goblin_Lobber_Bomb_Death"
+  },
+  "RunTime": 0.2
+}

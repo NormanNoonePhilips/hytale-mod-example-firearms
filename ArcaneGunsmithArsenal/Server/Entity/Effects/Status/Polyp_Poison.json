@@ -1,0 +1,15 @@
+{
+  "ApplicationEffects": {
+    "ScreenEffect": "ScreenEffects/Poison_T1.png"
+  },
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Poison": 4
+    }
+  },
+  "DamageCalculatorCooldown": 3,
+  "Duration": 10,
+  "OverlapBehavior": "Overwrite",
+  "Debuff": true,
+  "RemovalBehavior": "Complete"
+}

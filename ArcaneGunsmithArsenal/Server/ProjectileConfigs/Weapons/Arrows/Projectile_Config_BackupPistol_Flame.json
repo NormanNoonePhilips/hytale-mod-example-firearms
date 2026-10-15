@@ -1,0 +1,52 @@
+{
+  "Model": "BackupPistol_Ammo_Flame",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "TerminalVelocityAir": 30
+  },
+  "LaunchForce": 30,
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          },
+          "Var": "BP_Damage_FX"
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "BP_Impact_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.25
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 3
+  }
+}

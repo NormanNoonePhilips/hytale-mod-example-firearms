@@ -1,0 +1,50 @@
+{
+  "Type": "Parallel",
+  "Effects": {
+    "ItemAnimationId": "Shoot",
+    "ClearAnimationOnFinish": true
+  },
+  "RunTime": 0.5,
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chainshot_Cannonball_B"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chainshot_Cannonball_B2"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chainshot_Tether_C"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chainshot_Tether_C2"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Chainshot_Tether_C3"
+        }
+      ]
+    }
+  ]
+}

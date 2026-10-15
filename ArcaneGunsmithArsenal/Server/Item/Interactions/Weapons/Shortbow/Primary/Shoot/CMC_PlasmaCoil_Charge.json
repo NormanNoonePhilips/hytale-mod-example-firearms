@@ -1,0 +1,30 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": false,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+  },
+  "Next": {
+    "0.75": {
+      "Type": "ChangeStat",
+      "Behaviour": "Add",
+      "StatModifiers": {
+        "Ammo": -1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Proj_C",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_2"
+          ]
+        }
+      }
+    }
+  }
+}

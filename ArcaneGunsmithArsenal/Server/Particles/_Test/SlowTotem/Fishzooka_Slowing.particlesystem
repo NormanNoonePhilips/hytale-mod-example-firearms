@@ -1,0 +1,10 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Fishzooka_Spawners"
+    }
+  ],
+  "CullDistance": 100,
+  "$Comment": "spawn of the effect",
+  "LifeSpan": 3
+}

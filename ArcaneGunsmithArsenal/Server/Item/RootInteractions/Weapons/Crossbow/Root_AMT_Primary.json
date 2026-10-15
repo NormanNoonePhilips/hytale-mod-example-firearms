@@ -1,0 +1,13 @@
+{
+  "Cooldown": {
+    "Cooldown": 0.025
+  },
+  "Interactions": [
+    "AMT_Primary"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

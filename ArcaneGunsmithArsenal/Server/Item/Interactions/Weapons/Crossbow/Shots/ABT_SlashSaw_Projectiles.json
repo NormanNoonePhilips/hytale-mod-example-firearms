@@ -1,0 +1,836 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 0.5,
+  "Next": [
+    {
+      "Type": "Chaining",
+      "Next": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A1",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A1",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A2",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.1
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A2",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.1
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A3",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.125
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A3",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.125
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A4",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A5",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_A4",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        }
+      ],
+      "ChainingAllowance": 1
+    },
+    {
+      "Type": "Chaining",
+      "Next": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_B2",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.1
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_B2",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.1
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_B3",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.125
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_B3",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.125
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_B4",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_B4",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        },
+        {
+          "Type": "Parallel",
+          "Interactions": [
+            {
+              "Interactions": [
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.05,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_ABT_SlashSaw_B4",
+                  "Next": {
+                    "Type": "ModifyInventory",
+                    "ItemToRemove": {
+                      "Id": "Weapon_MagicCell_Void",
+                      "Quantity": 1
+                    },
+                    "RequiredGameMode": "Adventure",
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.15
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "Interactions": [
+                {
+                  "Type": "ChainFlag",
+                  "ChainId": "AMT_Primary_Overheating",
+                  "Flag": "AMT_Primary_Overheat"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ChainingAllowance": 1
+    },
+    {
+      "Type": "Chaining",
+      "Next": [
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C1",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C1",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.075
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C2",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.1
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C2",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.1
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C3",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.125
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C3",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.125
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C4",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ClearAnimationOnFinish": true
+          },
+          "Config": "Projectile_Config_ABT_SlashSaw_C5",
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Void",
+              "Quantity": 1
+            },
+            "RequiredGameMode": "Adventure",
+            "Next": {
+              "Type": "ChangeStat",
+              "Behaviour": "Set",
+              "StatModifiers": {
+                "StaminaRegenDelay": 0
+              },
+              "RunTime": 0.15
+            }
+          }
+        }
+      ],
+      "ChainingAllowance": 1
+    }
+  ],
+  "Flags": {
+    "AMT_Primary_Overheat": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            "ABT_SlashSaw_Overheat_Strength"
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "TriggerCooldown",
+              "Cooldown": {
+                "Id": "ABT_Cooldown",
+                "Cooldown": 5
+              },
+              "Effects": {
+                "Particles": [
+                  {
+                    "SystemId": "Explosion_Small",
+                    "TargetEntityPart": "PrimaryItem",
+                    "Scale": 0.3,
+                    "PositionOffset": {
+                      "Y": 0.45,
+                      "Z": 1
+                    }
+                  }
+                ],
+                "WorldSoundEventId": "SFX_Blunderbuss_Fire",
+                "LocalSoundEventId": "SFX_Blunderbuss_Fire_Local"
+              }
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Explode",
+              "Config": {
+                "DamageEntities": true,
+                "EntityDamageRadius": 3,
+                "EntityDamage": 20,
+                "EntityDamageFalloff": 0.5,
+                "Knockback": {
+                  "Type": "Directional",
+                  "Force": -25
+                }
+              },
+              "Effects": {
+                "Particles": [
+                  {
+                    "SystemId": "Smoke_Black",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "Y": 0.45,
+                      "Z": 1
+                    }
+                  }
+                ]
+              },
+              "RunTime": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ChainId": "AMT_Primary_Overheating"
+}

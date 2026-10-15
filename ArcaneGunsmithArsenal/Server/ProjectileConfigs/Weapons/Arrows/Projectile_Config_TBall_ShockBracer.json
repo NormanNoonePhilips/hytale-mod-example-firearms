@@ -1,0 +1,64 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 0,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.12,
+    "SticksVertically": false,
+    "BounceLimit": 0,
+    "BounceCount": 1
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_ShockBracer_Primary_TBall_Damage",
+        "Explode_TBall",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 2
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        "Explode_TBall",
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Lightning_Tesla",
+  "LaunchForce": 30,
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot"
+}

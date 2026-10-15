@@ -1,0 +1,11 @@
+{
+  "RequireNewClick": false,
+  "Interactions": [
+    "Weapon_Voidspitter_Primary_Shoot"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

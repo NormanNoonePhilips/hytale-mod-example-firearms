@@ -1,0 +1,38 @@
+{
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    },
+    "Min": {
+      "X": -0.1,
+      "Y": -0.1,
+      "Z": -0.1
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "Trails": [
+    {
+      "TrailId": "Kunai",
+      "TargetEntityPart": "Self"
+    }
+  ],
+  "Particles": [
+    {
+      "SystemId": "Mace_Charging",
+      "Scale": 5
+    },
+    {
+      "SystemId": "Fire_Blue",
+      "Scale": 2
+    }
+  ],
+  "Light": {
+    "Color": "#469",
+    "Radius": 1
+  }
+}

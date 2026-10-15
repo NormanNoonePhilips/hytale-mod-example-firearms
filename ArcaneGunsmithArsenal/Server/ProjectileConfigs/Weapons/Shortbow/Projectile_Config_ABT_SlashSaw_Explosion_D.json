@@ -1,0 +1,10 @@
+{
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.5
+  },
+  "Parent": "Projectile_Config_ABT_SlashSaw_Explosion",
+  "SpawnRotationOffset": {
+    "Pitch": 45
+  }
+}

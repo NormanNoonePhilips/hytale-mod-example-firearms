@@ -1,0 +1,45 @@
+{
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Food_Instant_Heal_T3",
+          "Entity": "Target",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Health_Potion_High_Drink",
+            "LocalSoundEventId": "SFX_Health_Potion_High_Drink_Local"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Food_Health_Regen_Small"
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Food_Stamina_Regen_Small"
+        },
+        "Weapon_Peashooter_Effects_Variation",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Standard_Projectile_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Parent": "Projectile_Config_Heal_Peashooter",
+  "Model": "Peashooter_SuperHeal"
+}

@@ -1,0 +1,132 @@
+{
+  "Model": "Pike_Fishzooka",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 7,
+    "TerminalVelocityAir": 90,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "SticksVertically": true
+  },
+  "LaunchForce": 90,
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "Class": "Charged",
+            "BaseDamage": {
+              "Projectile": 50
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Exp"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 25,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 3
+            }
+          ]
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Fishzooka_Ricochet_B"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.15
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "CMC_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Fishzooka_Puddle_B"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.15
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 1.2
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Projectile_Config_Fishzooka_Puddle_B"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.1
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": 0.5
+  },
+  "LaunchLocalSoundEventId": "SFX_Water_Moveout",
+  "LaunchWorldSoundEventId": "SFX_Water_Moveout"
+}

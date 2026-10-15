@@ -1,0 +1,75 @@
+{
+  "Model": "Rubble_Ice_Refroster",
+  "LaunchForce": 50,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 12,
+    "TerminalVelocityAir": 25,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "LaunchLocalSoundEventId": "SFX_Ice_Break",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Sig_Damage_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Shortbow_Primary_Shoot_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "AMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 1
+        },
+        {
+          "Type": "Replace",
+          "Var": "AMT_Hit_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.5
+  }
+}

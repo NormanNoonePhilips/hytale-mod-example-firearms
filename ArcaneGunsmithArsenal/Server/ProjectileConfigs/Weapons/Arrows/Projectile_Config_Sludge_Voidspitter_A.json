@@ -1,0 +1,36 @@
+{
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_Voidspitter_Primary_Shoot_Damage_A",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "LaunchForce": 35,
+  "Parent": "Projectile_Config_Sludge_Voidspitter",
+  "Model": "Voidspitter_Sludge_A"
+}

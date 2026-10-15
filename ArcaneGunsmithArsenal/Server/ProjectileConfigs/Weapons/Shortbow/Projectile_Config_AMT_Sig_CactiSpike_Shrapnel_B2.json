@@ -1,0 +1,10 @@
+{
+  "SpawnRotationOffset": {
+    "Pitch": 7.5,
+    "Yaw": 135
+  },
+  "SpawnOffset": {
+    "Y": 0.75
+  },
+  "Parent": "Projectile_Config_AMT_Sig_CactiSpike_Shrapnel"
+}

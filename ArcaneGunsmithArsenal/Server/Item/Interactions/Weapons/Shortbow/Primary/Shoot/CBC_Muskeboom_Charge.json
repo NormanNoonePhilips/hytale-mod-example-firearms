@@ -1,0 +1,111 @@
+{
+  "Type": "Charging",
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "Scale": 1,
+        "SystemId": "Fire_Charge_Charging_Constant",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.14
+        }
+      }
+    ]
+  },
+  "HorizontalSpeedMultiplier": 0.7,
+  "Next": {
+    "0.5": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 2
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Proj_A",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_0"
+          ]
+        }
+      }
+    },
+    "1": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 2
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Proj_B",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_1"
+          ]
+        }
+      }
+    },
+    "1.75": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 3
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Proj_C",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_2"
+          ]
+        }
+      }
+    },
+    "2.5": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 3
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Proj_D",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_3"
+          ]
+        }
+      }
+    },
+    "3.5": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Flame",
+        "Quantity": 4
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Proj_E",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Strength_4"
+          ]
+        }
+      }
+    }
+  },
+  "AllowIndefiniteHold": true
+}

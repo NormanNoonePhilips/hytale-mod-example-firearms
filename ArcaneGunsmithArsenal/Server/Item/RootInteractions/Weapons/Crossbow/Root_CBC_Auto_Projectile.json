@@ -1,0 +1,14 @@
+{
+  "Cooldown": {
+    "Cooldown": 0.05,
+    "Id": "CMCPrimaryCooldown"
+  },
+  "Interactions": [
+    "CMC_Primary_Action"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

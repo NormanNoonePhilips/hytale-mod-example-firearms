@@ -1,0 +1,73 @@
+{
+  "Model": "Piranha",
+  "Parent": "Proj_SMT_Concheror_Bounce",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          },
+          "Var": "SMT_Damage_Bounce"
+        },
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Effects_Standard_Projectile_Impact"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.2
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 3
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "SMT_Projectile_Attack"
+        }
+      ]
+    }
+  }
+}

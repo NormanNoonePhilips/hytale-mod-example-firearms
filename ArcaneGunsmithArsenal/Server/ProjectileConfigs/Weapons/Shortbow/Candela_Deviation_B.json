@@ -1,0 +1,5 @@
+{
+  "Parent": "Projectile_Config_Ember_Candela_Strength_Z",
+  "Model": "Fireball",
+  "LaunchForce": 25
+}

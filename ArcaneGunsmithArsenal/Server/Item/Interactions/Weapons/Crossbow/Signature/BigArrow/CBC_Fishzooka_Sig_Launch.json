@@ -1,0 +1,11 @@
+{
+  "Type": "Projectile",
+  "Config": "Projectile_Config_Sig_Fishzooka",
+  "Next": {
+    "Type": "ChangeStat",
+    "StatModifiers": {
+      "SignatureCharges": -100
+    },
+    "ValueType": "Percent"
+  }
+}

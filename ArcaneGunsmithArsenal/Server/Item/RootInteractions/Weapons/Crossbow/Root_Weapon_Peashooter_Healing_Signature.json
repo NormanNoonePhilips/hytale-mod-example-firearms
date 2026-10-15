@@ -1,0 +1,20 @@
+{
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Charges": [
+      5,
+      5,
+      5
+    ],
+    "InterruptRecharge": true,
+    "Cooldown": 0.5
+  },
+  "Interactions": [
+    "Weapon_Peashooter_Primary_Signature_Healing"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

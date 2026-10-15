@@ -1,0 +1,7 @@
+{
+  "Parent": "Weapon_HailCannon_Primary_Launch_Mortar",
+  "Config": "Projectile_Config_Mortar_Hailcannon",
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  }
+}

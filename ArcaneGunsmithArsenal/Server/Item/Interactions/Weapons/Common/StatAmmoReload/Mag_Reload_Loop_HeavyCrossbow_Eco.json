@@ -1,0 +1,71 @@
+{
+  "Type": "Simple",
+  "RunTime": 0.8,
+  "Effects": {
+    "ItemAnimationId": "ReloadReady",
+    "WorldSoundEventId": "SFX_Door_Crude_Open",
+    "LocalSoundEventId": "SFX_Door_Crude_Open",
+    "ClearAnimationOnFinish": true,
+    "ItemPlayerAnimationsId": "Crossbow"
+  },
+  "Next": {
+    "Type": "Repeat",
+    "Repeat": -1,
+    "Rules": {
+      "InterruptedBy": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    "ForkInteractions": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "LessThan": true,
+          "Costs": {
+            "Ammo": 100
+          },
+          "ValueType": "Percent",
+          "Next": {
+            "Type": "ModifyInventory",
+            "RequiredGameMode": "Adventure",
+            "ItemToRemove": {
+              "Id": "Weapon_MagicCell_Eco",
+              "Quantity": 3
+            },
+            "Next": {
+              "Type": "Simple",
+              "RunTime": 0.3,
+              "HorizontalSpeedMultiplier": 0.75,
+              "Effects": {
+                "ItemAnimationId": "ShootCharging",
+                "WorldSoundEventId": "SFX_Hand_Crossbow_T2_Load",
+                "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Load_Local",
+                "ClearAnimationOnFinish": true,
+                "ItemPlayerAnimationsId": "Crossbow_Heavy"
+              },
+              "Next": {
+                "Type": "ApplyEffect",
+                "HorizontalSpeedMultiplier": 0.75,
+                "EffectId": {
+                  "StatModifiers": {
+                    "Ammo": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Failed": {
+      "Type": "Replace",
+      "Var": "No_Ammo_Effects",
+      "DefaultValue": {
+        "Interactions": [
+          "Common_Bow_No_Ammo"
+        ]
+      }
+    }
+  }
+}

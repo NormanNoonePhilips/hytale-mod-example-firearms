@@ -1,0 +1,25 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageBlocks": true,
+    "DamageEntities": true,
+    "EntityDamageRadius": 4,
+    "EntityDamage": 15,
+    "EntityDamageFalloff": 0.5,
+    "BlockDamageRadius": 2,
+    "BlockDamageFalloff": 3,
+    "BlockDropChance": 1
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Magic_Hit",
+        "TargetEntityPart": "Entity",
+        "PositionOffset": {
+          "X": -1,
+          "Y": -1
+        }
+      }
+    ]
+  }
+}

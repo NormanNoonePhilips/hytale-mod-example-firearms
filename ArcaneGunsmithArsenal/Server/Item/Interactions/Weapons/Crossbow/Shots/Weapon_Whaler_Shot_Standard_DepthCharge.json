@@ -1,0 +1,29 @@
+{
+  "Type": "Projectile",
+  "RunTime": 0.2,
+  "Effects": {
+    "ItemAnimationId": "ShootCharged",
+    "ClearAnimationOnFinish": true
+  },
+  "Config": "Projectile_Config_DepthCharge_Whaler",
+  "Next": {
+    "Type": "ChangeStat",
+    "StatModifiers": {
+      "Ammo": -1
+    },
+    "Next": {
+      "Type": "ChangeStat",
+      "Behaviour": "Set",
+      "StatModifiers": {
+        "StaminaRegenDelay": 0
+      },
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "SignatureCharges": -100
+        },
+        "ValueType": "Percent"
+      }
+    }
+  }
+}

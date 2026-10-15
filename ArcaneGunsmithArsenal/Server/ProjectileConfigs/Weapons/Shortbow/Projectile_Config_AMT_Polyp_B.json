@@ -1,0 +1,7 @@
+{
+  "Parent": "Projectile_Config_AMT_Polyp",
+  "SpawnRotationOffset": {
+    "Pitch": 1,
+    "Yaw": -1
+  }
+}

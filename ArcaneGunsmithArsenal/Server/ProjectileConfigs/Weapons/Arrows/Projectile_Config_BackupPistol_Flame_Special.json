@@ -1,0 +1,117 @@
+{
+  "Model": "Bomb",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "Bounciness": 0.5,
+    "SticksVertically": true,
+    "TerminalVelocityAir": 30,
+    "BounceCount": 1
+  },
+  "LaunchForce": 30,
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 3,
+            "EntityDamage": 16,
+            "EntityDamageFalloff": 0.5,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 12
+            }
+          },
+          "Next": {
+            "Type": "Selector",
+            "Selector": {
+              "Id": "AOECircle",
+              "Range": 2
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "ApplyEffect",
+                  "Entity": "Target",
+                  "EffectId": "Burn"
+                }
+              ]
+            },
+            "RunTime": 0.1
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Explosion_Small",
+                "TargetEntityPart": "Entity",
+                "Scale": 2
+              }
+            ],
+            "WorldSoundEventId": "SFX_Goblin_Lobber_Bomb_Death"
+          },
+          "RunTime": 0.05
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 3,
+            "EntityDamage": 21,
+            "EntityDamageFalloff": 0.5,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 12
+            }
+          },
+          "Next": {
+            "Type": "Selector",
+            "Selector": {
+              "Id": "AOECircle",
+              "Range": 2
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "ApplyEffect",
+                  "Entity": "Target",
+                  "EffectId": "Burn"
+                }
+              ]
+            },
+            "RunTime": 0.1
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Explosion_Small",
+                "TargetEntityPart": "Entity",
+                "Scale": 2
+              }
+            ],
+            "WorldSoundEventId": "SFX_Goblin_Lobber_Bomb_Death"
+          },
+          "RunTime": 0.05
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.25
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 3
+  }
+}

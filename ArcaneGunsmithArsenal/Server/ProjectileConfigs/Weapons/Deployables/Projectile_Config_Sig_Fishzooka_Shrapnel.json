@@ -1,0 +1,73 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 15.0,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "SticksVertically": false,
+    "BounceCount": 5,
+    "BounceLimit": 0.02,
+    "Bounciness": 0.85
+  },
+  "LaunchForce": 9,
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "Class": "Unknown",
+            "BaseDamage": {
+              "Projectile": 6
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Exp"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 1,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          }
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    }
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 87,
+    "Yaw": 180
+  },
+  "Model": "Piranha"
+}

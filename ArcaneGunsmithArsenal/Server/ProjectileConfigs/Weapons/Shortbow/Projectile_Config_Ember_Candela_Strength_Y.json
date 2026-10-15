@@ -1,0 +1,56 @@
+{
+  "Parent": "Projectile_Config_Ember_Candela",
+  "Model": "Fireball",
+  "LaunchForce": 60,
+  "Physics": {
+    "Type": "Standard",
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "BounceCount": -1,
+    "Gravity": 10
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Damage_Strength_2",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Shortbow_Primary_Shoot_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact_Strength_2",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss_Strength_2",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  }
+}

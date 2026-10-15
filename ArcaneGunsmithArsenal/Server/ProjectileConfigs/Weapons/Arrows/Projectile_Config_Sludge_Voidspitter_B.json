@@ -1,0 +1,22 @@
+{
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_Voidspitter_Primary_Shoot_Damage_B",
+        "Explode_Sludge_B",
+        "Void_Projectile_Impact_Effects_B",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        "Explode_Sludge_B",
+        "Void_Projectile_Impact_Effects_B",
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "LaunchForce": 40,
+  "Parent": "Projectile_Config_Sludge_Voidspitter",
+  "Model": "Voidspitter_Sludge_B"
+}

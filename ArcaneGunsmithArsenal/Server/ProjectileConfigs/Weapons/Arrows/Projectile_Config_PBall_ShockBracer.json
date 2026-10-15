@@ -1,0 +1,60 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 0,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "Velocity",
+    "Bounciness": 1,
+    "SticksVertically": false,
+    "BounceCount": 3,
+    "BounceLimit": 0
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Explode_PBall_C",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.65
+        },
+        {
+          "Type": "Repeat",
+          "Repeat": 7,
+          "ForkInteractions": {
+            "Interactions": [
+              "Explode_PBall_B",
+              {
+                "Type": "Simple",
+                "Effects": {
+                  "Particles": [
+                    {
+                      "SystemId": "Lightning",
+                      "TargetEntityPart": "Self",
+                      "Scale": 2
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Lightning_Plasma",
+  "LaunchForce": 10,
+  "SpawnOffset": {
+    "Y": -0.2,
+    "X": 0.1,
+    "Z": -0.5
+  }
+}

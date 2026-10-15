@@ -1,0 +1,52 @@
+{
+  "Model": "BackupPistol_Ammo_Eco",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 30,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "SticksVertically": true,
+    "TerminalVelocityAir": 40,
+    "BounceCount": 0
+  },
+  "LaunchForce": 45,
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          },
+          "Var": "BP_Damage_FX"
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "BP_Impact_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.25
+  },
+  "SpawnRotationOffset": {
+    "Pitch": 3
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "LaunchForce": 50,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 1,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_FlashBall_Damage_Special_Shockwave",
+        {
+          "Type": "Replace",
+          "Var": "Standard_Projectile_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Effects_Standard_Projectile_Impact"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn",
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Burn_Ignite"
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Standard_Projectile_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.1
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Projectile",
+  "SpawnOffset": {
+    "Z": -0.2,
+    "X": 0.3
+  }
+}

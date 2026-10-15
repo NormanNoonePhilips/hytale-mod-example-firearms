@@ -1,0 +1,218 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 1,
+  "Next": [
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Lightning"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_A_Z"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_A_Y"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_A_X"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Lightning"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_B_Z"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_B_Y"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_B_X"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Lightning"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_C_Z"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_C_Y"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_C_X"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "ShockBracer_Loop",
+              "Flag": "ShockBracer_Overheat_A"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ChainId": "ShockBracer_Loop",
+  "Flags": {
+    "ShockBracer_Overheat_A": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_D_Z"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_D_Y"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_D_X"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Projectile_Config_Lightning_Shrapnel"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "ShockBracer_Loop",
+              "Flag": "ShockBracer_Overheat_B"
+            }
+          ]
+        }
+      ]
+    },
+    "ShockBracer_Overheat_B": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_E_Z"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_E_Y"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Shrapnel_Deviation_E_X"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Parent": "Weapon_ShockBracer_Primary_Shoot_Shrapnel",
+              "Config": "Projectile_Config_Lightning_Shrapnel"
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "ShockBracer_Loop",
+              "Flag": "ShockBracer_Overheat_A"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

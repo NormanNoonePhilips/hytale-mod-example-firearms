@@ -1,0 +1,19 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Guns/Revolver/RevolverCock.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": -2,
+        "MaxPitch": 1,
+        "MinVolume": -2,
+        "MaxVolume": 0.5
+      }
+    }
+  ],
+  "Volume": 0.1,
+  "MaxInstance": 20,
+  "MaxDistance": 5,
+  "Parent": "SFX_Attn_Moderate"
+}

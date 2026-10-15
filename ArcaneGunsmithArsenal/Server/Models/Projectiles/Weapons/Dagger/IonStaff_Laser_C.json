@@ -1,0 +1,37 @@
+{
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.25,
+      "Y": 0.25,
+      "Z": 0.25
+    },
+    "Min": {
+      "X": -0.25,
+      "Y": -0.25,
+      "Z": -0.25
+    }
+  },
+  "Trails": [
+    {
+      "TargetNodeName": "Handle",
+      "TrailId": "Rubble",
+      "RotationOffset": {
+        "Yaw": -45
+      }
+    }
+  ],
+  "MinScale": 1,
+  "MaxScale": 1,
+  "Particles": [
+    {
+      "SystemId": "Golem_Fire_Glow",
+      "TargetEntityPart": "Entity",
+      "Scale": 3
+    }
+  ],
+  "Light": {
+    "Radius": 1
+  }
+}

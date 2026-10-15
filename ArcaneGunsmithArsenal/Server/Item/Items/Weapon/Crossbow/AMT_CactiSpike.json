@@ -1,0 +1,232 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_CactiSpike.name",
+    "Description": "AGA_Server.items.ArcaneGun_CactiSpike.description"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Icon": "Icons/ItemsGenerated/AMT_CactiSpike.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Uncommon",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      320,
+      110,
+      11
+    ],
+    "Translation": [
+      1,
+      -16
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_AMT_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 40,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 15,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 150,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "AMT_Primary_Projectile": {
+      "Interactions": [
+        "AMT_CactiSpike_Projectile"
+      ]
+    },
+    "AMT_Signature_Projectile": {
+      "Interactions": [
+        "AMT_CactiSpike_Sig_Projectile"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "Mag_Staged_Reload_Loop_Eco"
+      ]
+    },
+    "AMT_Damage_FX": {
+      "Interactions": [
+        "AMT_CactiSpike_Damage"
+      ]
+    },
+    "AMT_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "AMT_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 1,
+          "Effects": {
+            "WorldSoundEventId": "SFX_Fern_Break",
+            "ClearSoundEventOnFinish": true
+          }
+        }
+      ]
+    },
+    "AMT_Sig_Damage_FX": {
+      "Interactions": [
+        "Weapon_Crossbow_Damage_Signature_Projectile"
+      ]
+    },
+    "AMT_Sig_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "AMT_Sig_Miss_FX": {
+      "Interactions": [
+        "CactiSpike_Sig_Miss"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Cactispike_Bash"
+      ]
+    }
+  },
+  "Model": "Items/Weapons/CactiSpike.blockymodel",
+  "Texture": "Items/Weapons/CactiSpikeTexture.png",
+  "Scale": 1,
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.175,
+        "Z": -0.25
+      },
+      "Color": "#51d733",
+      "Scale": 0.15
+    }
+  ],
+  "DurabilityLossOnDeath": true,
+  "ItemLevel": 25,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 7,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 100
+      },
+      {
+        "ResourceTypeId": "Wood_Goldenwood",
+        "Quantity": 6
+      },
+      {
+        "Quantity": 5,
+        "ItemId": "Ingredient_Bar_Thorium"
+      },
+      {
+        "ResourceTypeId": "Flowers",
+        "Quantity": 15
+      }
+    ]
+  }
+}

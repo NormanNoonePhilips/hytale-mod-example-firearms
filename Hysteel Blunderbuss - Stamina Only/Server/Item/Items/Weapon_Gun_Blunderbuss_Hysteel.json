@@ -1,0 +1,130 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Weapon_Gun_Blunderbuss_Hysteel.name"
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Icon": "Icons/ItemsGenerated/Weapon_Gun_Blunderbuss_Hysteel.png",
+  "Texture": "Resources/Gun/Blunderbuss_Texture.png",
+  "PlayerAnimationsId": "Rifle",
+  "Interactions": {
+    "Primary": {
+      "RequireNewClick": true,
+      "ClickQueuingTimeout": 0.2,
+      "Interactions": [
+        "Gun_Shoot_Hysteel"
+      ],
+      "Cooldown": {
+        "Cooldown": 0.2
+      }
+    },
+    "Secondary": {
+      "Interactions": [
+        "Gun_Attack_Hysteel"
+      ]
+    },
+    "Ability1": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "Costs": {
+            "SignatureEnergy": 100
+          },
+          "Next": {
+            "Type": "Serial",
+            "Interactions": [
+              {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "SignatureEnergy": -100
+                },
+                "ValueType": "Percent"
+              },
+              {
+                "Type": "LaunchProjectile",
+                "ProjectileId": "Gunshot",
+                "RunTime": 0.3
+              },
+              {
+                "Type": "LaunchProjectile",
+                "ProjectileId": "Gunshot",
+                "RunTime": 0.3
+              },
+              {
+                "Type": "LaunchProjectile",
+                "ProjectileId": "Gunshot",
+                "RunTime": 0.3
+              }
+            ]
+          },
+          "ValueType": "Percent",
+          "Lenient": true
+        }
+      ]
+    }
+  },
+  "IconProperties": {
+    "Scale": 0.38,
+    "Rotation": [
+      320,
+      90,
+      0
+    ],
+    "Translation": [
+      -14,
+      -25
+    ]
+  },
+  "Quality": "Rare",
+  "Model": "Items/Weapons/Gun/Blunderbuss.blockymodel",
+  "Scale": 1,
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Gun"
+    ]
+  },
+  "Weapon": {
+    "StatModifiers": {
+      "SignatureEnergy": [
+        {
+          "CalculationType": "Additive",
+          "Amount": 30
+        }
+      ]
+    },
+    "EntityStatsToClear": [
+      "SignatureEnergy"
+    ]
+  },
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Weapon_Bench",
+        "Categories": [
+          "Weapon_Bow"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 12,
+        "ItemId": "Ingredient_Bar_Hysteel"
+      },
+      {
+        "ItemId": "Rock_Gem_Emerald"
+      },
+      {
+        "Quantity": 2,
+        "ItemId": "Ingredient_Leather_Medium"
+      }
+    ],
+    "TimeSeconds": 6
+  },
+  "ItemLevel": 30,
+  "DurabilityLossOnHit": 0.5,
+  "MaxDurability": 150
+}

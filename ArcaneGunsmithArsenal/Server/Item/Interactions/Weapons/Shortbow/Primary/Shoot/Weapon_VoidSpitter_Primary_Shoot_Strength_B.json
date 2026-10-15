@@ -1,0 +1,7 @@
+{
+  "Parent": "Weapon_Voidspitter_Primary_Shoot_Sludge",
+  "Config": "Projectile_Config_Sludge_Voidspitter_B",
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  }
+}

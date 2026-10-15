@@ -1,0 +1,42 @@
+{
+  "Type": "Selector",
+  "$Comment": "Length of Combat",
+  "RunTime": 0.083,
+  "Effects": {
+    "CameraEffect": "Shortbow_Bash",
+    "ItemAnimationId": "SwingLeft",
+    "Trails": [
+      {
+        "TrailId": "Charged_Basic",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Y": 0.6
+        }
+      }
+    ]
+  },
+  "Selector": {
+    "Id": "Stab",
+    "TestLineOfSight": true,
+    "ExtendTop": 0.5,
+    "ExtendLeft": 0.5,
+    "ExtendRight": 0.5,
+    "ExtendBottom": 0.5,
+    "StartDistance": 0,
+    "EndDistance": 2.5
+  },
+  "HitBlock": {
+    "Interactions": [
+      "Block_Break_Adventure"
+    ]
+  },
+  "Next": {
+    "Type": "Simple",
+    "RunTime": 0.333
+  },
+  "HitEntity": {
+    "Interactions": [
+      "Weapon_IonStaff_Secondary_Guard_Bash_Damage_B"
+    ]
+  }
+}

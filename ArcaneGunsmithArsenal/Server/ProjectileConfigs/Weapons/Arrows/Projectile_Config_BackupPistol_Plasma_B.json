@@ -1,0 +1,7 @@
+{
+  "SpawnRotationOffset": {
+    "Pitch": 2,
+    "Yaw": -1.5
+  },
+  "Parent": "Projectile_Config_BackupPistol_Plasma"
+}

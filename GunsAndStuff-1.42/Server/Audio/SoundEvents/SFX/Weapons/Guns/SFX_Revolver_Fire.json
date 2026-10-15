@@ -1,0 +1,20 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Weapons/Guns/Revolver/RevolverShoot.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": -2,
+        "MaxPitch": 1,
+        "MinVolume": -2,
+        "MaxVolume": 2
+      }
+    }
+  ],
+  "Volume": 1,
+  "MaxInstance": 20,
+  "MaxDistance": 80,
+  "Parent": "SFX_Attn_Loud",
+  "PreventSoundInterruption": true
+}

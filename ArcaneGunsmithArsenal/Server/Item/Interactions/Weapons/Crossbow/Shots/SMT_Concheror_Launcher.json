@@ -1,0 +1,72 @@
+{
+  "Type": "Chaining",
+  "ChainId": "SMT_Concheror_Chain",
+  "Next": [
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_SMT_Concheror",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "RunTime": 0.6
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_SMT_Concheror_A",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "RunTime": 0.6
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_SMT_Concheror_B",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "RunTime": 0.6
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_SMT_Concheror_C",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "RunTime": 0.6
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_SMT_Concheror_D",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "RunTime": 0.6
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "Projectile_Config_SMT_Concheror_E",
+      "Next": {
+        "Type": "ChangeStat",
+        "StatModifiers": {
+          "Ammo": -1
+        },
+        "RunTime": 0.6
+      }
+    }
+  ]
+}

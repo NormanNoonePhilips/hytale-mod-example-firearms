@@ -1,0 +1,29 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": true,
+    "EntityDamageRadius": 4,
+    "EntityDamage": 30,
+    "EntityDamageFalloff": 0.75,
+    "Knockback": {
+      "Force": -10
+    }
+  },
+  "RunTime": 0.1,
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Fire_Blue",
+        "TargetEntityPart": "Entity",
+        "DetachedFromModel": false,
+        "Scale": 2
+      },
+      {
+        "SystemId": "Block_Hit_Ice",
+        "TargetEntityPart": "Entity",
+        "Scale": 3
+      }
+    ]
+  },
+  "CancelOnItemChange": false
+}

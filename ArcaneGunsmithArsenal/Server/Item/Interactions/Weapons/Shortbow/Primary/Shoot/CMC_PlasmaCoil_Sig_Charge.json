@@ -1,0 +1,155 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": false,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+  },
+  "Next": {
+    "0.9": {
+      "Type": "Repeat",
+      "Repeat": 4,
+      "ForkInteractions": {
+        "Interactions": [
+          {
+            "Type": "Projectile",
+            "Config": "Projectile_Config_Sig_PlasmaCoil",
+            "Effects": {
+              "WorldSoundEventId": "SFX_Electricity_Metal_Hit",
+              "Particles": [
+                {
+                  "SystemId": "Block_Break_Crystal",
+                  "TargetEntityPart": "PrimaryItem",
+                  "PositionOffset": {
+                    "Z": 1,
+                    "Y": 0.1,
+                    "X": -0.1
+                  },
+                  "Color": "#ffff02",
+                  "Scale": 0.3
+                }
+              ]
+            }
+          },
+          {
+            "Type": "Selector",
+            "RunTime": 0.12,
+            "Selector": {
+              "Id": "Horizontal",
+              "Direction": "ToRight",
+              "Length": 25,
+              "EndDistance": 9,
+              "ExtendTop": 0.85,
+              "ExtendBottom": 1,
+              "TestLineOfSight": true,
+              "YawStartOffset": -14
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "DamageEntity",
+                  "DamageCalculator": {
+                    "BaseDamage": {
+                      "Physical": 6
+                    }
+                  },
+                  "DamageEffects": {
+                    "Knockback": {
+                      "Force": -17
+                    },
+                    "ModelParticles": [
+                      {
+                        "SystemId": "Lightning",
+                        "TargetEntityPart": "Entity",
+                        "Scale": 0.6,
+                        "PositionOffset": {
+                          "Y": 3
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "Effects": {
+              "Particles": [
+                {
+                  "SystemId": "Daggers_Signature_Slash",
+                  "TargetEntityPart": "PrimaryItem",
+                  "Scale": 1.25,
+                  "PositionOffset": {
+                    "Z": 6,
+                    "Y": -0.4
+                  },
+                  "RotationOffset": {
+                    "Pitch": 0,
+                    "Yaw": 60,
+                    "Roll": 90
+                  }
+                },
+                {
+                  "SystemId": "Daggers_Signature_Slash",
+                  "TargetEntityPart": "PrimaryItem",
+                  "Scale": 1.25,
+                  "PositionOffset": {
+                    "Z": 6,
+                    "Y": 0.4
+                  },
+                  "RotationOffset": {
+                    "Pitch": 0,
+                    "Yaw": 60,
+                    "Roll": 90
+                  }
+                },
+                {
+                  "SystemId": "Daggers_Signature_Slash",
+                  "TargetEntityPart": "PrimaryItem",
+                  "Scale": 1.75,
+                  "PositionOffset": {
+                    "Z": 5
+                  },
+                  "RotationOffset": {
+                    "Pitch": 0,
+                    "Yaw": 60,
+                    "Roll": 90
+                  }
+                },
+                {
+                  "SystemId": "Daggers_Signature_Slash",
+                  "TargetEntityPart": "PrimaryItem",
+                  "Scale": 1,
+                  "PositionOffset": {
+                    "Z": 3
+                  },
+                  "RotationOffset": {
+                    "Pitch": 0,
+                    "Yaw": 60,
+                    "Roll": 90
+                  }
+                }
+              ]
+            },
+            "Next": {
+              "Type": "ChangeStat",
+              "StatModifiers": {
+                "SignatureCharges": -100
+              },
+              "Next": {
+                "Type": "ChangeStat",
+                "Behaviour": "Set",
+                "StatModifiers": {
+                  "StaminaRegenDelay": 0
+                }
+              },
+              "ValueType": "Percent"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

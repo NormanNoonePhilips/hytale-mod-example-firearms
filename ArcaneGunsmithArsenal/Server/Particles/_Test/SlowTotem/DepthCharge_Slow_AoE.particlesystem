@@ -1,0 +1,6 @@
+{
+  "$Comment": "spawn of the effect",
+  "LifeSpan": 2,
+  "Parent": "Totem_Slow_AoE",
+  "BoundingRadius": 5
+}

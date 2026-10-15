@@ -1,0 +1,47 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Signature_Volley_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Shortbow_Signature_Volley_Effects"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_ShockBracer_Signature_PBall_Projectile"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "TriggerCooldown",
+          "Cooldown": {
+            "Id": "PrimaryFire",
+            "Cooldown": 2
+          }
+        }
+      ]
+    }
+  ]
+}

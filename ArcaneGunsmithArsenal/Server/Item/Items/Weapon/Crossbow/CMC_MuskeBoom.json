@@ -1,0 +1,255 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Muskeboom.name",
+    "Description": "AGA_Server.items.ArcaneGun_Muskeboom.description"
+  },
+  "PlayerAnimationsId": "Rifle",
+  "Model": "Items/Weapons/MuskeBoom.blockymodel",
+  "Texture": "Items/Weapons/MuskeBoomTexture.png",
+  "Icon": "Icons/ItemsGenerated/CMC_MuskeBoom.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Rare",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.4,
+    "Rotation": [
+      325,
+      72,
+      339
+    ],
+    "Translation": [
+      -17,
+      -22
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges"
+    ],
+    "StatModifiers": {
+      "SignatureEnergy": [
+        {
+          "Amount": 5,
+          "CalculationType": "Additive",
+          "Target": "Max"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 180,
+  "DurabilityLossOnHit": 0.25,
+  "Interactions": {
+    "Primary": "Root_CBC_Primary_Flame",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Shortbow_Signature_Volley"
+  },
+  "InteractionVars": {
+    "CMC_Charge": {
+      "Interactions": [
+        "CBC_Muskeboom_Charge"
+      ]
+    },
+    "CMC_Proj_A": {
+      "Interactions": [
+        "CBC_Muskeboom_Projectile_A"
+      ]
+    },
+    "CMC_Proj_B": {
+      "Interactions": [
+        "CBC_Muskeboom_Projectile_B"
+      ]
+    },
+    "CMC_Proj_C": {
+      "Interactions": [
+        "CBC_Muskeboom_Projectile_C"
+      ]
+    },
+    "CMC_Proj_D": {
+      "Interactions": [
+        "CBC_Muskeboom_Projectile_D"
+      ]
+    },
+    "CMC_Proj_E": {
+      "Interactions": [
+        "CBC_Muskeboom_Projectile_E"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "CMC_Impact_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.05,
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Impact_Fire",
+                "TargetEntityPart": "Entity"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "CMC_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.05,
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Impact_Fire",
+                "TargetEntityPart": "Entity"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "CMC_Signature_Shot": {
+      "Interactions": [
+        "CMC_MuskeBoom_Charging"
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.25,
+        "X": -0.1,
+        "Z": 0.05
+      },
+      "Color": "#ed381c",
+      "Scale": 0.1,
+      "RotationOffset": {
+        "Pitch": 45,
+        "Yaw": -45
+      }
+    }
+  ],
+  "ItemLevel": 35,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 10,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 12
+      },
+      {
+        "ItemId": "Ingredient_Bar_Cobalt",
+        "Quantity": 9
+      },
+      {
+        "ResourceTypeId": "Wood_Hardwood",
+        "Quantity": 9
+      },
+      {
+        "ResourceTypeId": "Fuel",
+        "Quantity": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Cooldown": 0.75
+  },
+  "Interactions": [
+    "Weapon_FlashBall_Shockwave_Signature"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

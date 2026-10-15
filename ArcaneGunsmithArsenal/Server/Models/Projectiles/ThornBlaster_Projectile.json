@@ -1,0 +1,36 @@
+{
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    },
+    "Min": {
+      "X": -0.1,
+      "Y": -0.1,
+      "Z": -0.1
+    }
+  },
+  "DefaultAttachments": [
+    {
+      "Model": "Items/Ingredients/Stick.blockymodel",
+      "Texture": "Items/Ingredients/Stick_Texture.png"
+    }
+  ],
+  "Trails": [
+    {
+      "TrailId": "Small_Projectile",
+      "TargetEntityPart": "Entity"
+    }
+  ],
+  "Particles": [
+    {
+      "SystemId": "Block_Sprint_Grass",
+      "TargetEntityPart": "Entity",
+      "Scale": 0.2,
+      "Color": "#3da222"
+    }
+  ]
+}

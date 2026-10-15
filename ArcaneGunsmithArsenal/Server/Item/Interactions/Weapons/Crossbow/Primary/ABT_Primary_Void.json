@@ -1,0 +1,59 @@
+{
+  "Type": "DurabilityCondition",
+  "Threshold": 0,
+  "Operator": "GreaterThan",
+  "Next": {
+    "Type": "StatsCondition",
+    "Costs": {
+      "SignatureCharges": 1
+    },
+    "ValueType": "Percent",
+    "Next": {
+      "Type": "Replace",
+      "Var": "AMT_Signature_Projectile",
+      "DefaultValue": {
+        "Interactions": [
+          "Weapon_Crossbow_Signature_BigArrow_Shot"
+        ]
+      }
+    },
+    "Failed": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Void",
+        "Quantity": 1
+      },
+      "Next": {
+        "Type": "Parallel",
+        "Interactions": [
+          {
+            "Interactions": [
+              {
+                "Type": "ModifyInventory",
+                "ItemToAdd": {
+                  "Id": "Weapon_MagicCell_Void",
+                  "Quantity": 1
+                },
+                "RequiredGameMode": "Adventure"
+              }
+            ]
+          },
+          {
+            "Interactions": [
+              {
+                "Type": "Replace",
+                "Var": "AMT_Primary_Projectile",
+                "DefaultValue": {
+                  "Interactions": [
+                    "Weapon_Shortbow_Primary_Shoot_Charge"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "RequiredGameMode": "Adventure"
+    }
+  }
+}

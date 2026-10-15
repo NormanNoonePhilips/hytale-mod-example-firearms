@@ -1,0 +1,24 @@
+{
+  "ApplicationEffects": {
+    "EntityBottomTint": "#80ecff",
+    "ModelVFXId": "Freeze",
+    "ScreenEffect": "ScreenEffects/Snow.png",
+    "Particles": [
+      {
+        "SystemId": "Effect_Snow_Impact",
+        "Scale": 0.4
+      }
+    ],
+    "EntityTopTint": "#da72ff",
+    "HorizontalSpeedMultiplier": 0.7
+  },
+  "OverlapBehavior": "Extend",
+  "Duration": 2,
+  "Debuff": true,
+  "DamageCalculatorCooldown": 1,
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Ice": 5
+    }
+  }
+}

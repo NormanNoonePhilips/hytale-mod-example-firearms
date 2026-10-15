@@ -1,0 +1,21 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Water_Sprint_Splash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0.3
+      }
+    },
+    {
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1,
+        "Z": 0.3
+      },
+      "SpawnerId": "Water_Sprint_Splash"
+    }
+  ],
+  "LifeSpan": 2
+}

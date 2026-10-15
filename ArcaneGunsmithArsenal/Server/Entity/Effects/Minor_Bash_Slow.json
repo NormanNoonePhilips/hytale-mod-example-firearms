@@ -1,0 +1,20 @@
+{
+  "Duration": 2,
+  "ApplicationEffects": {
+    "EntityBottomTint": "#80ecff",
+    "ModelVFXId": "Intangible_Dark",
+    "ScreenEffect": "ScreenEffects/Snow.png",
+    "EntityTopTint": "#da72ff",
+    "HorizontalSpeedMultiplier": 0.9,
+    "MovementEffects": {
+      "DisableSprint": true
+    },
+    "Particles": [
+      {
+        "SystemId": "Block_Hit_Ice",
+        "Scale": 0.5
+      }
+    ]
+  },
+  "OverlapBehavior": "Overwrite"
+}

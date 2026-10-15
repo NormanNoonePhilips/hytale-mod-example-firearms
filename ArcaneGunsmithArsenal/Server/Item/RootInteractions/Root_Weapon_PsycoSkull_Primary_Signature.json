@@ -1,0 +1,14 @@
+{
+  "RequireNewClick": false,
+  "Cooldown": {
+    "Cooldown": 1
+  },
+  "Interactions": [
+    "Weapon_PsycoSkull_Primary_Signature"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

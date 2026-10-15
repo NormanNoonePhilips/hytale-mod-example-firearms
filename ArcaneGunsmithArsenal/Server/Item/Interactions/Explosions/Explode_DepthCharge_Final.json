@@ -1,0 +1,35 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "Knockback": {
+      "Type": "Point",
+      "Force": 25,
+      "VelocityY": 10,
+      "VelocityConfig": {
+        "Style": "Exp"
+      }
+    },
+    "DamageEntities": true,
+    "EntityDamageRadius": 3,
+    "EntityDamage": 35,
+    "EntityDamageFalloff": 0.25
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Impact_Ice",
+        "Scale": 2.5,
+        "TargetEntityPart": "Entity"
+      },
+      {
+        "SystemId": "Fire_Blue",
+        "TargetEntityPart": "PrimaryItem",
+        "Scale": 5
+      }
+    ],
+    "WorldSoundEventId": "SFX_Clay_Pot_Large_Break",
+    "LocalSoundEventId": "SFX_Clay_Pot_Large_Break"
+  },
+  "RunTime": 0.1,
+  "CancelOnItemChange": false
+}

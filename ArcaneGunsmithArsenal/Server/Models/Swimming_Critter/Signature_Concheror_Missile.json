@@ -1,0 +1,36 @@
+{
+  "Model": "NPC/Swimming_Beast/Shark_Hammerhead/Models/Model.blockymodel",
+  "Texture": "NPC/Swimming_Beast/Shark_Hammerhead/Models/Texture.png",
+  "EyeHeight": 0.22,
+  "HitBox": {
+    "Max": {
+      "X": 0.3,
+      "Y": 0.4,
+      "Z": 0.3
+    },
+    "Min": {
+      "X": -0.3,
+      "Y": 0,
+      "Z": -0.3
+    }
+  },
+  "Particles": [
+    {
+      "SystemId": "Water_Sprint",
+      "TargetEntityPart": "Self",
+      "Scale": 2
+    },
+    {
+      "SystemId": "Water_Run",
+      "Scale": 3
+    }
+  ],
+  "Trails": [
+    {
+      "TrailId": "Large_Charged_Red",
+      "RotationOffset": {
+        "Roll": 90
+      }
+    }
+  ]
+}

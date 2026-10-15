@@ -1,0 +1,31 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "Knockback": {
+      "Type": "Point",
+      "Force": 30
+    },
+    "EntityDamageRadius": 5,
+    "EntityDamage": 5,
+    "EntityDamageFalloff": 0.1,
+    "DamageEntities": true
+  },
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Fire_Green",
+        "Scale": 1.5,
+        "TargetEntityPart": "Self",
+        "PositionOffset": {
+          "Y": -1,
+          "Z": 0.5,
+          "X": -0.3
+        }
+      }
+    ],
+    "WaitForAnimationToFinish": true,
+    "WorldSoundEventId": "SFX_Flame_Break",
+    "LocalSoundEventId": "SFX_Flame_Break"
+  },
+  "RunTime": 0.5
+}

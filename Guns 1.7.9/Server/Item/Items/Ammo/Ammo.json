@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "Ammo"
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Quality": "Common",
+  "ItemLevel": 14,
+  "Recipe": {
+    "TimeSeconds": 0.5,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "Quantity": 1,
+        "ItemId": "Ingredient_Powder_Boom"
+      }
+    ],
+    "OutputQuantity": 4,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Survival"
+        ],
+        "Id": "Workbench"
+      },
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "Id": "Weapon_Bench"
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 1.8,
+    "Rotation": [
+      44,
+      56,
+      0
+    ],
+    "Translation": [
+      -3,
+      -4
+    ]
+  },
+  "Model": "Resources/model.blockymodel",
+  "Texture": "Resources/texture.png",
+  "Icon": "Icons/ItemsGenerated/Ammo.png",
+  "MaxStack": 100,
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Arrow"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Weapons_Arrows",
+  "PlayerAnimationsId": "Dagger"
+}

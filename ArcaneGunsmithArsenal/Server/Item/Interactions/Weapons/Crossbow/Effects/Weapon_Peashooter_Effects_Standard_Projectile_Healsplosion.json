@@ -1,0 +1,12 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Potion_Health_Implosion",
+        "TargetEntityPart": "Entity",
+        "Scale": 1
+      }
+    ]
+  }
+}

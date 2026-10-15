@@ -1,0 +1,422 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Hayley.name",
+    "Description": "AGA_Server.items.ArcaneGun_Hayley.description"
+  },
+  "PlayerAnimationsId": "Rifle",
+  "Model": "Items/Weapons/Hayley.blockymodel",
+  "Texture": "Items/Weapons/HayleyTexture.png",
+  "Icon": "Icons/ItemsGenerated/CBC_Hayley.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Rare",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.4,
+    "Rotation": [
+      323,
+      86,
+      19
+    ],
+    "Translation": [
+      -19,
+      -21
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "SignatureEnergy": [
+        {
+          "Amount": 8,
+          "CalculationType": "Additive",
+          "Target": "Max"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 180,
+  "DurabilityLossOnHit": 0.25,
+  "Interactions": {
+    "Primary": "Root_CBC_Primary_Ice",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Shortbow_Signature_Volley"
+  },
+  "InteractionVars": {
+    "CMC_Charge": {
+      "Interactions": [
+        "CBC_Hayley_Charge"
+      ]
+    },
+    "CMC_Proj_A": {
+      "Interactions": [
+        "CBC_Hayley_Projectile_A"
+      ]
+    },
+    "CMC_Proj_B": {
+      "Interactions": [
+        "CBC_Hayley_Projectile_B"
+      ]
+    },
+    "CMC_Proj_C": {
+      "Interactions": [
+        "CBC_Hayley_Projectile_C"
+      ]
+    },
+    "CMC_Proj_D": {
+      "Interactions": [
+        "CBC_Hayley_Projectile_D"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "CMC_Impact_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "CMC_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Hit_Snow",
+                "TargetEntityPart": "Entity",
+                "Scale": 2
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "CMC_Signature_Shot": {
+      "Interactions": [
+        "CBC_Hayley_Sig_Charging"
+      ]
+    },
+    "CMC_Buff_A": {
+      "Interactions": [
+        {
+          "Type": "Selector",
+          "RunTime": 0.75,
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 1.5,
+            "Offset": {
+              "Z": -1.5
+            }
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "DamageEntity",
+                "Parent": "DamageEntityParent",
+                "DamageCalculator": {
+                  "BaseDamage": {
+                    "Projectile": 15
+                  }
+                },
+                "EntityStatsOnHit": [
+                  {
+                    "EntityStatId": "SignatureEnergy",
+                    "Amount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Sprint_Ice",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Block_Hit_Ice",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.75
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "CMC_Buff_B": {
+      "Interactions": [
+        {
+          "Type": "Selector",
+          "RunTime": 1,
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 1.5,
+            "Offset": {
+              "Z": -1.5
+            }
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "DamageEntity",
+                "Parent": "DamageEntityParent",
+                "DamageCalculator": {
+                  "BaseDamage": {
+                    "Projectile": 20
+                  }
+                },
+                "EntityStatsOnHit": [
+                  {
+                    "EntityStatId": "SignatureEnergy",
+                    "Amount": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Sprint_Ice",
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "SystemId": "Block_Hit_Ice",
+                "TargetEntityPart": "Entity",
+                "Scale": 1.5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "CMC_Buff_C": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Parent": "Explode_Generic_Entities",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 6,
+            "EntityDamage": 60,
+            "EntityDamageFalloff": 0.5,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 20
+            }
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Break_Ice",
+                "TargetEntityPart": "Entity",
+                "Scale": 3.5
+              },
+              {
+                "SystemId": "Effect_Snow_Impact",
+                "TargetEntityPart": "Entity",
+                "Scale": 3
+              }
+            ]
+          },
+          "RunTime": 0.05,
+          "Next": {
+            "Type": "Selector",
+            "RunTime": 0.05,
+            "Selector": {
+              "Id": "AOECircle",
+              "Range": 4
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "DamageEntity",
+                  "EntityStatsOnHit": [
+                    {
+                      "EntityStatId": "SignatureEnergy",
+                      "Amount": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "CMC_Sig_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Parent": "Explode_Generic_Entities",
+          "Config": {
+            "DamageEntities": true,
+            "EntityDamageRadius": 7,
+            "EntityDamage": 50,
+            "EntityDamageFalloff": 0.65,
+            "Knockback": {
+              "Type": "Point",
+              "Force": 20
+            }
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Break_Ice",
+                "TargetEntityPart": "Entity",
+                "Scale": 3.5
+              },
+              {
+                "SystemId": "Effect_Snow_Impact",
+                "TargetEntityPart": "Entity",
+                "Scale": 4
+              },
+              {
+                "SystemId": "IceBall_Explosion",
+                "Scale": 4,
+                "TargetEntityPart": "Entity"
+              }
+            ]
+          },
+          "RunTime": 0.05
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.25,
+        "Z": 0.15
+      },
+      "Color": "#1bb8f8",
+      "Scale": 0.15
+    }
+  ],
+  "DurabilityLossOnDeath": true,
+  "ItemLevel": 35,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 10,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Ice_Essence",
+        "Quantity": 15
+      },
+      {
+        "ResourceTypeId": "Wood_Hardwood",
+        "Quantity": 6
+      },
+      {
+        "Quantity": 7,
+        "ItemId": "Ingredient_Bar_Cobalt"
+      },
+      {
+        "ItemId": "Rock_Shale",
+        "Quantity": 12
+      }
+    ]
+  }
+}

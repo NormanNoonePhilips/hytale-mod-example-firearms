@@ -1,0 +1,8 @@
+{
+  "Type": "Projectile",
+  "Effects": {
+    "ItemAnimationId": "Shoot",
+    "ClearAnimationOnFinish": true
+  },
+  "Config": "Projectile_Config_SuperHeal_Peashooter"
+}

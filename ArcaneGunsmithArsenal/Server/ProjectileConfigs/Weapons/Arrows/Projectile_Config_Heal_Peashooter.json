@@ -1,0 +1,58 @@
+{
+  "LaunchForce": 120,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 12,
+    "TerminalVelocityAir": 60,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityRoll",
+    "Bounciness": 0.0,
+    "SticksVertically": true,
+    "ComputePitch": true,
+    "ComputeYaw": true
+  },
+  "LaunchLocalSoundEventId": "SFX_Grass_Break",
+  "LaunchWorldSoundEventId": "SFX_Grass_Break",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Food_Health_Restore_Tiny",
+          "Entity": "Target",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Health_Potion_Low_Drink",
+            "LocalSoundEventId": "SFX_Health_Potion_Low_Drink_Local"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Food_Health_Regen_Tiny"
+        },
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Peashooter_Signature_Regen",
+          "Entity": "Owner"
+        },
+        "Weapon_Peashooter_Effects_Standard_Projectile_Healsplosion",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Standard_Projectile_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Peashooter_Heal"
+}

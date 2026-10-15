@@ -1,0 +1,29 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_X_L"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_X_C"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Spread_Strength_X_R"
+        }
+      ]
+    }
+  ]
+}

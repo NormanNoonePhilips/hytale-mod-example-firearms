@@ -1,0 +1,11 @@
+{
+  "LaunchForce": 40,
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.5
+  },
+  "Parent": "Projectile_Config_ABT_SlashSaw",
+  "SpawnRotationOffset": {
+    "Pitch": -2
+  }
+}

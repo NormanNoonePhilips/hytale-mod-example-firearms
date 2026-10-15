@@ -1,0 +1,133 @@
+{
+  "Type": "Charging",
+  "AllowIndefiniteHold": true,
+  "DisplayProgress": true,
+  "Effects": {
+    "ItemAnimationId": "ShootCharging",
+    "ClearAnimationOnFinish": true,
+    "ClearSoundEventOnFinish": true,
+    "WorldSoundEventId": "SFX_Bow_T2_Draw",
+    "LocalSoundEventId": "SFX_Bow_T2_Draw_Local",
+    "Particles": [
+      {
+        "PositionOffset": {
+          "Z": 0.8,
+          "Y": 0.25,
+          "X": -0.1
+        },
+        "RotationOffset": {
+          "Pitch": 0,
+          "Roll": 0
+        },
+        "Scale": 0.25,
+        "SystemId": "Water_Sprint",
+        "TargetEntityPart": "PrimaryItem"
+      }
+    ]
+  },
+  "HorizontalSpeedMultiplier": 0.5,
+  "Next": {
+    "0.75": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Water",
+        "Quantity": 3
+      },
+      "Next": {
+        "Type": "Serial",
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "CMC_Proj_A",
+            "DefaultValue": {
+              "Interactions": [
+                "Weapon_Shortbow_Primary_Shoot_Strength_1"
+              ]
+            }
+          },
+          {
+            "Type": "Simple",
+            "RunTime": 0.15
+          },
+          {
+            "Type": "Simple",
+            "RunTime": 0.75,
+            "Effects": {
+              "ItemPlayerAnimationsId": "Crossbow",
+              "ItemAnimationId": "ReloadCharged3"
+            }
+          }
+        ]
+      }
+    },
+    "1.5": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Water",
+        "Quantity": 5
+      },
+      "Next": {
+        "Type": "Serial",
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "CMC_Proj_B",
+            "DefaultValue": {
+              "Interactions": [
+                "Weapon_Shortbow_Primary_Shoot_Strength_2"
+              ]
+            }
+          },
+          {
+            "Type": "Simple",
+            "RunTime": 0.15
+          },
+          {
+            "Type": "Simple",
+            "RunTime": 1,
+            "Effects": {
+              "ItemPlayerAnimationsId": "Crossbow",
+              "ItemAnimationId": "ReloadCharged4"
+            }
+          }
+        ]
+      }
+    },
+    "3": {
+      "Type": "ModifyInventory",
+      "RequiredGameMode": "Adventure",
+      "ItemToRemove": {
+        "Id": "Weapon_MagicCell_Water",
+        "Quantity": 9
+      },
+      "Next": {
+        "Type": "Serial",
+        "Interactions": [
+          {
+            "Type": "Replace",
+            "Var": "CMC_Proj_C",
+            "DefaultValue": {
+              "Interactions": [
+                "Weapon_Shortbow_Primary_Shoot_Strength_3"
+              ]
+            }
+          },
+          {
+            "Type": "Simple",
+            "RunTime": 0.15
+          },
+          {
+            "Type": "Simple",
+            "RunTime": 1.5,
+            "Effects": {
+              "ItemPlayerAnimationsId": "Crossbow",
+              "ItemAnimationId": "ReloadCharged5"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

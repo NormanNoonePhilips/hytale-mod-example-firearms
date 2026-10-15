@@ -1,0 +1,511 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Concheror.name",
+    "Description": "AGA_Server.items.ArcaneGun_Concheror.description"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/Concheror.blockymodel",
+  "Texture": "Items/Weapons/ConcherorTexture.png",
+  "Icon": "Icons/ItemsGenerated/SMT_Concheror.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Rare",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Utility": {
+    "Compatible": true
+  },
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      322,
+      91,
+      43
+    ],
+    "Translation": [
+      -7,
+      -15
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_SMT_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 4,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 8,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 120,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "SMT_Primary_Projectile": {
+      "Interactions": [
+        "SMT_Concheror_Launcher"
+      ]
+    },
+    "SMT_Signature_Projectile": {
+      "Interactions": [
+        "SMT_Signature_Concheror_Projectile"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "Concheror_Reload_Loop"
+      ]
+    },
+    "SMT_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 1
+            }
+          ],
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 6
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Point",
+              "Force": 15
+            }
+          }
+        }
+      ]
+    },
+    "SMT_Hit_FX": {
+      "Interactions": [
+        "Explode_Concheror"
+      ]
+    },
+    "SMT_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Water_Splash_Soft_Ver1",
+                "Scale": 0.5,
+                "TargetEntityPart": "Entity"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "SMT_Sig_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 35
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.99,
+                "AirResistanceMax": 0.98,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 24,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          },
+          "Next": {
+            "Type": "ApplyEffect",
+            "EffectId": "Concheror_Soak",
+            "Entity": "Target"
+          }
+        }
+      ]
+    },
+    "SMT_Sig_Hit_FX": {
+      "Interactions": [
+        "Explode_Concheror_Signature"
+      ]
+    },
+    "SMT_Sig_Miss_FX": {
+      "Interactions": [
+        "Explode_Concheror"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "SMT_Damage_Bounce": {
+      "Interactions": [
+        {
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "Class": "Light",
+            "BaseDamage": {
+              "Physical": 4
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.99,
+                "AirResistanceMax": 0.98,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 4,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "SMT_Sig_Damage_Bounce": {
+      "Interactions": [
+        {
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "Class": "Light",
+            "BaseDamage": {
+              "Physical": 20
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Type": "Force",
+              "VelocityConfig": {
+                "AirResistance": 0.99,
+                "AirResistanceMax": 0.98,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              },
+              "Direction": {
+                "X": 0.0,
+                "Y": 0.5,
+                "Z": -1
+              },
+              "Force": 24,
+              "VelocityType": "Add"
+            },
+            "WorldParticles": [
+              {
+                "SystemId": "Impact_Dagger_Stab",
+                "Scale": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "SMT_Projectile_Attack": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "Effects": {
+                "Particles": [
+                  {
+                    "SystemId": "Dagger_Charging",
+                    "TargetEntityPart": "Entity"
+                  }
+                ],
+                "ClearAnimationOnFinish": true
+              },
+              "RunTime": 0.3
+            },
+            {
+              "Type": "Selector",
+              "Selector": {
+                "Id": "AOECircle",
+                "Range": 2
+              },
+              "HitEntity": {
+                "Interactions": [
+                  {
+                    "Type": "DamageEntity",
+                    "Parent": "DamageEntityParent",
+                    "DamageCalculator": {
+                      "BaseDamage": {
+                        "Physical": 4
+                      }
+                    },
+                    "DamageEffects": {
+                      "Knockback": {
+                        "Type": "Point",
+                        "Force": -3
+                      }
+                    }
+                  }
+                ]
+              },
+              "Effects": {
+                "Particles": [
+                  {
+                    "SystemId": "Daggers_Bash",
+                    "TargetEntityPart": "Entity",
+                    "Scale": 2
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "Cooldown": {
+        "Cooldown": 0.3
+      }
+    },
+    "SMT_Sig_Projectile_Attack": {
+      "Type": "Serial",
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Dagger_Charging",
+                "TargetEntityPart": "Entity",
+                "Scale": 3
+              }
+            ],
+            "ClearAnimationOnFinish": true
+          },
+          "RunTime": 0.4
+        },
+        {
+          "Type": "Selector",
+          "Selector": {
+            "Id": "AOECircle",
+            "Range": 3
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Type": "DamageEntity",
+                "Parent": "DamageEntityParent",
+                "DamageCalculator": {
+                  "BaseDamage": {
+                    "Physical": 12
+                  }
+                },
+                "DamageEffects": {
+                  "Knockback": {
+                    "Type": "Point",
+                    "Force": -8
+                  }
+                }
+              }
+            ]
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Mace_Signature_Slash",
+                "TargetEntityPart": "Entity",
+                "Scale": 1.5,
+                "RotationOffset": {
+                  "Roll": -90,
+                  "Pitch": -15
+                }
+              },
+              {
+                "SystemId": "Mace_Signature_Slash",
+                "TargetEntityPart": "Entity",
+                "Scale": 1.5,
+                "RotationOffset": {
+                  "Roll": 90,
+                  "Pitch": 15
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "Parent": "Simple_Mag_Template",
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.175,
+        "Z": -0.1
+      },
+      "Color": "#2c49e2",
+      "Scale": 0.1
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.2,
+        "Z": 0.6
+      },
+      "Color": "#2c49e2",
+      "Scale": 0.2
+    }
+  ],
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 10,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "*Deco_Tankard_State_Filled_Water",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Deco_Coral_Shell",
+        "Quantity": 3
+      },
+      {
+        "ResourceTypeId": "Fish",
+        "Quantity": 10
+      },
+      {
+        "Quantity": 10,
+        "ItemId": "Ingredient_Bar_Cobalt"
+      }
+    ]
+  },
+  "ItemLevel": 30
+}

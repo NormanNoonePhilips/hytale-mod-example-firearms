@@ -1,0 +1,68 @@
+{
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_IonStaff_Secondary_Shoot_Damage_Strength_C",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Laser_Impact",
+                "Scale": 3
+              }
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Laser_Impact",
+                "TargetEntityPart": "Entity",
+                "Scale": 3
+              }
+            ],
+            "WaitForAnimationToFinish": false
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "IonStaff_Laser_C",
+  "LaunchForce": 70,
+  "SpawnOffset": {
+    "Y": -0.3,
+    "X": 0.2
+  },
+  "Parent": "Projectile_Config_Laser_IonCannon",
+  "LaunchLocalSoundEventId": "SFX_Crystal_Break",
+  "LaunchWorldSoundEventId": "SFX_Crystal_Break"
+}

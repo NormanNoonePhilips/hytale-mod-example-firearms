@@ -1,0 +1,104 @@
+{
+  "Type": "Chaining",
+  "ChainingAllowance": 0.2,
+  "Next": [
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 5
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 6
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 7
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 8
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 9
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 10
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    },
+    {
+      "Type": "DamageEntity",
+      "Parent": "DamageEntityParent",
+      "DamageCalculator": {
+        "BaseDamage": {
+          "Projectile": 11
+        }
+      },
+      "DamageEffects": {
+        "Knockback": {
+          "Force": -4
+        }
+      }
+    }
+  ]
+}

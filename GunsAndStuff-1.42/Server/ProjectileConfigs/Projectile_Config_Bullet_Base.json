@@ -1,0 +1,13 @@
+{
+  "Model": "Bullet_Medium",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 10,
+    "TerminalVelocityAir": 700,
+    "TerminalVelocityWater": 25,
+    "RotationMode": "None",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "LaunchForce": 700
+}

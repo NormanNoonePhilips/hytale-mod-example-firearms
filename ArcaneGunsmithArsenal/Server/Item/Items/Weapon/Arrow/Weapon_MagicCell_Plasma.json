@@ -1,0 +1,191 @@
+{
+  "Recipe": {
+    "TimeSeconds": 0.2,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Potion_Empty"
+      },
+      {
+        "Quantity": 1,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "Quantity": 6,
+        "ResourceTypeId": "Rock_Volcanic"
+      }
+    ],
+    "OutputQuantity": 50,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Alchemy_Potions"
+        ],
+        "Id": "Alchemybench"
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 1.4,
+    "Rotation": [
+      18,
+      312,
+      347
+    ],
+    "Translation": [
+      1,
+      -3
+    ]
+  },
+  "Model": "Items/Weapons/MagicCell.blockymodel",
+  "Icon": "Icons/ItemsGenerated/Weapon_MagicCell_Plasma.png",
+  "InteractionVars": {
+    "Knife_Block_Damage": "Knife_Block_Damage",
+    "Knife_Swing_Left_Effect": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Swing_Left_Effect",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Axe_Special_Swing"
+          }
+        }
+      ]
+    },
+    "Knife_Swing_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Swing_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 1
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": 0,
+              "VelocityType": "Add"
+            },
+            "WorldSoundEventId": "SFX_Axe_Special_Impact"
+          }
+        }
+      ]
+    },
+    "Knife_Swing_Right_Effect": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Swing_Right_Effect",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Axe_Special_Swing"
+          }
+        }
+      ]
+    },
+    "Knife_Swing_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Swing_Right_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 1
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": 0,
+              "VelocityType": "Add"
+            },
+            "WorldSoundEventId": "SFX_Axe_Special_Impact"
+          }
+        }
+      ]
+    },
+    "Knife_Stab_Effect": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Stab_Effect",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Axe_Special_Swing"
+          }
+        }
+      ]
+    },
+    "Knife_Stab_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Stab_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 1
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": 0,
+              "VelocityType": "Add"
+            },
+            "WorldSoundEventId": "SFX_Axe_Special_Impact"
+          }
+        }
+      ]
+    },
+    "Knife_Lunge_Effect": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Lunge_Effect",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Axe_Special_Swing"
+          }
+        }
+      ]
+    },
+    "Knife_Lunge_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Lunge_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 1
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": 0,
+              "VelocityType": "Add"
+            },
+            "WorldSoundEventId": "SFX_Axe_Special_Impact"
+          }
+        }
+      ]
+    },
+    "Knife_Throw_Charged_Projectile": {
+      "Interactions": [
+        {
+          "Parent": "Knife_Throw_Charged_Projectile",
+          "ProjectileId": "Arrow_HalfCharge"
+        }
+      ]
+    }
+  },
+  "Weapon": {},
+  "Texture": "Items/Weapons/Plasma_MagicCell.png",
+  "Parent": "Weapon_MagicCell",
+  "Particles": [
+    {
+      "SystemId": "Beam_Lightning2",
+      "TargetEntityPart": "PrimaryItem",
+      "PositionOffset": {
+        "Y": -0.2,
+        "X": -0.05
+      },
+      "Scale": 0.075,
+      "RotationOffset": {
+        "Roll": -90
+      }
+    }
+  ],
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.MagicCell_Plasma.name",
+    "Description": "AGA_Server.items.MagicCell.description"
+  }
+}

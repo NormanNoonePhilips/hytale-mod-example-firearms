@@ -1,0 +1,27 @@
+{
+  "Type": "ModifyInventory",
+  "ItemToRemove": {
+    "Id": "Weapon_MagicCell_Plasma",
+    "Quantity": 1
+  },
+  "Next": {
+    "Type": "Replace",
+    "Var": "Primary_Shoot_Strength_0",
+    "DefaultValue": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_ShockBracer_Primary_Shoot_Strength_A"
+        }
+      ]
+    }
+  },
+  "Failed": {
+    "Type": "Replace",
+    "Var": "No_Ammo_Effects",
+    "DefaultValue": {
+      "Interactions": [
+        "Common_Bow_No_Ammo"
+      ]
+    }
+  }
+}

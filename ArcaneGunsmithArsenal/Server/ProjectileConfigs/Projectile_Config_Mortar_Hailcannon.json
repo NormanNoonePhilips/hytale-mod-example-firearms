@@ -1,0 +1,58 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 75,
+    "TerminalVelocityAir": 75,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "Velocity",
+    "Bounciness": 0.1,
+    "SticksVertically": true,
+    "BounceCount": 1,
+    "BounceLimit": 0
+  },
+  "LaunchLocalSoundEventId": "SFX_Ice_Hit",
+  "LaunchWorldSoundEventId": "SFX_Ice_Hit",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_HailCannon_Primary_Launch_Damage_Strength_B",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Explode_HailCannon_Mortar",
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        "Explode_HailCannon_Mortar",
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "Ice_Rocket",
+  "LaunchForce": 60,
+  "SpawnRotationOffset": {
+    "Pitch": 40
+  }
+}

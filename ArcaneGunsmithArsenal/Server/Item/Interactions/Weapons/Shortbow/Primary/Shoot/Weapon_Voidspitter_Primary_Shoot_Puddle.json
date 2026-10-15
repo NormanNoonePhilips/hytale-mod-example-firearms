@@ -1,0 +1,21 @@
+{
+  "Type": "CooldownCondition",
+  "Id": "Puddle_Cooldown",
+  "Next": {
+    "Type": "Serial",
+    "Interactions": [
+      {
+        "Type": "Projectile",
+        "Config": "Projectile_Config_Sludge_Puddle_Activate"
+      },
+      {
+        "Type": "TriggerCooldown",
+        "Cooldown": {
+          "Id": "Puddle_Cooldown",
+          "Cooldown": 4
+        }
+      }
+    ]
+  },
+  "Failed": "Explode_Sludge_B"
+}

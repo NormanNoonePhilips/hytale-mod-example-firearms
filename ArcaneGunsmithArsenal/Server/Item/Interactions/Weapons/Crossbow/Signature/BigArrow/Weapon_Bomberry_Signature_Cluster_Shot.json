@@ -1,0 +1,11 @@
+{
+  "Parent": "Weapon_Bomberry_Cluster_Projectile",
+  "Config": "Projectile_Config_Bomberry_Cluster",
+  "Next": {
+    "Type": "ChangeStat",
+    "StatModifiers": {
+      "SignatureCharges": -100
+    },
+    "ValueType": "Percent"
+  }
+}

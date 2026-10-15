@@ -1,0 +1,24 @@
+{
+  "Type": "Projectile",
+  "RunTime": 0.2,
+  "Effects": {
+    "ItemAnimationId": "Shoot",
+    "ClearAnimationOnFinish": true
+  },
+  "Next": {
+    "Type": "ChangeStat",
+    "Behaviour": "Set",
+    "StatModifiers": {
+      "StaminaRegenDelay": 0
+    },
+    "Next": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_Arrow_Crude",
+        "Quantity": 1
+      },
+      "RequiredGameMode": "Adventure"
+    }
+  },
+  "Config": "Projectile_Config_CBC_Hayley_A"
+}

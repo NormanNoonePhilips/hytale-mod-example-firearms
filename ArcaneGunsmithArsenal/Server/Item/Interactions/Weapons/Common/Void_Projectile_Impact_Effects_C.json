@@ -1,0 +1,22 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "LocalSoundEventId": "SFX_Skeleton_Mage_Spellbook_Impact",
+    "WorldSoundEventId": "SFX_Skeleton_Mage_Spellbook_Impact",
+    "Particles": [
+      {
+        "SystemId": "Firework_Mix4",
+        "TargetEntityPart": "Entity",
+        "Color": "#6e0096",
+        "Scale": 0.75
+      },
+      {
+        "SystemId": "Firework_Mix4",
+        "TargetEntityPart": "Entity",
+        "Color": "#6e0096",
+        "Scale": 0.5
+      }
+    ]
+  },
+  "RunTime": 0.1
+}

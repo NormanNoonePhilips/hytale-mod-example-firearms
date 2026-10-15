@@ -1,0 +1,307 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Polyp.name",
+    "Description": "AGA_Server.items.ArcaneGun_Polyp.description"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/Polyp.blockymodel",
+  "Texture": "Items/Weapons/PolypTexture.png",
+  "Icon": "Icons/ItemsGenerated/AMT_Polyp.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Uncommon",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      330,
+      76,
+      10
+    ],
+    "Translation": [
+      -9,
+      -15
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_AMT_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 10,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 4,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 180,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "AMT_Primary_Projectile": {
+      "Interactions": [
+        "AMT_Polyp_Projectile"
+      ]
+    },
+    "AMT_Signature_Projectile": {
+      "Interactions": [
+        "AMT_Polyp_Sig_Projectile"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "Mag_Reload_Loop_Water"
+      ]
+    },
+    "AMT_Damage_FX": {
+      "Interactions": [
+        "AMT_Polyp_Damage"
+      ]
+    },
+    "AMT_Hit_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Break_Dirt",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.85,
+                "Color": "#475edc"
+              }
+            ],
+            "WorldSoundEventId": "SFX_Mud_Break"
+          },
+          "RunTime": 0.05
+        }
+      ]
+    },
+    "AMT_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Break_Dirt",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.85,
+                "Color": "#475edc"
+              }
+            ],
+            "WorldSoundEventId": "SFX_Mud_Break"
+          },
+          "RunTime": 0.05
+        }
+      ]
+    },
+    "AMT_Sig_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 20
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": -2
+            }
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Impact_Poison",
+                "TargetEntityPart": "Entity"
+              }
+            ]
+          },
+          "Next": {
+            "Type": "ApplyEffect",
+            "Entity": "Target",
+            "EffectId": "Polyp_Poison"
+          }
+        }
+      ]
+    },
+    "AMT_Sig_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "AMT_Sig_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Block_Break_Dirt",
+                "TargetEntityPart": "Entity",
+                "Scale": 2,
+                "Color": "#475edc"
+              },
+              {
+                "SystemId": "Effect_Poison",
+                "Scale": 2,
+                "TargetEntityPart": "Entity",
+                "PositionOffset": {
+                  "Y": -1.5
+                }
+              }
+            ]
+          },
+          "RunTime": 0.05,
+          "Next": {
+            "Type": "Selector",
+            "Selector": {
+              "Id": "AOECircle",
+              "Range": 3
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "ApplyEffect",
+                  "EffectId": "Polyp_Poison",
+                  "Entity": "Target"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Polyp_Bash"
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "DurabilityLossOnDeath": true,
+  "ItemLevel": 20,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 7,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "*Deco_Tankard_State_Filled_Water",
+        "Quantity": 2
+      },
+      {
+        "ResourceTypeId": "Fish",
+        "Quantity": 5
+      },
+      {
+        "ResourceTypeId": "Wood_Softwood",
+        "Quantity": 10
+      },
+      {
+        "Quantity": 10,
+        "ItemId": "Ingredient_Bar_Thorium"
+      }
+    ]
+  },
+  "Utility": {
+    "Compatible": true
+  }
+}

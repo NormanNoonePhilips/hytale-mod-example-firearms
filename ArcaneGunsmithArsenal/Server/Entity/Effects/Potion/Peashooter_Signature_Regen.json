@@ -1,0 +1,18 @@
+{
+  "StatModifiers": {
+    "SignatureEnergy": 1
+  },
+  "ValueType": "Absolute",
+  "DamageCalculatorCooldown": 1,
+  "Duration": 1,
+  "OverlapBehavior": "Overwrite",
+  "StatusEffectIcon": "Icons/ItemsGenerated/Potion_Regen_Mana_Small.png",
+  "StatModifierEffects": {
+    "WorldParticles": [
+      {
+        "SystemId": "Potion_Signature_Burst",
+        "Scale": 0.6
+      }
+    ]
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Weapon_HandmadeRevolver.name",
+    "Description": "server.items.Weapon_HandmadeRevolver.description"
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "PlayerAnimationsId": {
+    "Parent": "Handgun",
+    "Animations": {
+      "Shoot": {
+        "ThirdPerson": "Characters/Animations/Items/Main_Handed/Handgun/Attacks/Shoot/Shoot.blockyanim",
+        "ThirdPersonMoving": "Characters/Animations/Items/Main_Handed/Handgun/Attacks/Shoot/Shoot_Moving.blockyanim",
+        "FirstPerson": "Characters/Animations/Items/Main_Handed/Handgun/Attacks/Shoot/Shoot_FPS.blockyanim",
+        "Speed": 3,
+        "BlendingDuration": 0.2,
+        "ThirdPersonFace": "Characters/Animations/Expressions/Frown.blockyanim"
+      },
+      "Reload": {
+        "ThirdPerson": "Characters/Animations/Items/Main_Handed/Crossbow/Reload/Reload.blockyanim",
+        "Speed": 1,
+        "BlendingDuration": 0.0,
+        "ThirdPersonFace": "Characters/Animations/Expressions/Frown.blockyanim",
+        "Looping": true,
+        "FirstPerson": "Characters/Animations/Items/Main_Handed/Crossbow/Reload/Reload_FPS.blockyanim"
+      },
+      "Gun_Hammer": {
+        "FirstPerson": "Characters/Animations/Items/Main_Handed/HandmadeRevolver/HandmadeRevolver.Shoot.blockyanim",
+        "ThirdPerson": "Characters/Animations/Items/Main_Handed/HandmadeRevolver/HandmadeRevolver.Shoot.blockyanim",
+        "ThirdPersonMoving": "Characters/Animations/Items/Main_Handed/HandmadeRevolver/HandmadeRevolver.Shoot.blockyanim",
+        "Speed": 1,
+        "BlendingDuration": 0
+      }
+    }
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "Charging",
+          "Next": {
+            "0.25": {
+              "Type": "StatsCondition",
+              "Costs": {
+                "Ammo": 1
+              },
+              "Failed": {
+                "Type": "Replace",
+                "Var": "No_Ammo_Effects"
+              },
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Ammo": -1
+                },
+                "Next": {
+                  "Type": "Replace",
+                  "Var": "Shot_Fired"
+                }
+              }
+            }
+          },
+          "Effects": {
+            "ClearSoundEventOnFinish": true,
+            "LocalSoundEventId": "Revolver_Cock01",
+            "WorldSoundEventId": "Revolver_Cock01",
+            "ClearAnimationOnFinish": true,
+            "ItemAnimationId": "Gun_Hammer"
+          },
+          "DisplayProgress": false
+        }
+      ],
+      "Tags": {
+        "Attack": [
+          "Range"
+        ]
+      },
+      "RequireNewClick": true,
+      "Cooldown": {
+        "Cooldown": 0.45,
+        "Id": "Shoot"
+      }
+    },
+    "Secondary": "Gun_Attack",
+    "Ability3": "Root_Common_AmmoHeavy_Reload_Entry",
+    "SwapFrom": {
+      "Cooldown": {
+        "Cooldown": 0.25
+      },
+      "Interactions": [
+        "Gun_Ammo_Heavy_SwapFrom_BatchRefund"
+      ]
+    },
+    "SwapTo": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Reload_Batch"
+        }
+      ]
+    }
+  },
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      351,
+      57,
+      0
+    ],
+    "Translation": [
+      -17,
+      -22
+    ]
+  },
+  "Texture": "Items/Weapons/Revolver/HandmadeRevolver_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Revolver_Handmade.png",
+  "Quality": "Uncommon",
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ]
+  },
+  "Weapon": {
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 6,
+          "CalculationType": "Additive"
+        }
+      ]
+    },
+    "RenderDualWielded": false,
+    "EntityStatsToClear": [
+      "Ammo"
+    ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Ingredient_Leather_Medium",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 20
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 2
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Categories": [
+          "Weapons.Bow"
+        ],
+        "Id": "Armory"
+      }
+    ]
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "InteractionConfig": {
+    "DisplayOutlines": false
+  },
+  "Utility": {
+    "Compatible": true
+  },
+  "ItemLevel": 5,
+  "MaxDurability": 80,
+  "DurabilityLossOnHit": 0.28,
+  "UsePlayerAnimations": false,
+  "Model": "Items/Weapons/Revolver/HandmadeRevolver.blockymodel",
+  "Scale": 0.8,
+  "InteractionVars": {
+    "Gun_Swing_Left_Effect": {
+      "Interactions": [
+        {
+          "Parent": "Gun_Swing_Left_Effect",
+          "Effects": {
+            "Trails": [
+              {
+                "TrailId": "Small_Default",
+                "TargetNodeName": "Handle",
+                "TargetEntityPart": "PrimaryItem",
+                "PositionOffset": {
+                  "X": 0.4,
+                  "Y": -0.05,
+                  "Z": 0
+                },
+                "RotationOffset": {
+                  "Yaw": 0,
+                  "Pitch": 0,
+                  "Roll": -45
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Gun_Swing_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Gun_Swing_Left_Damage",
+          "DamageCalculator": {
+            "Type": "Dps",
+            "BaseDamage": {
+              "Physical": 5
+            },
+            "RandomPercentageModifier": 0.1
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Unarmed_Impact"
+          }
+        }
+      ]
+    },
+    "Shot_Fired": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Gun_Shot_Effects"
+        },
+        {
+          "Type": "Simple",
+          "Next": {
+            "Type": "LaunchProjectile",
+            "RunTime": 0,
+            "ProjectileId": "Gun_Bullet_Heavy_HandmadeRevolver",
+            "HorizontalSpeedMultiplier": 1
+          },
+          "RunTime": 0,
+          "HorizontalSpeedMultiplier": 0,
+          "Effects": {
+            "ItemAnimationId": "Shoot"
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "Camera_FX"
+        }
+      ]
+    },
+    "Reload_Entry": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Reload_Single"
+        }
+      ]
+    },
+    "No_Ammo_Effects": {
+      "Interactions": [
+        "Gun_Empty_Noise2"
+      ]
+    },
+    "Gun_Shot_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "RevolverShooting",
+                "PositionOffset": {
+                  "Z": 0.73,
+                  "Y": 0.22
+                },
+                "RotationOffset": {
+                  "Pitch": 90
+                }
+              }
+            ],
+            "LocalSoundEventId": "SFX_Revolver_Fire",
+            "ClearSoundEventOnFinish": false,
+            "ClearAnimationOnFinish": false,
+            "WorldSoundEventId": "SFX_Revolver_Fire"
+          }
+        }
+      ]
+    },
+    "Camera_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "CameraEffect": "HandmadeRevolver_Shoot"
+          },
+          "RunTime": 0.05
+        }
+      ]
+    },
+    "Reload_Single": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "Repeat",
+              "Repeat": -1,
+              "RunTime": 0,
+              "Rules": {
+                "InterruptedBy": [
+                  "Primary",
+                  "Secondary"
+                ]
+              },
+              "ForkInteractions": {
+                "Interactions": [
+                  {
+                    "Type": "StatsCondition",
+                    "Costs": {
+                      "Ammo": 100
+                    },
+                    "LessThan": true,
+                    "ValueType": "Percent",
+                    "Next": {
+                      "Type": "ModifyInventory",
+                      "ItemToRemove": {
+                        "Id": "Gun_Ammo_Heavy",
+                        "Quantity": 1
+                      },
+                      "Next": {
+                        "Type": "ChangeStat",
+                        "Entity": "User",
+                        "StatModifiers": {
+                          "Ammo": 1
+                        },
+                        "Effects": {
+                          "ItemAnimationId": "Reload",
+                          "ClearAnimationOnFinish": true,
+                          "ClearSoundEventOnFinish": true,
+                          "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start_Local",
+                          "WorldSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start"
+                        },
+                        "RunTime": 0.65,
+                        "HorizontalSpeedMultiplier": 0.7
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "Reload_Batch": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "Repeat",
+              "ForkInteractions": {
+                "Interactions": [
+                  {
+                    "Type": "StatsCondition",
+                    "Costs": {
+                      "Ammo": 100
+                    },
+                    "LessThan": true,
+                    "ValueType": "Percent",
+                    "Next": {
+                      "Type": "ModifyInventory",
+                      "ItemToRemove": {
+                        "Id": "Gun_Ammo_Heavy",
+                        "Quantity": 6
+                      },
+                      "Next": {
+                        "Type": "ChangeStat",
+                        "Entity": "User",
+                        "StatModifiers": {
+                          "Ammo": 6
+                        }
+                      },
+                      "Failed": {
+                        "Type": "ModifyInventory",
+                        "ItemToRemove": {
+                          "Id": "Gun_Ammo_Heavy",
+                          "Quantity": 3
+                        },
+                        "Next": {
+                          "Type": "ChangeStat",
+                          "Entity": "User",
+                          "StatModifiers": {
+                            "Ammo": 3
+                          }
+                        },
+                        "Failed": {
+                          "Type": "ModifyInventory",
+                          "ItemToRemove": {
+                            "Id": "Gun_Ammo_Heavy",
+                            "Quantity": 2
+                          },
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "Entity": "User",
+                            "StatModifiers": {
+                              "Ammo": 2
+                            }
+                          },
+                          "Failed": {
+                            "Type": "ModifyInventory",
+                            "ItemToRemove": {
+                              "Id": "Gun_Ammo_Heavy",
+                              "Quantity": 1
+                            },
+                            "Next": {
+                              "Type": "ChangeStat",
+                              "Entity": "User",
+                              "StatModifiers": {
+                                "Ammo": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "Repeat": -1
+            },
+            {
+              "Type": "Simple",
+              "Effects": {
+                "LocalSoundEventId": "SFX_Hand_Crossbow_T2_Reload_Start_Local"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Reticle": "DefaultGun"
+}

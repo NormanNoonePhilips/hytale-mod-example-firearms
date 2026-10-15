@@ -1,0 +1,13 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "LocalSoundEventId": "SFX_Goblin_Lobber_Bomb_Death",
+    "WorldSoundEventId": "SFX_Goblin_Lobber_Bomb_Death",
+    "Particles": [
+      {
+        "SystemId": "Explosion_Small",
+        "TargetEntityPart": "Entity"
+      }
+    ]
+  }
+}

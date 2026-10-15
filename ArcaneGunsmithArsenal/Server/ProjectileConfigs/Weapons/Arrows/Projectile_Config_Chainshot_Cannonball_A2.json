@@ -1,0 +1,10 @@
+{
+  "LaunchForce": 40,
+  "Parent": "Projectile_Config_Chainshot_Cannonball",
+  "SpawnRotationOffset": {
+    "Yaw": -1.5
+  },
+  "SpawnOffset": {
+    "X": 0.3
+  }
+}

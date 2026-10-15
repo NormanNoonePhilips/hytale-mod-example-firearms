@@ -1,0 +1,314 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Thornblaster.name",
+    "Description": "AGA_Server.items.ArcaneGun_Thornblaster.description"
+  },
+  "PlayerAnimationsId": "Rifle",
+  "Model": "Items/Weapons/ThornBlaster.blockymodel",
+  "Texture": "Items/Weapons/ThornBlasterTexture.png",
+  "Icon": "Icons/ItemsGenerated/SMT_ThornBlaster.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Uncommon",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.4,
+    "Rotation": [
+      315,
+      90,
+      45
+    ],
+    "Translation": [
+      -9,
+      -15
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_SMT_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 10,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 5,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 180,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "SMT_Primary_Projectile": {
+      "Interactions": [
+        "SMT_ThornBlaster_Projectile"
+      ]
+    },
+    "SMT_Signature_Projectile": {
+      "Interactions": [
+        "SMT_ThornBlaster_Sig_Projectile"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "Mag_Reload_Loop_HeavyCrossbow"
+      ]
+    },
+    "SMT_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "TargetedDamage": {
+            "Head": {
+              "DamageCalculator": {
+                "BaseDamage": {
+                  "Projectile": 21
+                }
+              },
+              "DamageEffects": {
+                "ModelParticles": [
+                  {
+                    "SystemId": "Impact_Critical",
+                    "Scale": 1.75,
+                    "TargetEntityPart": "Entity",
+                    "RotationOffset": {},
+                    "PositionOffset": {
+                      "Y": 2
+                    }
+                  }
+                ],
+                "Knockback": {
+                  "Force": -9
+                }
+              }
+            }
+          },
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 14
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": -7
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "SMT_Sig_Damage_FX": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "TargetedDamage": {
+            "Head": {
+              "DamageCalculator": {
+                "BaseDamage": {
+                  "Projectile": 50
+                }
+              },
+              "DamageEffects": {
+                "ModelParticles": [
+                  {
+                    "SystemId": "Impact_Critical",
+                    "Scale": 1.75,
+                    "TargetEntityPart": "Entity",
+                    "RotationOffset": {},
+                    "PositionOffset": {
+                      "Y": 2
+                    }
+                  }
+                ],
+                "Knockback": {
+                  "Force": -18
+                }
+              }
+            }
+          },
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 35
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": -12
+            }
+          }
+        }
+      ]
+    },
+    "SMT_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "SMT_Miss_FX": {
+      "Interactions": [
+        "Common_Projectile_Miss"
+      ]
+    },
+    "SMT_Sig_Hit_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "SMT_Sig_Miss_FX": {
+      "Interactions": [
+        "Common_Projectile_Miss"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "CMC_Reload_Loop": {
+      "Interactions": [
+        "Mag_Reload_Loop_HeavyCrossbow"
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.175,
+        "Z": 0.025
+      },
+      "Color": "#35d627",
+      "Scale": 0.15,
+      "RotationOffset": {
+        "Pitch": 45
+      }
+    }
+  ],
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 12,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 175
+      },
+      {
+        "ItemId": "Ingredient_Bar_Cobalt",
+        "Quantity": 9
+      },
+      {
+        "ResourceTypeId": "Wood_Lightwood",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 30
+      }
+    ]
+  },
+  "ItemLevel": 35
+}

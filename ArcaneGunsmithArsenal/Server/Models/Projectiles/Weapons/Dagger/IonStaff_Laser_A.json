@@ -1,0 +1,38 @@
+{
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.05,
+      "Y": 0.05,
+      "Z": 0.05
+    },
+    "Min": {
+      "X": -0.05,
+      "Y": -0.05,
+      "Z": -0.05
+    }
+  },
+  "Trails": [
+    {
+      "TargetNodeName": "Handle",
+      "TrailId": "Rubble",
+      "RotationOffset": {
+        "Yaw": -45
+      }
+    }
+  ],
+  "MinScale": 1,
+  "MaxScale": 1,
+  "Particles": [
+    {
+      "SystemId": "Flying_Orb",
+      "TargetEntityPart": "Entity",
+      "Color": "#5b4fbf",
+      "Scale": 0.5
+    }
+  ],
+  "Light": {
+    "Radius": 1
+  }
+}

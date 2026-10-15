@@ -1,0 +1,277 @@
+{
+  "Type": "Chaining",
+  "Next": [
+    {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "Effects": {
+                "Particles": [
+                  {
+                    "SystemId": "Fuse_Bomb",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "X": 0.1,
+                      "Y": 0.25,
+                      "Z": 0.5
+                    }
+                  }
+                ],
+                "WorldSoundEventId": "SFX_Gravel_Break"
+              },
+              "RunTime": 0.4
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "Hwacha_Overheat",
+              "Flag": "Hwacha_Overheating"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "HorizontalSpeedMultiplier": 0.4,
+  "ChainId": "Hwacha_Overheat",
+  "Flags": {
+    "Hwacha_Overheating": {
+      "Type": "Parallel",
+      "Interactions": [
+        {
+          "Interactions": [
+            {
+              "Type": "Chaining",
+              "Next": [
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_A",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_B",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_C",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_D",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_E",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_F",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_G",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                },
+                {
+                  "Type": "Projectile",
+                  "RunTime": 0.25,
+                  "Effects": {
+                    "ItemAnimationId": "ShootCharged",
+                    "ClearAnimationOnFinish": true
+                  },
+                  "Config": "Projectile_Config_AMT_Hwacha_Rocket_H",
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": -1
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "Behaviour": "Set",
+                      "StatModifiers": {
+                        "StaminaRegenDelay": 0
+                      },
+                      "RunTime": 0.25
+                    }
+                  }
+                }
+              ],
+              "ChainingAllowance": 3
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "ChainFlag",
+              "ChainId": "Hwacha_Overheat",
+              "Flag": "Hwacha_Overheating"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ChainingAllowance": 0.6
+}

@@ -1,0 +1,373 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Candela.name",
+    "Description": "AGA_Server.items.ArcaneGun_Candela.description"
+  },
+  "Model": "Items/Weapons/Candela.blockymodel",
+  "Texture": "Items/Weapons/CandelaTexture.png",
+  "Icon": "Icons/ItemsGenerated/Candela.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "PlayerAnimationsId": "Crossbow",
+  "Reticle": "DefaultMelee",
+  "Quality": "Uncommon",
+  "ItemLevel": 30,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 7,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Ingredient_Bar_Cobalt",
+        "Quantity": 6
+      },
+      {
+        "Quantity": 20,
+        "ItemId": "Ingredient_Bar_Copper"
+      },
+      {
+        "ItemId": "Furniture_Crude_Candle",
+        "Quantity": 5
+      }
+    ],
+    "TimeSeconds": 3
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.4,
+    "Rotation": [
+      42,
+      39,
+      0
+    ],
+    "Translation": [
+      -8,
+      -13
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_Weapon_Candela_Secondary_Charge",
+    "Secondary": "Root_Weapon_Candela_Primary_Ember",
+    "Ability1": "Root_Weapon_Candela_Signature_Firecracker"
+  },
+  "InteractionVars": {
+    "Primary_Shoot_Charge": {
+      "Interactions": [
+        {
+          "$Comment": "Charging up a standard primary shot",
+          "Parent": "Weapon_Candela_Primary_Shoot_Charge",
+          "Effects": {
+            "ClearSoundEventOnFinish": true,
+            "WorldSoundEventId": "SFX_Bow_T2_Draw",
+            "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+          },
+          "HorizontalSpeedMultiplier": 0.67
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_0": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with 0.0s charge",
+          "Parent": "Weapon_Candela_Primary_Ember_Strength_Z"
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_2": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with 0.6s charge",
+          "Parent": "Weapon_Candela_Primary_Ember_Strength_Y"
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_4": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with full charge (1.2s+)",
+          "Parent": "Weapon_Candela_Primary_Ember_Strength_X"
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_0": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Ember_Damage_Strength_Z",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 3
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_2": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Ember_Damage_Strength_Y",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 20
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_4": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Candela_Primary_Ember_Damage_Strength_Z",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 15
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_0": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when basic primary arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_NoCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_NoCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_2": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when 0.4s charge arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_HalfCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_HalfCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_4": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when full charge arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_0": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_NoCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_NoCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_2": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_HalfCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_HalfCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_4": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Charge": {
+      "Interactions": [
+        {
+          "$Comment": "Charging the signature volley attack",
+          "Parent": "Weapon_Candela_Signature_Firecracker_Charge",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Draw",
+            "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+          },
+          "HorizontalSpeedMultiplier": 0.667
+        }
+      ]
+    },
+    "Signature_Volley_Effects": {
+      "Interactions": [
+        {
+          "$Comment": "Effects upon launching a signature volley.",
+          "Parent": "Weapon_Shortbow_Signature_Volley_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Shoot_Local",
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Shoot"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Impact": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when signature volley arrow impacts an entity",
+          "Parent": "Signature_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Miss": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when signature volley hits the ground",
+          "Parent": "Signature_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Signature_Volley_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 15
+            }
+          }
+        }
+      ]
+    }
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "ArcaneGun"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges"
+    ],
+    "StatModifiers": {
+      "SignatureEnergy": [
+        {
+          "Amount": 45,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Torch_On_Loop",
+        "WorldSoundEventId": "SFX_Torch_On_Loop",
+        "Particles": [
+          {
+            "SystemId": "Torch_Fire",
+            "PositionOffset": {
+              "Y": 0.55
+            },
+            "TargetEntityPart": "PrimaryItem",
+            "Scale": 0.5
+          }
+        ]
+      }
+    ],
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "FireSword",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.4
+            },
+            "Scale": 0.65
+          }
+        ]
+      }
+    ]
+  },
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 100,
+  "DurabilityLossOnHit": 1,
+  "Scale": 1.3,
+  "Particles": [
+    {
+      "SystemId": "Candle_Fire",
+      "TargetEntityPart": "PrimaryItem",
+      "Color": "#e0a93f",
+      "PositionOffset": {
+        "Y": 0.45
+      },
+      "Scale": 0.75
+    }
+  ],
+  "Light": {
+    "Color": "#eda"
+  },
+  "DurabilityLossOnDeath": true
+}

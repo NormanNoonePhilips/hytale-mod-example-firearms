@@ -1,0 +1,105 @@
+{
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "ApplyEffect",
+      "EffectId": "Stamina_Broken_Immune"
+    },
+    {
+      "Type": "ChangeStat",
+      "StatModifiers": {
+        "Stamina": -2
+      },
+      "Effects": {
+        "ItemAnimationId": "GuardBash",
+        "WorldSoundEventId": "SFX_Hand_Crossbow_T1_Shove",
+        "LocalSoundEventId": "SFX_Hand_Crossbow_T1_Shove_Local",
+        "ItemPlayerAnimationsId": "Rifle"
+      },
+      "RunTime": 0.167,
+      "Next": {
+        "Type": "ChangeStat",
+        "Behaviour": "Set",
+        "StatModifiers": {
+          "StaminaRegenDelay": -1.5
+        },
+        "Next": {
+          "Type": "Selector",
+          "$Comment": "Length of Combat",
+          "RunTime": 0.083,
+          "Effects": {
+            "CameraEffect": "Crossbow_Bash",
+            "Particles": [
+              {
+                "SystemId": "Crossbow_Bash",
+                "TargetEntityPart": "PrimaryItem",
+                "TargetNodeName": "Handle",
+                "PositionOffset": {
+                  "Z": 0.7
+                }
+              }
+            ]
+          },
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 0.5,
+            "ExtendLeft": 0.5,
+            "ExtendRight": 0.5,
+            "ExtendBottom": 0.5,
+            "StartDistance": 0,
+            "EndDistance": 2.5
+          },
+          "HitBlock": {
+            "Interactions": [
+              "Block_Break_Adventure"
+            ]
+          },
+          "HitEntity": {
+            "Interactions": [
+              {
+                "Parent": "DamageEntityParent",
+                "DamageCalculator": {
+                  "BaseDamage": {
+                    "Physical": 6
+                  }
+                },
+                "DamageEffects": {
+                  "Knockback": {
+                    "Type": "Force",
+                    "VelocityConfig": {
+                      "AirResistance": 0.97,
+                      "AirResistanceMax": 0.96,
+                      "GroundResistance": 0.94,
+                      "GroundResistanceMax": 0.3,
+                      "Threshold": 3.0,
+                      "Style": "Exp"
+                    },
+                    "Direction": {
+                      "X": 0.0,
+                      "Y": 1.0,
+                      "Z": -2.0
+                    },
+                    "Force": 12,
+                    "VelocityType": "Set"
+                  },
+                  "WorldSoundEventId": "SFX_T1_Impact_Blunt",
+                  "LocalSoundEventId": "SFX_T1_Impact_Blunt",
+                  "WorldParticles": [
+                    {
+                      "SystemId": "Impact_Crossbow_Bash"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "Next": {
+            "Type": "Simple",
+            "RunTime": 0.5
+          }
+        }
+      }
+    }
+  ]
+}

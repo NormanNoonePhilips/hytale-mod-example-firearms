@@ -1,0 +1,29 @@
+{
+  "RequireNewClick": true,
+  "Rules": {
+    "Interrupting": [
+      "Primary"
+    ]
+  },
+  "Interactions": [
+    {
+      "Type": "Replace",
+      "Var": "Common_Bash",
+      "DefaultOk": true,
+      "DefaultValue": {
+        "Interactions": [
+          "Weapon_Crossbow_Secondary_Guard_Bash"
+        ]
+      }
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  },
+  "Cooldown": {
+    "Cooldown": 0.05,
+    "Id": "BashCooldown"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_FlashBall_Shot_Shockwave_Projectile"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_FlashBall_Shot_Special_Projectile",
+          "Config": "Projectile_Config_Flare_Special"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_FlashBall_Shot_Special_Projectile",
+          "Config": "Projectile_Config_Flare_Special_Deviation"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_FlashBall_Shot_Shockwave_Projectile",
+          "Config": "Projectile_Config_FlashBall_Shockwave_Deviation"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -100
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    }
+  ],
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Firework_GS",
+        "Color": "#e10b0b",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 2
+        },
+        "Scale": 0.75
+      },
+      {
+        "SystemId": "Firework_GS",
+        "Color": "#e10b0b",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 4
+        }
+      },
+      {
+        "SystemId": "Firework_GS",
+        "Color": "#e10b0b",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 6
+        },
+        "Scale": 1.25
+      }
+    ]
+  }
+}

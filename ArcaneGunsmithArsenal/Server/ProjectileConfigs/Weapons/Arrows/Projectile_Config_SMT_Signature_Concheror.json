@@ -1,0 +1,60 @@
+{
+  "Model": "Signature_Concheror_Missile",
+  "Physics": {
+    "Type": "Standard",
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 50,
+    "RotationMode": "VelocityDamped",
+    "SticksVertically": true,
+    "Gravity": 4
+  },
+  "LaunchForce": 45,
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          },
+          "Var": "SMT_Sig_Damage_FX"
+        },
+        {
+          "Type": "Replace",
+          "Var": "SMT_Sig_Hit_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Effects_Standard_Projectile_Impact"
+            ]
+          }
+        },
+        {
+          "Type": "Projectile",
+          "Config": "Proj_SMT_Concheror_Signature_Bounce_A"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.15
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Projectile",
+          "Config": "Proj_SMT_Concheror_Signature_Bounce"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.15
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  }
+}

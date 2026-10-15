@@ -1,0 +1,7 @@
+{
+  "Parent": "Projectile_Config_SMT_AmpRifle",
+  "SpawnRotationOffset": {
+    "Pitch": -0.4,
+    "Yaw": 0.85
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Amprifle.name",
+    "Description": "AGA_Server.items.ArcaneGun_Amprifle.description"
+  },
+  "PlayerAnimationsId": "Rifle",
+  "Model": "Items/Weapons/AmpRifle.blockymodel",
+  "Texture": "Items/Weapons/AmpRifleTexture.png",
+  "Icon": "Icons/ItemsGenerated/SMT_AmpRifle.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Rare",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 0.4,
+    "Rotation": [
+      315,
+      97,
+      45
+    ],
+    "Translation": [
+      -17,
+      -27
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_SMT_Primary",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Crossbow_Signature_BigArrow",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges",
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 4,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 8,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 180,
+  "DurabilityLossOnHit": 0.25,
+  "InteractionVars": {
+    "SMT_Primary_Projectile": {
+      "Interactions": [
+        "SMT_AmpRifle_Projectiles"
+      ]
+    },
+    "SMT_Signature_Projectile": {
+      "Interactions": [
+        "SMT_AmpRifle_Sig_Projectile"
+      ]
+    },
+    "CMC_Reload_Loop": {
+      "Interactions": [
+        "AmpRifle_Reload_Loop"
+      ]
+    },
+    "SMT_Damage_FX": {
+      "Interactions": [
+        "SMT_AmpRifle_Damage"
+      ]
+    },
+    "SMT_Hit_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Lightning",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.25
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "SMT_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Lightning",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.25
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "SMT_Sig_Miss_FX": {
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Lightning",
+                "Scale": 3,
+                "TargetEntityPart": "Entity"
+              },
+              {
+                "TargetEntityPart": "Entity",
+                "SystemId": "Explosion_Medium",
+                "Scale": 2
+              }
+            ]
+          },
+          "Config": {
+            "EntityDamageFalloff": 0.4,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -15
+            }
+          },
+          "Next": {
+            "Type": "Selector",
+            "Selector": {
+              "Id": "AOECircle",
+              "Range": 2
+            },
+            "HitEntity": {
+              "Type": "ApplyEffect",
+              "EffectId": "Stun_AmpRifle_Grenade",
+              "Entity": "Target"
+            }
+          }
+        }
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "Mag_Reload_Loop": {
+      "Interactions": [
+        "AmpRifle_Reload_Loop"
+      ]
+    }
+  },
+  "Scale": 0.9,
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.2,
+        "Z": 1.15
+      },
+      "Color": "#ffee5d",
+      "Scale": 0.25
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.275,
+        "Z": 0.5,
+        "X": 0.1
+      },
+      "Color": "#ffee5d",
+      "Scale": 0.1
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.275,
+        "X": 0.1,
+        "Z": 0.1
+      },
+      "Color": "#ffee5d",
+      "Scale": 0.1
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.275,
+        "Z": 0.5,
+        "X": -0.1
+      },
+      "Color": "#ffee5d",
+      "Scale": 0.1
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.275,
+        "X": -0.1,
+        "Z": 0.1
+      },
+      "Color": "#ffee5d",
+      "Scale": 0.1
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.2,
+        "Z": -0.3
+      },
+      "Color": "#ffee5d",
+      "Scale": 0.15
+    }
+  ],
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 12,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "Quantity": 20,
+        "ResourceTypeId": "Rock_Volcanic"
+      },
+      {
+        "Quantity": 4,
+        "ItemId": "Ingredient_Bar_Gold"
+      },
+      {
+        "ItemId": "Ingredient_Bar_Adamantite",
+        "Quantity": 5
+      },
+      {
+        "Quantity": 15,
+        "ItemId": "Ingredient_Bar_Iron"
+      }
+    ]
+  },
+  "ItemLevel": 35
+}

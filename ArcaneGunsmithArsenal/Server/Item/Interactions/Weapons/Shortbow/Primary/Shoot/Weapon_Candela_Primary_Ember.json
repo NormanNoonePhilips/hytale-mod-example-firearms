@@ -1,0 +1,30 @@
+{
+  "Type": "StatsCondition",
+  "Costs": {
+    "SignatureCharges": 1
+  },
+  "Next": {
+    "Type": "ChangeStat",
+    "Behaviour": "Set",
+    "StatModifiers": {
+      "StaminaRegenDelay": -10
+    },
+    "Next": {
+      "Type": "Replace",
+      "Var": "Signature_Volley_Charge",
+      "DefaultValue": {
+        "Interactions": [
+          "Weapon_Candela_Signature_Firecracker_Charge"
+        ]
+      }
+    }
+  },
+  "Failed": {
+    "Type": "ChangeStat",
+    "Behaviour": "Set",
+    "StatModifiers": {
+      "StaminaRegenDelay": -10
+    },
+    "Next": "Weapon_Candela_Primary_Shoot_Uncharged"
+  }
+}

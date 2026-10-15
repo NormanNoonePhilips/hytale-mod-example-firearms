@@ -1,0 +1,38 @@
+{
+  "Type": "DurabilityCondition",
+  "Threshold": 0,
+  "Operator": "GreaterThan",
+  "Next": {
+    "Type": "StatsCondition",
+    "Costs": {
+      "SignatureCharges": 100
+    },
+    "ValueType": "Percent",
+    "Next": {
+      "Type": "Replace",
+      "Var": "CMC_Signature_Shot",
+      "DefaultValue": {
+        "Interactions": [
+          "Weapon_Shortbow_Signature_Volley_Charge"
+        ]
+      }
+    },
+    "Failed": {
+      "Type": "ModifyInventory",
+      "ItemToRemove": {
+        "Id": "Weapon_Arrow_Crude",
+        "Quantity": 1
+      },
+      "Next": {
+        "Type": "Replace",
+        "Var": "CMC_Charge",
+        "DefaultValue": {
+          "Interactions": [
+            "Weapon_Shortbow_Primary_Shoot_Charge"
+          ]
+        }
+      },
+      "RequiredGameMode": "Adventure"
+    }
+  }
+}

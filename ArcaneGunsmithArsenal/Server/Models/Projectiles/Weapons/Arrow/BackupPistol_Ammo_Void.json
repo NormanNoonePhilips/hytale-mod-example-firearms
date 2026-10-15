@@ -1,0 +1,48 @@
+{
+  "HitBox": {
+    "Max": {
+      "X": 0.075,
+      "Y": 0.075,
+      "Z": 0.075
+    },
+    "Min": {
+      "X": -0.075,
+      "Y": -0.075,
+      "Z": -0.075
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "Trails": [
+    {
+      "TrailId": "Arrow"
+    },
+    {
+      "TrailId": "Arrow"
+    }
+  ],
+  "Model": "Items/Projectiles/Projectile.blockymodel",
+  "Texture": "Items/Projectiles/Projectile_default.png",
+  "AnimationSets": {
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "Items/Animations/Fly/Fly_Vertical.blockyanim"
+        }
+      ]
+    }
+  },
+  "DefaultAttachments": [
+    {
+      "Model": "Resources/Crystals/Crystal_Fragment.blockymodel",
+      "Texture": "Resources/Crystals/Crystal_Fragment_Textures/Pink.png"
+    }
+  ],
+  "Particles": [
+    {
+      "SystemId": "Block_Sprint_Crystal",
+      "Color": "#b963e5",
+      "Scale": 0.4
+    }
+  ]
+}

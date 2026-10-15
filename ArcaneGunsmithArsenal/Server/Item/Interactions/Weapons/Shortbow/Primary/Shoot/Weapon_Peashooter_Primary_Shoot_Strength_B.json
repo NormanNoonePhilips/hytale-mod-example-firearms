@@ -1,0 +1,7 @@
+{
+  "Parent": "Weapon_Peashooter_Primary_Shoot_Pea",
+  "Config": "Projectile_Config_Peashooter_Pea_B",
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  }
+}

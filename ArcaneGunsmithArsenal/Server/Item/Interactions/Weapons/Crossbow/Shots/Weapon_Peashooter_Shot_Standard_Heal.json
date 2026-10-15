@@ -1,0 +1,16 @@
+{
+  "Type": "ModifyInventory",
+  "Effects": {
+    "ItemAnimationId": "Shoot",
+    "ClearAnimationOnFinish": true
+  },
+  "ItemToRemove": {
+    "Id": "Weapon_MagicCell_Eco",
+    "Quantity": 3
+  },
+  "Failed": "Common_Bow_No_Ammo",
+  "Next": {
+    "Type": "Projectile",
+    "Config": "Projectile_Config_Heal_Peashooter"
+  }
+}

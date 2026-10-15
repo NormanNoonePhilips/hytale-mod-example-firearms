@@ -1,0 +1,10 @@
+{
+  "LaunchForce": 3,
+  "SpawnRotationOffset": {
+    "Pitch": -90
+  },
+  "Parent": "Proj_SMT_Concheror_Bounce_E",
+  "SpawnOffset": {
+    "Z": -1
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 10,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": true
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Parent": "DamageEntityParent",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 5
+            }
+          },
+          "DamageEffects": {
+            "Knockback": {
+              "Force": -6
+            }
+          }
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Miss_Effects"
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "CMC_Miss_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.4
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Buff_C"
+        },
+        {
+          "Type": "Replace",
+          "Var": "CMC_Miss_Effects"
+        }
+      ]
+    }
+  },
+  "Model": "Ice_Bolt_Hayley",
+  "LaunchForce": 70,
+  "SpawnOffset": {
+    "X": 0.1,
+    "Z": -0.5
+  }
+}

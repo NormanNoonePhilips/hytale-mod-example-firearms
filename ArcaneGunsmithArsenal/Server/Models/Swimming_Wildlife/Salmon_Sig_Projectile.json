@@ -1,0 +1,30 @@
+{
+  "Model": "NPC/Swimming_Wildlife/Salmon/Models/Model.blockymodel",
+  "Texture": "NPC/Swimming_Wildlife/Salmon/Models/Texture.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.4,
+      "Y": 0.4,
+      "Z": 0.4
+    },
+    "Min": {
+      "X": -0.4,
+      "Y": -0.4,
+      "Z": -0.4
+    }
+  },
+  "Particles": [
+    {
+      "SystemId": "Watering_Can",
+      "TargetEntityPart": "Entity"
+    }
+  ],
+  "MinScale": 0.3,
+  "MaxScale": 0.3,
+  "Trails": [
+    {
+      "TrailId": "Medium_Signature",
+      "TargetEntityPart": "Entity"
+    }
+  ]
+}

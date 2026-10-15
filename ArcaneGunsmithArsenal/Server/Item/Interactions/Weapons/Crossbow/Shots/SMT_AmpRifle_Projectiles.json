@@ -1,0 +1,107 @@
+{
+  "Type": "Chaining",
+  "Next": [
+    {
+      "Type": "Serial",
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "Ammo": -1
+          },
+          "Next": {
+            "Type": "ChangeStat",
+            "Behaviour": "Set",
+            "StatModifiers": {
+              "StaminaRegenDelay": 0
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ItemPlayerAnimationsId": "Crossbow_Heavy"
+          },
+          "Config": "Projectile_Config_SMT_AmpRifle_B1"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle_A1"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle_C1"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle_D1"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.6
+        }
+      ]
+    },
+    {
+      "Type": "Serial",
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "Ammo": -1
+          },
+          "Next": {
+            "Type": "ChangeStat",
+            "Behaviour": "Set",
+            "StatModifiers": {
+              "StaminaRegenDelay": 0
+            }
+          }
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Effects": {
+            "ItemAnimationId": "ShootCharged",
+            "ItemPlayerAnimationsId": "Crossbow_Heavy"
+          },
+          "Config": "Projectile_Config_SMT_AmpRifle_B2"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle_A2"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle_C2"
+        },
+        {
+          "Type": "Projectile",
+          "RunTime": 0.05,
+          "Config": "Projectile_Config_SMT_AmpRifle_D2"
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.6
+        }
+      ]
+    }
+  ]
+}

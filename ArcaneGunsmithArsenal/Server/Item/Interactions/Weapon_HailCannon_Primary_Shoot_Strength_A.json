@@ -1,0 +1,7 @@
+{
+  "Parent": "Weapon_HailCannon_Primary_Launch_Rocket",
+  "Config": "Projectile_Config_Rocket_Hailcannon",
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  }
+}

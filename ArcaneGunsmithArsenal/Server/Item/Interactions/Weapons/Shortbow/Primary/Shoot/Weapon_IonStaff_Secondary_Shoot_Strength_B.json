@@ -1,0 +1,25 @@
+{
+  "Type": "Simple",
+  "Next": {
+    "Type": "Serial",
+    "Interactions": [
+      {
+        "Parent": "Weapon_IonCannon_Primary_Shoot_Laser",
+        "Config": "Projectile_Config_Laser_IonCannon_V2"
+      },
+      {
+        "Type": "Repeat",
+        "Repeat": 4,
+        "ForkInteractions": {
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "RunTime": 0.08
+            },
+            "Weapon_IonCannon_Primary_Shoot_Laser"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Fishzooka_Sprint_Splash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.5,
+        "Z": 0.3
+      },
+      "TotalSpawners": 6,
+      "MaxConcurrent": 3
+    },
+    {
+      "SpawnerId": "FishZooka_Circle_Sprint",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.25,
+        "Z": 0.3
+      },
+      "LifeSpan": {
+        "Min": 2,
+        "Max": 2
+      },
+      "TotalSpawners": 10,
+      "MaxConcurrent": 3
+    }
+  ],
+  "LifeSpan": 3
+}

@@ -1,0 +1,37 @@
+{
+  "Type": "Parallel",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Signature_Volley_Effects",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Shortbow_Signature_Volley_Effects"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Voidspitter_Primary_Shoot_Strength_Signature",
+          "Config": "Projectile_Config_Sludge_Voidspitter_Special"
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "SignatureCharges": -25
+          },
+          "ValueType": "Percent"
+        }
+      ]
+    }
+  ]
+}

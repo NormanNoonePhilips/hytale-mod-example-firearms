@@ -1,0 +1,29 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": true,
+    "EntityDamageRadius": 3,
+    "EntityDamage": 30,
+    "EntityDamageFalloff": 0.5,
+    "DamageBlocks": true,
+    "BlockDamageRadius": 1
+  },
+  "RunTime": 0.1,
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Block_Break_Ice",
+        "TargetEntityPart": "Entity",
+        "Scale": 3
+      },
+      {
+        "TargetEntityPart": "Entity",
+        "SystemId": "Fire_Blue",
+        "Scale": 7
+      }
+    ],
+    "WaitForAnimationToFinish": false
+  },
+  "Parent": "Explode_Generic_Blocks",
+  "CancelOnItemChange": false
+}

@@ -1,0 +1,216 @@
+{
+  "Type": "Chaining",
+  "Next": [
+    {
+      "Type": "Chaining",
+      "Next": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_A"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_A"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_B"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_B"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_C"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_C"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        }
+      ],
+      "ChainingAllowance": 2
+    },
+    {
+      "Type": "Chaining",
+      "Next": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_A"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_A"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_B"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_B"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_C"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_C"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        },
+        {
+          "Type": "ChainFlag",
+          "ChainId": "Primary_Ember_Loop",
+          "Flag": "Exitloopchain"
+        }
+      ],
+      "ChainingAllowance": 2
+    },
+    {
+      "Type": "Chaining",
+      "Next": [
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Projectile_Config_Ember_Candela_Strength_Z"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_A"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_A"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_B"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_B"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_C"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_C"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        },
+        {
+          "Parent": "Weapon_Candela_Primary_Shoot_Ember",
+          "Config": "Candela_Deviation_D"
+        }
+      ],
+      "ChainingAllowance": 2
+    }
+  ],
+  "Effects": {
+    "ItemAnimationId": "ShootCharged"
+  },
+  "ChainId": "Primary_Ember_Loop",
+  "Flags": {
+    "Exitloopchain": {
+      "Type": "TriggerCooldown",
+      "Effects": {
+        "Particles": [
+          {
+            "SystemId": "Explosion_Small",
+            "TargetEntityPart": "PrimaryItem",
+            "Scale": 1,
+            "PositionOffset": {
+              "Z": 0.4
+            }
+          }
+        ],
+        "WorldSoundEventId": "SFX_Goblin_Lobber_Bomb_Death",
+        "LocalSoundEventId": "SFX_Goblin_Lobber_Bomb_Death"
+      },
+      "Cooldown": {
+        "Id": "Shootingprimary",
+        "Cooldown": 5
+      },
+      "Next": {
+        "Type": "Repeat",
+        "Repeat": 10,
+        "ForkInteractions": {
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "Effects": {
+                "Particles": [
+                  {
+                    "SystemId": "Candela_Smoke_Black",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "Y": 0.5
+                    },
+                    "Scale": 0.4
+                  }
+                ]
+              },
+              "RunTime": 0.5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ChainingAllowance": 2
+}

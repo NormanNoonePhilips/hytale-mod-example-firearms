@@ -1,0 +1,61 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Ammo_Light.name",
+    "Description": ""
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Quality": "Common",
+  "ItemLevel": 14,
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "TimeSeconds": 0.5,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "Quantity": 2,
+        "ItemId": "Ingredient_Bar_Copper"
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 30,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "Id": "Weapon_Bench"
+      }
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.9,
+    "Rotation": [
+      180,
+      67,
+      129
+    ],
+    "Translation": [
+      6,
+      -1
+    ]
+  },
+  "Model": "Items/Weapons/Ammo/AmmoBox.blockymodel",
+  "Texture": "Items/Weapons/Ammo/AmmoBox_Light.png",
+  "Icon": "Icons/ItemsGenerated/Gun_Ammo_Light.png",
+  "MaxStack": 999,
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Arrow"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Weapons_Arrows"
+}

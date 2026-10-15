@@ -1,0 +1,90 @@
+{
+  "Type": "Selector",
+  "Effects": {
+    "Particles": [
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 3,
+        "RotationOffset": {
+          "Pitch": 180,
+          "Yaw": -15
+        }
+      },
+      {
+        "SystemId": "Muskeboom_Fire_Projectile",
+        "TargetEntityPart": "PrimaryItem",
+        "PositionOffset": {
+          "Z": 1,
+          "Y": 0.1
+        },
+        "Color": "#d10e0e",
+        "Scale": 3,
+        "RotationOffset": {
+          "Pitch": 180,
+          "Yaw": 15
+        }
+      }
+    ],
+    "WorldSoundEventId": "SFX_Fireball_Death",
+    "ItemAnimationId": "ShootCharged",
+    "ItemPlayerAnimationsId": "Crossbow_Heavy"
+  },
+  "RunTime": 0.1,
+  "Selector": {
+    "Id": "Horizontal",
+    "Direction": "ToRight",
+    "Length": 35,
+    "EndDistance": 5,
+    "ExtendTop": 0.6,
+    "ExtendBottom": 0.85,
+    "TestLineOfSight": true,
+    "YawStartOffset": -22.5
+  },
+  "HitEntity": {
+    "Interactions": [
+      {
+        "Type": "DamageEntity",
+        "DamageCalculator": {
+          "BaseDamage": {
+            "Physical": 15
+          }
+        },
+        "DamageEffects": {
+          "Knockback": {
+            "Force": -13
+          },
+          "ModelParticles": [
+            {
+              "SystemId": "Impact_Fire",
+              "TargetEntityPart": "Entity",
+              "Scale": 2,
+              "PositionOffset": {
+                "Y": 3
+              }
+            }
+          ]
+        },
+        "EntityStatsOnHit": [
+          {
+            "EntityStatId": "SignatureEnergy",
+            "Amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Next": {
+    "Type": "Projectile",
+    "Config": "Projectile_Config_CBC_Muskeboom_C",
+    "Next": {
+      "Type": "Simple",
+      "RunTime": 0.45
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        "Weapon_IonStaff_Secondary_Shoot_Damage_Strength_B",
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Impact",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "Primary_Shoot_Miss",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileBounce": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Mace_Signature_Ground_Hit",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.1
+              }
+            ],
+            "WaitForAnimationToFinish": false
+          }
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "Model": "IonStaff_Laser_B",
+  "LaunchForce": 70,
+  "SpawnOffset": {
+    "Y": -0.3,
+    "X": 0.2
+  },
+  "Parent": "Projectile_Config_Laser_IonCannon",
+  "LaunchLocalSoundEventId": "SFX_Crystal_Break",
+  "LaunchWorldSoundEventId": "SFX_Crystal_Break"
+}

@@ -1,0 +1,6 @@
+{
+  "Type": "Simple",
+  "Next": {
+    "Parent": "Weapon_IonStaff_Secondary_Shoot_Strength_Sig"
+  }
+}

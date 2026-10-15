@@ -1,0 +1,72 @@
+{
+  "Model": "Voidspitter_Sludge_Puddle_A",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 50,
+    "TerminalVelocityAir": 50,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "None",
+    "SticksVertically": true,
+    "BounceCount": 1,
+    "BounceLimit": 0.4
+  },
+  "LaunchForce": 45,
+  "Interactions": {
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.2
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        },
+        {
+          "Type": "SpawnDeployableAtHitLocation",
+          "Config": {
+            "Type": "Aoe",
+            "Id": "Sludge_Puddle_A",
+            "LiveDuration": 4,
+            "Model": "Voidspitter_Sludge_Puddle_A",
+            "ModelScale": 1.0,
+            "StartRadius": 4,
+            "Height": 0.2,
+            "DamageInterval": 0.75,
+            "DamageAmount": 5,
+            "HitboxCollisionConfig": "HardCollision",
+            "DamageCause": "OutOfWorld",
+            "Shape": "Cylinder",
+            "SpawnParticles": [
+              {
+                "SystemId": "Sludge_Puddle_Purple",
+                "TargetEntityPart": "Entity",
+                "RotationOffset": {
+                  "Pitch": 55
+                },
+                "PositionOffset": {
+                  "Z": 3
+                },
+                "Scale": 2
+              }
+            ],
+            "AttackEnemies": true,
+            "AmbientSoundEventId": "SFX_Cauldron_Bubbling"
+          }
+        }
+      ]
+    },
+    "ProjectileSpawn": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 4
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  },
+  "SpawnRotationOffset": {
+    "Pitch": -90
+  }
+}

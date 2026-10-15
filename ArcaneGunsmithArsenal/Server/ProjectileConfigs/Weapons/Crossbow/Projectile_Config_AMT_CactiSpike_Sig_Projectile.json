@@ -1,0 +1,53 @@
+{
+  "Model": "CactiSpike_Turret",
+  "LaunchForce": 20,
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 25,
+    "TerminalVelocityAir": 100,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "None"
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Signature_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Signature_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "SMT_Sig_Damage_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Weapon_Crossbow_Damage_Standard_Projectile"
+            ]
+          }
+        },
+        {
+          "Type": "Replace",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Impact_Effects"
+            ]
+          },
+          "Var": "SMT_Sig_Hit_FX"
+        },
+        "Common_Projectile_Despawn"
+      ]
+    },
+    "ProjectileMiss": {
+      "Interactions": [
+        {
+          "Type": "Replace",
+          "Var": "AMT_Sig_Miss_FX",
+          "DefaultValue": {
+            "Interactions": [
+              "Common_Projectile_Miss"
+            ]
+          },
+          "RunTime": 10
+        },
+        "Common_Projectile_Despawn"
+      ]
+    }
+  }
+}

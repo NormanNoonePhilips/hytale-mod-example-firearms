@@ -1,0 +1,6 @@
+{
+  "SpawnRotationOffset": {
+    "Pitch": 45
+  },
+  "Parent": "Projectile_Config_Hailcannon_Signature_SMortar"
+}

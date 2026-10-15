@@ -1,0 +1,125 @@
+{
+  "Type": "Simple",
+  "RunTime": 0,
+  "Next": {
+    "Type": "Repeat",
+    "ForkInteractions": {
+      "Interactions": [
+        {
+          "Type": "StatsCondition",
+          "ValueType": "Percent",
+          "LessThan": true,
+          "Costs": {
+            "Ammo": 100
+          },
+          "Next": {
+            "Type": "ModifyInventory",
+            "ItemToRemove": {
+              "Id": "Gun_Ammo_Medium",
+              "Quantity": 30
+            },
+            "Next": {
+              "Type": "ChangeStat",
+              "StatModifiers": {
+                "Ammo": 30
+              }
+            },
+            "Failed": {
+              "Type": "ModifyInventory",
+              "ItemToRemove": {
+                "Id": "Gun_Ammo_Medium",
+                "Quantity": 25
+              },
+              "Next": {
+                "Type": "ChangeStat",
+                "StatModifiers": {
+                  "Ammo": 25
+                }
+              },
+              "Failed": {
+                "Type": "ModifyInventory",
+                "ItemToRemove": {
+                  "Id": "Gun_Ammo_Medium",
+                  "Quantity": 20
+                },
+                "Next": {
+                  "Type": "ChangeStat",
+                  "StatModifiers": {
+                    "Ammo": 20
+                  }
+                },
+                "Failed": {
+                  "Type": "ModifyInventory",
+                  "ItemToRemove": {
+                    "Id": "Gun_Ammo_Medium",
+                    "Quantity": 15
+                  },
+                  "Next": {
+                    "Type": "ChangeStat",
+                    "StatModifiers": {
+                      "Ammo": 15
+                    }
+                  },
+                  "Failed": {
+                    "Type": "ModifyInventory",
+                    "ItemToRemove": {
+                      "Id": "Gun_Ammo_Medium",
+                      "Quantity": 10
+                    },
+                    "Next": {
+                      "Type": "ChangeStat",
+                      "StatModifiers": {
+                        "Ammo": 10
+                      }
+                    },
+                    "Failed": {
+                      "Type": "ModifyInventory",
+                      "ItemToRemove": {
+                        "Id": "Gun_Ammo_Medium",
+                        "Quantity": 5
+                      },
+                      "Next": {
+                        "Type": "ChangeStat",
+                        "StatModifiers": {
+                          "Ammo": 5
+                        }
+                      },
+                      "Failed": {
+                        "Type": "ModifyInventory",
+                        "ItemToRemove": {
+                          "Id": "Gun_Ammo_Medium",
+                          "Quantity": 2
+                        },
+                        "Next": {
+                          "Type": "ChangeStat",
+                          "StatModifiers": {
+                            "Ammo": 2
+                          }
+                        },
+                        "Failed": {
+                          "Type": "ModifyInventory",
+                          "ItemToRemove": {
+                            "Id": "Gun_Ammo_Medium",
+                            "Quantity": 1
+                          },
+                          "Next": {
+                            "Type": "ChangeStat",
+                            "StatModifiers": {
+                              "Ammo": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Repeat": -1
+  },
+  "HorizontalSpeedMultiplier": 1
+}

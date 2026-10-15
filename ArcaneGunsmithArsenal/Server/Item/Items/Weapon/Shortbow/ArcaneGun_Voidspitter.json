@@ -1,0 +1,628 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_VoidSpitter.name",
+    "Description": "AGA_Server.items.ArcaneGun_VoidSpitter.description"
+  },
+  "Model": "Items/Weapons/Voidspitter.blockymodel",
+  "Texture": "Items/Weapons/VoidspitterTexture.png",
+  "Icon": "Icons/ItemsGenerated/Template_Weapon_Voidspitter.png",
+  "DroppedItemAnimation": "Items/Animations/Dropped/Dropped_Diagonal_Left.blockyanim",
+  "PlayerAnimationsId": "Crossbow_Heavy",
+  "Reticle": "DefaultMelee",
+  "Quality": "Rare",
+  "ItemLevel": 40,
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 10,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "ItemId": "Ingredient_Void_Essence",
+        "Quantity": 13
+      },
+      {
+        "ItemId": "Ingredient_Bar_Adamantite",
+        "Quantity": 5
+      },
+      {
+        "Quantity": 8,
+        "ItemId": "Ingredient_Chitin_Sturdy"
+      },
+      {
+        "Quantity": 4,
+        "ItemId": "Ingredient_Sac_Venom"
+      }
+    ]
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "IconProperties": {
+    "Scale": 1,
+    "Rotation": [
+      19,
+      38,
+      13
+    ],
+    "Translation": [
+      -6,
+      -2
+    ]
+  },
+  "Interactions": {
+    "Primary": "Root_Weapon_Voidspitter_Primary_Shoot",
+    "Secondary": "Root_Weapon_Voidspitter_Secondary_Guard",
+    "Ability1": "Root_Weapon_Voidspitter_Signature_Burst"
+  },
+  "InteractionVars": {
+    "Primary_Shoot_Charge": {
+      "Interactions": [
+        {
+          "$Comment": "Charging up a standard primary shot",
+          "Parent": "Weapon_Voidspitter_Primary_Shoot_Charge",
+          "Effects": {
+            "ClearSoundEventOnFinish": true,
+            "WorldSoundEventId": "SFX_Bow_T2_Draw",
+            "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+          },
+          "HorizontalSpeedMultiplier": 0.667
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_1": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with 0.3s charge",
+          "Parent": "Weapon_VoidSpitter_Primary_Shoot_Strength_A"
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_2": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with 0.6s charge",
+          "Parent": "Weapon_VoidSpitter_Primary_Shoot_Strength_B"
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_3": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with 0.9s charge",
+          "Parent": "Weapon_Voidspitter_Primary_Shoot_Strength_C"
+        }
+      ]
+    },
+    "Primary_Shoot_Strength_4": {
+      "Interactions": [
+        {
+          "$Comment": "Launching a shot with full charge (1.2s+)",
+          "Parent": "Weapon_Voidspitter_Primary_Shoot_Strength_D"
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_0": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_0",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 6
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_1": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_1",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 10
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_2": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_2",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 12
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_3": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_3",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 14
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_4": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_4",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 15
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_0": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when basic primary arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_NoCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_NoCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_1": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when basic primary arrow impacts an entity",
+          "Parent": "Void_Projectile_Impact_Effects_B",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_HalfCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_HalfCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_2": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when 0.4s charge arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_HalfCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_HalfCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_3": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when 0.6s charge arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Impact_Strength_4": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when full charge arrow impacts an entity",
+          "Parent": "Common_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_0": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_NoCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_NoCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_1": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_HalfCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_HalfCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_2": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_HalfCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_HalfCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_3": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Miss_Strength_4": {
+      "Interactions": [
+        {
+          "Parent": "Common_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Charge": {
+      "Interactions": [
+        {
+          "$Comment": "Charging the signature volley attack",
+          "Parent": "Weapon_Voidspitter_Signature_Burst_Charge",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Draw",
+            "LocalSoundEventId": "SFX_Bow_T2_Draw_Local"
+          },
+          "HorizontalSpeedMultiplier": 0.667
+        }
+      ]
+    },
+    "Signature_Volley_Effects": {
+      "Interactions": [
+        {
+          "$Comment": "Effects upon launching a signature volley.",
+          "Parent": "Weapon_Shortbow_Signature_Volley_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Shoot_Local",
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Shoot"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Impact": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when signature volley arrow impacts an entity",
+          "Parent": "Signature_Projectile_Impact_Effects",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Hit",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Hit"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Miss": {
+      "Interactions": [
+        {
+          "$Comment": "Effects played when signature volley hits the ground",
+          "Parent": "Signature_Projectile_Miss",
+          "Effects": {
+            "LocalSoundEventId": "SFX_Arrow_FullCharge_Miss",
+            "WorldSoundEventId": "SFX_Arrow_FullCharge_Miss"
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Signature_Volley_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 25
+            }
+          }
+        }
+      ]
+    },
+    "Guard_Start_StaminaCost": {
+      "Interactions": [
+        {
+          "$Comment": "The amount of stamina consumed upon starting guarding",
+          "Type": "ChangeStat",
+          "StatModifiers": {
+            "Stamina": -0.5
+          }
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "$Comment": "Actively guarding with the weapon",
+          "Parent": "Weapon_Shortbow_Secondary_Guard_Wield",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T1_Raise",
+            "LocalSoundEventId": "SFX_Bow_T1_Raise_Local"
+          },
+          "StaminaCost": {
+            "Value": 4,
+            "CostType": "Damage"
+          },
+          "BlockedEffects": {
+            "WorldSoundEventId": "SFX_Bow_T1_Block_Impact"
+          }
+        }
+      ]
+    },
+    "Guard_Bash": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Stamina_Broken_Immune"
+        },
+        {
+          "$Comment": "Effects and stamina consumed upon a guard bash",
+          "Parent": "Weapon_Shortbow_Secondary_Guard_Bash",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T1_Swing",
+            "LocalSoundEventId": "SFX_Bow_T1_Swing_Local"
+          },
+          "StatModifiers": {
+            "Stamina": -2
+          }
+        }
+      ]
+    },
+    "Guard_Bash_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Secondary_Guard_Bash_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 0
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_T1_Impact_Blunt",
+            "LocalSoundEventId": "SFX_T1_Impact_Blunt"
+          }
+        }
+      ]
+    }
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "ArcaneGun"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges"
+    ],
+    "StatModifiers": {
+      "SignatureEnergy": [
+        {
+          "Amount": 12,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ItemAppearanceConditions": {
+    "SignatureCharges": [
+      {
+        "ConditionValueType": "Percent",
+        "Condition": [
+          76,
+          100
+        ],
+        "Particles": [
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.275,
+              "Z": 0.175,
+              "X": 0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          },
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.265,
+              "Z": 0.125,
+              "X": -0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          },
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.255,
+              "Z": 0.075,
+              "X": 0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          },
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.245,
+              "Z": 0.025,
+              "X": -0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          }
+        ]
+      },
+      {
+        "ConditionValueType": "Percent",
+        "Condition": [
+          51,
+          75
+        ],
+        "Particles": [
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.265,
+              "Z": 0.125,
+              "X": -0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          },
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.255,
+              "Z": 0.075,
+              "X": 0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          },
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.245,
+              "Z": 0.025,
+              "X": -0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          }
+        ]
+      },
+      {
+        "ConditionValueType": "Percent",
+        "Condition": [
+          26,
+          50
+        ],
+        "Particles": [
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.255,
+              "Z": 0.075,
+              "X": 0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          },
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.245,
+              "Z": 0.025,
+              "X": -0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          }
+        ]
+      },
+      {
+        "ConditionValueType": "Percent",
+        "Condition": [
+          1,
+          25
+        ],
+        "Particles": [
+          {
+            "SystemId": "Candle_Fire",
+            "TargetEntityPart": "PrimaryItem",
+            "PositionOffset": {
+              "Y": 0.245,
+              "Z": 0.025,
+              "X": -0.02
+            },
+            "Scale": 0.35,
+            "Color": "#552195"
+          }
+        ]
+      }
+    ],
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Block_Run_Mud",
+            "PositionOffset": {
+              "Z": 0.5,
+              "Y": 0.1
+            },
+            "Scale": 0.4
+          }
+        ]
+      }
+    ]
+  },
+  "ItemSoundSetId": "ISS_Armor_Leather",
+  "MaxDurability": 160,
+  "DurabilityLossOnHit": 0.75,
+  "Scale": 1.5,
+  "DurabilityLossOnDeath": true
+}

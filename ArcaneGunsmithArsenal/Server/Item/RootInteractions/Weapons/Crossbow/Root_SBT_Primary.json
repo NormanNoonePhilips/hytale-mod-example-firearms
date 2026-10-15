@@ -1,0 +1,14 @@
+{
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Cooldown": 0.05
+  },
+  "Interactions": [
+    "SBT_Primary"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}

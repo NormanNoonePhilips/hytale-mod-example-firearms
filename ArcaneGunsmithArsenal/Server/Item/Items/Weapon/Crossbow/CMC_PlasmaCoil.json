@@ -1,0 +1,379 @@
+{
+  "TranslationProperties": {
+    "Name": "AGA_Server.items.ArcaneGun_Plasmacoil.name",
+    "Description": "AGA_Server.items.ArcaneGun_Plasmacoil.description"
+  },
+  "PlayerAnimationsId": "Crossbow",
+  "Model": "Items/Weapons/PlasmaCoil.blockymodel",
+  "Texture": "Items/Weapons/PlasmaCoilTexture.png",
+  "Icon": "Icons/ItemsGenerated/CMC_PlasmaCoil.png",
+  "Reticle": "DefaultMelee",
+  "Quality": "Uncommon",
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Utility": {
+    "Compatible": true
+  },
+  "IconProperties": {
+    "Scale": 0.5,
+    "Rotation": [
+      330,
+      93,
+      47
+    ],
+    "Translation": [
+      -8,
+      -13
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Crossbow"
+    ]
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "SignatureEnergy",
+      "SignatureCharges"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 6,
+          "CalculationType": "Additive"
+        }
+      ],
+      "SignatureEnergy": [
+        {
+          "Amount": 12,
+          "CalculationType": "Additive",
+          "Target": "Max"
+        }
+      ],
+      "SignatureCharges": [
+        {
+          "Amount": 1,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "MaxDurability": 80,
+  "DurabilityLossOnHit": 0.28,
+  "Interactions": {
+    "Primary": "Root_CBC_Auto_Projectile",
+    "Secondary": "Root_Common_Bash",
+    "Ability1": "Root_Weapon_Shortbow_Signature_Volley",
+    "Ability3": "Root_Common_Reload_Loop"
+  },
+  "InteractionVars": {
+    "CMC_Charge": {
+      "Interactions": [
+        "CMC_PlasmaCoil_Charge"
+      ]
+    },
+    "CMC_Proj_C": {
+      "Interactions": [
+        {
+          "Type": "Serial",
+          "Interactions": [
+            {
+              "Type": "Projectile",
+              "RunTime": 0.06,
+              "Config": "Projectile_Config_PlasmaCoil",
+              "Effects": {
+                "WorldSoundEventId": "SFX_Electricity_Metal_Hit",
+                "Particles": [
+                  {
+                    "SystemId": "Block_Break_Crystal",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "Z": 1,
+                      "Y": 0.1,
+                      "X": -0.1
+                    },
+                    "Color": "#ffff02",
+                    "Scale": 0.3
+                  }
+                ]
+              }
+            },
+            {
+              "Type": "Projectile",
+              "RunTime": 0.06,
+              "Config": "Projectile_Config_PlasmaCoil_A",
+              "Effects": {
+                "WorldSoundEventId": "SFX_Electricity_Metal_Hit",
+                "Particles": [
+                  {
+                    "SystemId": "Block_Break_Crystal",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "Z": 1,
+                      "Y": 0.1,
+                      "X": -0.1
+                    },
+                    "Color": "#ffff02",
+                    "Scale": 0.3
+                  }
+                ]
+              }
+            },
+            {
+              "Type": "Projectile",
+              "RunTime": 0.06,
+              "Config": "Projectile_Config_PlasmaCoil_B",
+              "Effects": {
+                "WorldSoundEventId": "SFX_Electricity_Metal_Hit",
+                "Particles": [
+                  {
+                    "SystemId": "Block_Break_Crystal",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "Z": 1,
+                      "Y": 0.1,
+                      "X": -0.1
+                    },
+                    "Color": "#ffff02",
+                    "Scale": 0.3
+                  }
+                ]
+              }
+            },
+            {
+              "Type": "Projectile",
+              "RunTime": 0.12,
+              "Config": "Projectile_Config_PlasmaCoil_C",
+              "Effects": {
+                "WorldSoundEventId": "SFX_Electricity_Metal_Hit",
+                "Particles": [
+                  {
+                    "SystemId": "Block_Break_Crystal",
+                    "TargetEntityPart": "PrimaryItem",
+                    "PositionOffset": {
+                      "Z": 1,
+                      "Y": 0.1,
+                      "X": -0.1
+                    },
+                    "Color": "#ffff02",
+                    "Scale": 0.3
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "Common_Reload_Loop": {
+      "Interactions": [
+        "Mag_Reload_Loop_Plasma"
+      ]
+    },
+    "Common_Bash": {
+      "Interactions": [
+        "Common_Bash"
+      ]
+    },
+    "CMC_Impact_FX": {
+      "Interactions": [
+        "Common_Projectile_Impact_Effects"
+      ]
+    },
+    "CMC_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Lightning",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.3
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Signature_Activate_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Bow_T2_Signature_Nock",
+            "LocalSoundEventId": "SFX_Bow_T2_Signature_Nock_Local"
+          }
+        }
+      ]
+    },
+    "CMC_Signature_Shot": {
+      "Interactions": [
+        "CMC_PlasmaCoil_Sig_Charge"
+      ]
+    },
+    "CMC_Sig_Miss_Effects": {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Lightning",
+                "TargetEntityPart": "Entity",
+                "Scale": 0.45
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "ItemAppearanceConditions": {
+    "SignatureEnergy": [
+      {
+        "Condition": [
+          100,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "Particles": [
+          {
+            "SystemId": "Sword_Signature_Ready",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0
+            },
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ]
+      }
+    ],
+    "SignatureCharges": [
+      {
+        "Condition": [
+          1,
+          100
+        ],
+        "ConditionValueType": "Percent",
+        "LocalSoundEventId": "SFX_Bow_T2_Signature_Loop_Local",
+        "WorldSoundEventId": "SFX_Bow_T2_Signature_Loop",
+        "Particles": [
+          {
+            "SystemId": "Crossbow_Signature_Status",
+            "TargetNodeName": "Main",
+            "PositionOffset": {
+              "X": 0,
+              "Y": 0,
+              "Z": 0
+            },
+            "Scale": 1,
+            "TargetEntityPart": "PrimaryItem"
+          }
+        ],
+        "ModelVFXId": "Crossbow_Signature_Status",
+        "FirstPersonParticles": [
+          {
+            "SystemId": "Crossbow_Signature_Status_FP"
+          }
+        ]
+      }
+    ]
+  },
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": -0.075,
+        "Z": 0.345
+      },
+      "Color": "#fbff67",
+      "Scale": 0.25
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": -0.075,
+        "Z": 0.345
+      },
+      "Color": "#fbff67",
+      "Scale": 0.25,
+      "RotationOffset": {
+        "Yaw": 90
+      }
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.2,
+        "X": 0.075,
+        "Z": -0.05
+      },
+      "Color": "#fbff67",
+      "Scale": 0.1,
+      "RotationOffset": {
+        "Yaw": -60
+      }
+    },
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Block_Sprint_Crystal",
+      "PositionOffset": {
+        "Y": 0.2,
+        "X": -0.075,
+        "Z": -0.05
+      },
+      "Color": "#fbff67",
+      "Scale": 0.1,
+      "RotationOffset": {
+        "Yaw": 60
+      }
+    }
+  ],
+  "Recipe": {
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "Input": [
+      {
+        "Quantity": 7,
+        "ResourceTypeId": "Crystal_Shards"
+      },
+      {
+        "Quantity": 20,
+        "ResourceTypeId": "Rock_Volcanic"
+      },
+      {
+        "ItemId": "Ingredient_Bar_Cobalt",
+        "Quantity": 5
+      },
+      {
+        "Quantity": 15,
+        "ItemId": "Plant_Crop_Potato_Item"
+      },
+      {
+        "Quantity": 5,
+        "ItemId": "Ingredient_Bar_Iron"
+      }
+    ]
+  },
+  "ItemLevel": 30
+}

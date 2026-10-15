@@ -1,0 +1,14 @@
+{
+  "Cooldown": {
+    "Cooldown": 0.025,
+    "Id": "ABT_Cooldown"
+  },
+  "Interactions": [
+    "ABT_Primary_Void"
+  ],
+  "Tags": {
+    "Attack": [
+      "Ranged"
+    ]
+  }
+}
