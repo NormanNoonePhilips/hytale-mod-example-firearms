@@ -1,1 +1,3 @@
 # hytale-mod-example-firearms
+
+ALL PNG TEXTURES HAVE BEEN REMOVED FOR SPACE MEMORY
